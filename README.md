@@ -2,7 +2,7 @@
 
 ## 1. 폴더 구조 및 기능
 
-![스크린샷 2025-08-03 오후 6.05.09.png](attachment:ee301979-6e44-4f23-8413-b90a9479bd0d:스크린샷_2025-08-03_오후_6.05.09.png)
+<img width="194" height="266" alt="스크린샷 2025-08-03 오후 6 05 09" src="https://github.com/user-attachments/assets/1561ab2f-5531-4282-b4a1-af3b67caa893" />
 
 public : 주로 이미지가 저장 되는 경로로 사용 할 것 같습니다. ( src 경로가 간단합니다)
 
@@ -55,5 +55,6 @@ export const Section1Style = styled.section`
 ```
 
 - className의 이름이 길어질 경우는 `-` 를 이용하여 분할처리 합니다.
+<img width="498" height="326" alt="스크린샷 2025-08-03 오후 6 19 00" src="https://github.com/user-attachments/assets/fc2b29c2-0aaf-42e6-a50f-8e6ad09e701e" />
 
-![스크린샷 2025-08-03 오후 6.19.00.png](attachment:14c039f3-020a-4be3-910a-a8be1b809c87:스크린샷_2025-08-03_오후_6.19.00.png)
+
