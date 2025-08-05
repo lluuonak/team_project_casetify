@@ -42,7 +42,10 @@ const Header = () => {
               />
             </svg>
           </i>
-          <h2 className="logo">
+          <h2
+            className="logo"
+            style={{ display: opacityState ? "block" : "none" }}
+          >
             <img src="/logo.png" alt="" />
           </h2>
           <ul className="top-nav">
@@ -141,7 +144,8 @@ const Header = () => {
               >
                 <p className="menu-title">
                   <strong>CASE</strong>
-                  <span></span>
+                  <span>|</span>
+                  <span>Samsung</span>
                 </p>
               </div>
             </Link>

@@ -51,6 +51,28 @@ export const MenuStyle = styled.div`
             display: flex;
             flex-flow:column;   
             gap:40px;
+            .menu-title{
+                padding-left: 34px;
+                width: 200px;
+                height: 64px;
+                display: flex;
+                align-items:center;
+                justify-content:space-around;
+                strong{
+                    display: block;
+                    color: #FFF;
+                    font-family: Inter;
+                    font-size: 36px;
+                    font-weight: 700;
+                }
+                span{
+                    display: block;
+                    color: #FFF;
+                    font-family: Inter;
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+            }
             .first{
                 width: 100%;
                 height: 300px;

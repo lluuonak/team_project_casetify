@@ -15,7 +15,6 @@ const Section1 = () => {
           type="video/mp4"
         />
       </video>
-      <div className="bg"></div>
       <img src="/logo_w.png" alt="" />
     </Section1Style>
   );
