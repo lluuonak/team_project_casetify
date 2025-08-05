@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
+import '@fontsource/inter/400.css';  // 일반 두께
+import '@fontsource/inter/700.css';  // 볼드 두께
 
 const GlobalStyle = createGlobalStyle`
   ${reset}

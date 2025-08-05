@@ -10,13 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.2.6",
     "@reduxjs/toolkit": "^2.8.2",
     "axios": "^1.11.0",
     "icons": "^1.0.0",
+    "npm": "^11.5.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-redux": "^9.2.0",
-    "react-router-dom": "^7.7.0",
+    "react-router-dom": "^7.7.1",
     "sass": "^1.89.2",
     "styled-components": "^6.1.19",
     "styled-reset": "^4.5.2"

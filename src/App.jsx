@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import GlobalStyle from "./styled/GlobalStyle";
 import Layout from "./common/Layout";
 
+import { Main, NotFiles } from "./pages";
+
 const App = () => {
   return (
     <>
@@ -10,6 +12,7 @@ const App = () => {
 
         <Routes>
           <Route path="/" element={<Layout />}>
+            <Route index element={<Main />} />
             <Route path="*" element={<NotFiles />} />
           </Route>
         </Routes>
