@@ -1,7 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
-import '@fontsource/inter/400.css';  // 일반 두께
-import '@fontsource/inter/700.css';  // 볼드 두께
+import '@fontsource/inter/400.css'; // 일반 두께
+import '@fontsource/inter/700.css'; // 볼드 두께
+import 'pretendard/dist/web/variable/pretendardvariable.css';
+import '@fontsource/prata';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -10,8 +12,12 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-size: 16px;
     line-height: 1.6;
-    font-family: 'Noto Sans KR', sans-serif;
+    /* font-family: 'Noto Sans KR', sans-serif; */
+    font-family: 'Pretendard', sans-serif;
     color:#333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
   }
   a {
     text-decoration: none;
@@ -19,12 +25,11 @@ const GlobalStyle = createGlobalStyle`
   }
   li { list-style:none }
   img { vertical-align: top; }
-  
-  
-  .inner { width:1400px; margin:auto; box-sizing:border-box; position:relative }
+  .inner {margin:auto; box-sizing:border-box;}
   .main { width: 100%; }
   .main h2 { text-align: center; font-size: 40px;   margin-bottom: 80px; }
    button { border:none; cursor: pointer; }
+
 `;
 
 export default GlobalStyle;

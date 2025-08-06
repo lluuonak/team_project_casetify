@@ -1,19 +1,21 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Section1Style = styled.section`
     width: 100%;
     height: 1040px;
-    video{
-        position:relative;
+    background-color: #000;
+    video {
+        width: 100%;
+        position: relative;
     }
-    
-    img{
+
+    img {
         width: 199px;
         height: 70px;
         display: block;
-        position:absolute;
+        position: absolute;
         top: 41%;
-        left : 50%;
+        left: 50%;
         transform: translateX(-50%) translateY(-50%);
     }
 `;
