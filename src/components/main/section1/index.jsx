@@ -1,23 +1,28 @@
-import { Section1Style } from "./style";
+import { useEffect, useRef } from 'react';
+import { Section1Style } from './style';
+import gsap from 'gsap';
 
 const Section1 = () => {
-  return (
-    <Section1Style>
-      <video
-        className="item-image desktopVideo"
-        autoPlay
-        loop
-        playsInline
-        muted
-      >
-        <source
-          src="https://cdn-stamplib.casetify.com/cms/video/24c8ba00645ceba9c73025880b54dc8d.mp4"
-          type="video/mp4"
-        />
-      </video>
-      <img src="/logo_w.png" alt="" />
-    </Section1Style>
-  );
+    const circleRef = useRef(null);
+    useEffect(() => {
+        gsap.to('.animation-text', {
+            rotation: 360,
+            repeat: -1,
+            ease: 'linear',
+            duration: 50,
+            transformOrigin: '50% 50%',
+            overwrite: 'auto',
+            clearProps: 'transform',
+        });
+    }, [circleRef]);
+    return (
+        <Section1Style>
+            <div className="animation-text"></div>
+            <div className="big-img"></div>
+            <strong>새로움의</strong>
+            <span>케이스를 열다.</span>
+        </Section1Style>
+    );
 };
 
 export default Section1;

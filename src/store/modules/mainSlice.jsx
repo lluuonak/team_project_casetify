@@ -9,15 +9,20 @@ export const mainSlice = createSlice({
     initialState,
     reducers: {
         openMenu: (state, action) => {
-            if (state.scrollState < 1000) {
+            if (state.scrollState < 500) {
                 state.logoShow = !state.logoShow;
+            } else {
+                state.logoShow = true;
             }
         },
         scollMove: (state, action) => {
             state.scrollState = action.payload;
+            if (state.scrollState > 500) {
+                state.logoShow = true;
+            }
         },
         disableLogo: (state) => {
-            state.logoShow = !state.logoShow;
+            state.logoShow = false;
         },
     },
 });

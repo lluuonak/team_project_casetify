@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 
 export const Section2Style = styled.section`
-    background: #000;
-    width: 100%;
-    height: 840px;
-    padding-bottom: 200px;
     .inner {
         margin: auto;
         width: 1600px;
@@ -39,8 +35,8 @@ export const Section2Style = styled.section`
             position: absolute;
             right: 1px;
             top: 1px;
-            width: 198px;
-            height: 198px;
+            width: 197px;
+            height: 197px;
             border-radius: 50%;
             background-color: #000;
             display: flex;
@@ -88,14 +84,21 @@ export const Section2Style = styled.section`
 export const PhoneListStyle = styled.ul`
     margin-top: 24px;
     width: 100%;
-    height: 200px;
+    height: 300px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     li {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
         background-color: #fff;
+        position: relative;
+        overflow: hidden;
+        .gsap-items {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
     }
     .rangle {
         border-radius: 80px;

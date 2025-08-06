@@ -8,7 +8,9 @@ import '@fontsource/prata';
 const GlobalStyle = createGlobalStyle`
   ${reset}
   /* other styles */
-  
+  *{
+    box-sizing:border-box;
+  }
   body {
     font-size: 16px;
     line-height: 1.6;
@@ -19,6 +21,11 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     overflow-x: hidden;
   }
+  section{
+    width: 100%;
+    height: 1040px;
+    background-color: #000;
+  }
   a {
     text-decoration: none;
     color:#333; 
@@ -26,8 +33,8 @@ const GlobalStyle = createGlobalStyle`
   li { list-style:none }
   img { vertical-align: top; }
   .inner {margin:auto; box-sizing:border-box;}
-  .main { width: 100%; }
-  .main h2 { text-align: center; font-size: 40px;   margin-bottom: 80px; }
+  .main { width: 100%; overflow:hidden;}
+  .main h2 { text-align: center; font-size: 40px; margin-bottom: 80px; }
    button { border:none; cursor: pointer; }
 
 `;

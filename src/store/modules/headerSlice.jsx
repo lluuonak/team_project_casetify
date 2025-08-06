@@ -1,16 +1,19 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
-  opacityState: false,
+    opacityState: false,
 };
 
 export const headerSlice = createSlice({
-  name: "header",
-  initialState,
-  reducers: {
-    setOpacityState: (state, action) => {
-      state.opacityState = !state.opacityState;
+    name: 'header',
+    initialState,
+    reducers: {
+        setOpacityState: (state, action) => {
+            state.opacityState = !state.opacityState;
+        },
+        scollOpacity: (state, action) => {
+            state.opacityState = action.payload;
+        },
     },
-  },
 });
 
 export const headerActions = headerSlice.actions;
