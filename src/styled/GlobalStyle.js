@@ -23,8 +23,9 @@ const GlobalStyle = createGlobalStyle`
   }
   section{
     width: 100%;
-    height: 1040px;
+    height: 1240px;
     background-color: #000;
+    
   }
   a {
     text-decoration: none;

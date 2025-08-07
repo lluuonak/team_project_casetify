@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import { HeaderStyle, MenuStyle, ModalOverlay } from './style';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { headerActions } from '../../store/modules/headerSlice';
-import { mainActions } from '../../store/modules/mainSlice';
+import { headerActions } from '../../store/modules/common/headerSlice';
+import { mainActions } from '../../store/modules/main/mainSlice';
 
 const Header = () => {
     const [menuState, setMenuState] = useState(false);

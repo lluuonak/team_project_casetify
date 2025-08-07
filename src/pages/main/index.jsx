@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
-import { Section1, Section2, Section3 } from '../../components/main';
+import { Section1, Section2, Section3, Section4 } from '../../components/main';
 import { useDispatch } from 'react-redux';
-import { mainActions } from '../../store/modules/mainSlice';
-import { headerActions } from '../../store/modules/headerSlice';
+import { mainActions } from '../../store/modules/main/mainSlice';
+import { headerActions } from '../../store/modules/common/headerSlice';
 
 const Main = () => {
     const dispatch = useDispatch();
@@ -30,6 +30,7 @@ const Main = () => {
             <Section1 />
             <Section2 />
             <Section3 />
+            <Section4 />
         </>
     );
 };

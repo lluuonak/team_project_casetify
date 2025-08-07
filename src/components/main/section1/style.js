@@ -27,7 +27,7 @@ export const Section1Style = styled.section`
     }
     strong {
         position: absolute;
-        top: 33%;
+        top: 31%;
         left: 4%;
         transform: translate(-10%, -50%);
         color: #fff;
