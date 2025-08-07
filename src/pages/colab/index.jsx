@@ -10,7 +10,8 @@ const Colab = () => {
     };
     return (
         <>
-            {/* <Section1/> */}
+            {/* 여기 아래 주석 처리 왜 해놓으셨지 */}
+            <Section1 />
             <Section2 />
             <Section3 />
         </>
