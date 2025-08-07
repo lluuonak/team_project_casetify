@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Section3Style = styled.div`
+export const Section3Style = styled.section`
     width: 1400px;
     height: 350px;
     margin: auto;
@@ -22,49 +22,10 @@ export const Section3Style = styled.div`
     }
     .colab-archieve {
         width: 700px;
-        background-color: skyblue;
+        background-image: url('/images/colab/collab-archieve.png');
     }
     .next-up {
         width: 700px;
-        background-color: orange;
-    }
-`;
-
-export const BtnsStyle = styled.div`
-    margin-bottom: 190px;
-    button {
-        width: 500px;
-        height: 350px;
-        background-color: skyblue;
-        border-radius: 20px;
-        color: #fff;
-        font-weight: 500;
-        font-size: 48px;
-    }
-
-    .btns {
-        width: 1600px;
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 50px;
-        button:nth-child(1) {
-            background-image: url('/images/colab/animation.png');
-        }
-        button:nth-child(2) {
-            background-image: url('/images/colab/art.png');
-        }
-        button:nth-child(3) {
-            background-image: url('/images/colab/characters.png');
-        }
-        button:nth-child(4) {
-            background-image: url('/images/colab/movie.png');
-        }
-        button:nth-child(5) {
-            background-image: url('/images/colab/fashion.png');
-        }
-        button:nth-child(6) {
-            background-image: url('/images/colab/sports.png');
-        }
+        background-image: url('/images/colab/next-up.png');
     }
 `;

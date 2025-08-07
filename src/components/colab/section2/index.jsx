@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { BtnsStyle, Section2Style } from './style';
+import { Section2Style } from './style';
 
 const Section2 = () => {
     const navigate = useNavigate();
@@ -8,20 +8,30 @@ const Section2 = () => {
     };
     return (
         <Section2Style>
-            <BtnsStyle>
-                <div className="btns">
-                    <button onClick={() => onGo('animation')}>Animation</button>
-                    <button onClick={() => onGo('art')}>Art</button>
-                    <button onClick={() => onGo('characters')}>Characters</button>
-                    <button onClick={() => onGo('movies')}>
+            <div className="btns">
+                <button onClick={() => onGo('animation')}>
+                    <h4>Animation</h4>
+                </button>
+                <button onClick={() => onGo('art')}>
+                    <h4>Art</h4>
+                </button>
+                <button onClick={() => onGo('characters')}>
+                    <h4>Characters</h4>
+                </button>
+                <button onClick={() => onGo('movies')}>
+                    <h4>
                         Movies &<br /> Entertainment
-                    </button>
-                    <button onClick={() => onGo('fashion')}>
+                    </h4>
+                </button>
+                <button onClick={() => onGo('fashion')}>
+                    <h4>
                         Fashion &<br /> Lifestyle
-                    </button>
-                    <button onClick={() => onGo('sports')}>Sports</button>
-                </div>
-            </BtnsStyle>
+                    </h4>
+                </button>
+                <button onClick={() => onGo('sports')}>
+                    <h4>Sports</h4>
+                </button>
+            </div>
         </Section2Style>
     );
 };
