@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ColabStyle = styled.section``;
+export const Section2Style = styled.section``;
 
 export const BtnsStyle = styled.div`
     margin-bottom: 190px;

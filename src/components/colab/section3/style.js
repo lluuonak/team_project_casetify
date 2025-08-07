@@ -1,6 +1,34 @@
 import styled from 'styled-components';
 
-export const ColabStyle = styled.section``;
+export const Section3Style = styled.div`
+    width: 1400px;
+    height: 350px;
+    margin: auto;
+    border-radius: 20px;
+    display: flex;
+    .more {
+        color: #fff;
+        box-sizing: border-box;
+        padding-left: 60px;
+        padding-top: 56px;
+        h4 {
+            font-weight: 700;
+            font-size: 40px;
+        }
+        p {
+            font-weight: 400;
+            font-size: 20px;
+        }
+    }
+    .colab-archieve {
+        width: 700px;
+        background-color: skyblue;
+    }
+    .next-up {
+        width: 700px;
+        background-color: orange;
+    }
+`;
 
 export const BtnsStyle = styled.div`
     margin-bottom: 190px;
@@ -38,35 +66,5 @@ export const BtnsStyle = styled.div`
         button:nth-child(6) {
             background-image: url('/images/colab/sports.png');
         }
-    }
-`;
-
-export const MoreColabStyle = styled.div`
-    width: 1400px;
-    height: 350px;
-    margin: auto;
-    border-radius: 20px;
-    display: flex;
-    .more {
-        color: #fff;
-        box-sizing: border-box;
-        padding-left: 60px;
-        padding-top: 56px;
-        h4 {
-            font-weight: 700;
-            font-size: 40px;
-        }
-        p {
-            font-weight: 400;
-            font-size: 20px;
-        }
-    }
-    .colab-archieve {
-        width: 700px;
-        background-color: skyblue;
-    }
-    .next-up {
-        width: 700px;
-        background-color: orange;
     }
 `;
