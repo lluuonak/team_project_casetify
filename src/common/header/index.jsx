@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import { HeaderStyle, MenuStyle, ModalOverlay } from './style';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { headerActions } from '../../store/modules/headerSlice';
-import { mainActions } from '../../store/modules/mainSlice';
+import { headerActions } from '../../store/modules/common/headerSlice';
+import { mainActions } from '../../store/modules/main/mainSlice';
 
 const Header = () => {
     const [menuState, setMenuState] = useState(false);
@@ -12,7 +12,7 @@ const Header = () => {
     const dispatch = useDispatch();
     const onClickEvent = () => {
         setMenuState(!menuState);
-        dispatch(headerActions.setOpacityState(opacityState));
+        dispatch(headerActions.setOpacityState());
         dispatch(mainActions.openMenu());
     };
 
@@ -26,7 +26,7 @@ const Header = () => {
         return () => {
             document.body.style.overflow = 'auto';
         };
-    }, [menuState]);
+    }, [menuState, opacityState, logoShow]);
     return (
         <>
             <HeaderStyle style={{ opacity: opacityState ? '1' : '0.3' }}>
@@ -45,8 +45,8 @@ const Header = () => {
                             />
                         </svg>
                     </i>
-                    <h2 className="logo" style={{ display: opacityState ? 'block' : 'none' }}>
-                        {logoShow && <img src="/logo.png" alt="" />}
+                    <h2 className="logo" style={{ display: logoShow ? 'block' : 'none' }}>
+                        <img src="/logo.png" alt="" />
                     </h2>
                     <ul className="top-nav">
                         <li>

@@ -1,3 +1,4 @@
+
 import { useNavigate } from 'react-router-dom';
 import { Section2Style } from './style';
 
@@ -37,3 +38,4 @@ const Section2 = () => {
 };
 
 export default Section2;
+

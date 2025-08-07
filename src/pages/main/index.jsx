@@ -1,21 +1,21 @@
 import { useEffect } from 'react';
-import { Section1, Section2 } from '../../components/main';
-import { useDispatch, useSelector } from 'react-redux';
-import { mainActions } from '../../store/modules/mainSlice';
+import { Section1, Section2, Section3, Section4 } from '../../components/main';
+import { useDispatch } from 'react-redux';
+import { mainActions } from '../../store/modules/main/mainSlice';
+import { headerActions } from '../../store/modules/common/headerSlice';
 
 const Main = () => {
     const dispatch = useDispatch();
     useEffect(() => {
         const handleScroll = () => {
             const scrollY = window.scrollY;
-            const main = document.querySelector('main');
-            const mainTop = main?.offsetTop || 0;
 
-            // 예시: main의 100px 이상 내려가면 로고 보여주기
-            if (scrollY > mainTop + 1000) {
+            if (scrollY > 500) {
                 dispatch(mainActions.scollMove(scrollY));
+                dispatch(headerActions.scollOpacity(true));
             } else {
                 dispatch(mainActions.disableLogo());
+                dispatch(headerActions.scollOpacity(false));
             }
         };
 
@@ -29,6 +29,8 @@ const Main = () => {
         <>
             <Section1 />
             <Section2 />
+            <Section3 />
+            <Section4 />
         </>
     );
 };
