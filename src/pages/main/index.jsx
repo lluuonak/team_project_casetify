@@ -1,22 +1,17 @@
 import { useEffect } from 'react';
 import { Section1, Section2, Section3, Section4 } from '../../components/main';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { mainActions } from '../../store/modules/main/mainSlice';
-import { headerActions } from '../../store/modules/common/headerSlice';
 
 const Main = () => {
     const dispatch = useDispatch();
     useEffect(() => {
-        const handleScroll = () => {
-            const scrollY = window.scrollY;
+        // 메인페이지 설정
+        dispatch(mainActions.setMainPage());
 
-            if (scrollY > 500) {
-                dispatch(mainActions.scollMove(scrollY));
-                dispatch(headerActions.scollOpacity(true));
-            } else {
-                dispatch(mainActions.disableLogo());
-                dispatch(headerActions.scollOpacity(false));
-            }
+        const handleScroll = () => {
+            dispatch(mainActions.setScrollY(window.scrollY));
+            dispatch(mainActions.setHeaderShow(window.scrollY));
         };
 
         window.addEventListener('scroll', handleScroll);

@@ -8,9 +8,17 @@ export const headerSlice = createSlice({
     initialState,
     reducers: {
         setOpacityState: (state, action) => {
-            state.opacityState = !state.opacityState;
+            if (action.payload === 0) {
+                console.log(`현재위치 0일때 : ${state.opacityState}`);
+                if (state.opacityState) {
+                    state.opacityState = false;
+                } else {
+                    state.opacityState = true;
+                }
+            }
         },
         scollOpacity: (state, action) => {
+            console.log(action.payload);
             state.opacityState = action.payload;
         },
     },
