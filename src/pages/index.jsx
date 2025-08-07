@@ -1,2 +1,9 @@
-export { default as NotFiles } from "./notfiles";
-export { default as Main } from "./main";
+export { default as NotFiles } from './notfiles';
+export { default as Main } from './main';
+export { default as Colab } from './colab';
+export { default as Animation } from '../components/colab/animation';
+export { default as Art } from '../components/colab/art';
+export { default as Characters } from '../components/colab/characters';
+export { default as Fashion } from '../components/colab/fashion';
+export { default as Movie } from '../components/colab/movie';
+export { default as Sports } from '../components/colab/sports';
