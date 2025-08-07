@@ -110,7 +110,11 @@ const Header = () => {
                         </strong>
                         <ul className="first-contents">
                             <li className="just-img"></li>
-                            <li className="link-to-page"></li>
+                            <li className="link-to-page">
+                                <Link>
+                                    <article></article>
+                                </Link>
+                            </li>
                         </ul>
                     </li>
                     <li className="second">
