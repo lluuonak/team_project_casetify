@@ -1,5 +1,5 @@
 
-const Animation = () => {
+const Sports = () => {
     return (
         <div>
             
@@ -7,4 +7,4 @@ const Animation = () => {
     );
 };
 
-export default Animation;
+export default Sports;
