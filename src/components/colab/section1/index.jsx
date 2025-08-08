@@ -5,7 +5,7 @@ const Section1 = () => {
         <main className="visual-banner"></main>
         <div className="new-product">
             <div className="title">
-                <h2></h2>
+                <h2>dfdfdsa</h2>
                 <p></p>
             </div>
             {/* view more 애프터로 추가 */}

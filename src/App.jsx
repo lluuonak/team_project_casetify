@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import GlobalStyle from './styled/GlobalStyle';
 import Layout from './common/Layout';
 
-import { Main, NotFiles, Colab, Animation, Movie, Sports, Fashion, Characters, Art } from './pages';
+import { Main, NotFiles, Colab, ColabDetail } from './pages';
 
 const App = () => {
     return (
@@ -21,9 +21,9 @@ const App = () => {
                             <Route path="movie" element={<Movie />} />
                             <Route path="sports" element={<Sports />} /> */}
                         </Route>
-                        <Route path="/colabDetail" element={<Colab />}>
-                                <Route path='/:id'/>
-                                {/* 여기서 id가 각 페이지에서 params 이용해서 바뀌며 같은 colabdetail 구조 안에 데이터만 바뀜 */}
+                        <Route path="/colabDetail" element={<ColabDetail />}>
+                            {/* <Route path="/:id" /> */}
+                            {/* 여기서 id가 각 페이지에서 params 이용해서 바뀌며 같은 colabdetail 구조 안에 데이터만 바뀜 */}
                         </Route>
                         <Route path="*" element={<NotFiles />} />
                     </Route>

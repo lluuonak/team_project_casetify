@@ -6,11 +6,14 @@ export const Section3Style = styled.section`
     margin: auto;
     border-radius: 20px;
     display: flex;
+    overflow: hidden;
     .more {
         color: #fff;
         box-sizing: border-box;
         padding-left: 60px;
         padding-top: 56px;
+        flex: 1;
+        transition: all 0.5s ease;
         h4 {
             font-weight: 700;
             font-size: 40px;
@@ -19,13 +22,21 @@ export const Section3Style = styled.section`
             font-weight: 400;
             font-size: 20px;
         }
+        &:hover {
+            flex: 2;
+            /* transition: 0.5s; */
+        }
     }
     .colab-archieve {
         width: 700px;
-        background-image: url('/images/colab/collab-archieve.png');
+        background-image: url('/images/colab/칠가이.png');
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     .next-up {
         width: 700px;
-        background-image: url('/images/colab/next-up.png');
+        background-image: url('/images/colab/텔레토비.png');
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 `;

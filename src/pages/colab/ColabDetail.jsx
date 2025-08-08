@@ -1,5 +1,11 @@
+import { ColabDetailStyle } from './style';
+
 const ColabDetail = () => {
-    return <div></div>;
+    return (
+        <ColabDetailStyle>
+            <h2></h2>
+        </ColabDetailStyle>
+    );
 };
 
 export default ColabDetail;
