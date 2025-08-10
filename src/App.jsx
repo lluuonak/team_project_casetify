@@ -3,6 +3,7 @@ import GlobalStyle from "./styled/GlobalStyle";
 import Layout from "./common/Layout";
 
 import { Main, NotFiles } from "./pages";
+import Ksports from "./pages/Ksports";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Main />} />
+            <Route path="Ksports" element={<Ksports />} />
             <Route path="*" element={<NotFiles />} />
           </Route>
         </Routes>
