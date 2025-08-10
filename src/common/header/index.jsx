@@ -2,18 +2,15 @@ import { Link } from 'react-router-dom';
 import { HeaderStyle, MenuStyle, ModalOverlay } from './style';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { headerActions } from '../../store/modules/common/headerSlice';
 import { mainActions } from '../../store/modules/main/mainSlice';
 
 const Header = () => {
     const [menuState, setMenuState] = useState(false);
-    const { opacityState } = useSelector((state) => state.header);
-    const { logoShow } = useSelector((state) => state.main);
+    const { headerShow } = useSelector((state) => state.main);
     const dispatch = useDispatch();
     const onClickEvent = () => {
         setMenuState(!menuState);
-        dispatch(headerActions.setOpacityState());
-        dispatch(mainActions.openMenu());
+        dispatch(mainActions.clickMenu(menuState));
     };
 
     useEffect(() => {
@@ -26,10 +23,10 @@ const Header = () => {
         return () => {
             document.body.style.overflow = 'auto';
         };
-    }, [menuState, opacityState, logoShow]);
+    }, [menuState, headerShow]);
     return (
         <>
-            <HeaderStyle style={{ opacity: opacityState ? '1' : '0.3' }}>
+            <HeaderStyle style={{ opacity: headerShow ? '1' : '0.3' }}>
                 <div className="inner">
                     <i className="menu-icon" onClick={onClickEvent}>
                         <svg
@@ -45,7 +42,7 @@ const Header = () => {
                             />
                         </svg>
                     </i>
-                    <h2 className="logo" style={{ display: logoShow ? 'block' : 'none' }}>
+                    <h2 className="logo" style={{ display: headerShow ? 'block' : 'none' }}>
                         <img src="/logo.png" alt="" />
                     </h2>
                     <ul className="top-nav">
@@ -111,7 +108,14 @@ const Header = () => {
                             <br />
                             한계를 깨다
                         </strong>
-                        <div className="video"></div>
+                        <ul className="first-contents">
+                            <li className="just-img"></li>
+                            <li className="link-to-page">
+                                <Link>
+                                    <article></article>
+                                </Link>
+                            </li>
+                        </ul>
                     </li>
                     <li className="second">
                         <Link>
@@ -142,7 +146,7 @@ const Header = () => {
                                     backgroundSize: 'cover',
                                 }}
                             >
-                                <p className="menu-title" style={{ width: 220 }}>
+                                <p className="menu-title" style={{ width: 254 }}>
                                     <strong>CASE</strong>
                                     <span>|</span>
                                     <span>Samsung</span>

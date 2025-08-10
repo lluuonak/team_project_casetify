@@ -58,17 +58,48 @@ export const MenuStyle = styled.div`
             strong {
                 display: block;
                 padding-left: 50px;
-                width: 252px;
-                height: 104px;
+                width: 302px;
+                height: 140px;
                 color: #fff;
                 font-family: Inter;
                 font-size: 48px;
                 font-weight: 700;
                 line-height: 70px;
             }
-            .video {
-                width: 1200px;
-                height: 400px;
+            .first-contents {
+                width: 1263px;
+                height: 260px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+                overflow: hidden;
+
+                .just-img {
+                    height: 100%;
+                    flex: 1.2;
+                    background-image: url('/images/header/contents1.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                .link-to-page {
+                    height: 100%;
+                    flex: 0.8;
+                    background-image: url('/images/header/contents2.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    &:hover {
+                        flex: 1.6;
+                        transition: 0.5s;
+                    }
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        article {
+                        }
+                    }
+                }
             }
         }
         .second {
@@ -91,7 +122,7 @@ export const MenuStyle = styled.div`
                 }
                 .menu-title {
                     padding-left: 34px;
-                    width: 187px;
+                    width: 215px;
                     height: 64px;
                     display: flex;
                     align-items: center;
