@@ -1,51 +1,77 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Section2Style = styled.section`
-  width: 1920px;
-  height: 1000px
-  display: flex;
-
-  .images {
+    width: 1920px;
+    height: 1000px;
+    background: #000;
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-
-    .image-wrapper {
-      width: 280px;
-      height: 380px;
-      overflow: hidden;
-      border-radius: 50% / 35%;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
-        .left{}
-        .right{}
+    .images {
+        width: 1600px;
+        flex-direction: column;
+        gap: 30px;
+        position: relative;
+        .image-wrapper-left {
+            position: absolute;
+            top: 5%;
+            left: 10%;
+            width: 380px;
+            height: 600px;
+            overflow: hidden;
+            border-radius: 50% / 35%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+        .image-wrapper-right {
+            position: absolute;
+            top: 30%;
+            left: 38%;
+            width: 380px;
+            height: 600px;
+            overflow: hidden;
+            border-radius: 50% / 35%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+        .image-wrapper-top {
+            width: 100%;
+            position: absolute;
+            right: -60%;
+            top: -20%;
+        }
     }
-  }
 
-  .text {
-    max-width: 400px;
-    color: #fff;
+    .text {
+        position: absolute;
+        right: 0%;
+        bottom: 27%;
+        max-width: 450px;
+        color: #fff;
+        text-align: left;
+        h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: 400;
+            opacity: 0.8;
+        }
 
-    h4 {
-      font-size: 16px;
-      margin-bottom: 10px;
-      font-weight: 400;
-      opacity: 0.8;
+        h2 {
+            font-size: 32px;
+            margin-bottom: 50px;
+            text-align: left;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
     }
-
-    h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.6;
-      opacity: 0.9;
-    }
-  }
 `;

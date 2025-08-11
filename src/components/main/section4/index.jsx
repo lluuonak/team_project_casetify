@@ -26,7 +26,7 @@ const Section4 = () => {
                                 <strong>{strong}</strong>
                                 <span>{span}</span>
                             </div>
-                            <Link to={link} className="more">
+                            <Link to="Ksports" className="more">
                                 MORE
                             </Link>
                         </div>

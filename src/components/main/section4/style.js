@@ -137,9 +137,15 @@ export const ListItemStyle = styled.li`
             height: 351px;
             display: block;
             position: absolute;
-            left: 51%;
+            left: -26%;
             top: 7px;
-            transform: translate(-50%);
+            /* transform: translate(-50%); */
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
         }
         .like-btn {
             right: 23px;
