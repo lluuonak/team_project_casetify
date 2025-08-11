@@ -1,10 +1,12 @@
-import { ColabDetailStyle } from './style';
+import Section1 from '../../components/colabdetail/section1';
+import Section2 from '../../components/colabdetail/section2';
 
 const ColabDetail = () => {
     return (
-        <ColabDetailStyle>
-            <h2></h2>
-        </ColabDetailStyle>
+        <>
+            <Section1 />
+            <Section2 />
+        </>
     );
 };
 
