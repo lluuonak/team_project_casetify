@@ -16,11 +16,11 @@ const App = () => {
                         <Route path="/colab" element={<Colab />}>
                             {/* <Route path="animation" element={<Animation />} />
                             <Route path="art" element={<Art />} />
-                            <Route path="characters" element={<Characters />} />
+                            {/* <Route path="characters" element={<Characters />} />
                             <Route path="fashion" element={<Fashion />} />
                             <Route path="movie" element={<Movie />} />
-                            <Route path="sports" element={<Sports />} /> */}
-                        </Route>
+                            <Route path="sports" element={<Sports />} />
+                            </Route>
                         <Route path="/colabDetail" element={<ColabDetail />}>
                             {/* <Route path="/:id" /> */}
                         </Route>
