@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Section2Style = styled.section`
+    height: 750px;
     .btns {
         width: 1600px;
         margin: auto;

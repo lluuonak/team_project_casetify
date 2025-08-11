@@ -23,7 +23,6 @@ const App = () => {
                         </Route>
                         <Route path="/colabDetail" element={<ColabDetail />}>
                             {/* <Route path="/:id" /> */}
-                            {/* 여기서 id가 각 페이지에서 params 이용해서 바뀌며 같은 colabdetail 구조 안에 데이터만 바뀜 */}
                         </Route>
                         <Route path="*" element={<NotFiles />} />
                     </Route>
