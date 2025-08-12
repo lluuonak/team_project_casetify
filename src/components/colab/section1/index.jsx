@@ -1,6 +1,9 @@
 import { Section1Style } from './style';
+import data from '../../../assets/colabSection1Data';
 
 const Section1 = () => {
+    const { id, title, desc, img, product } = data;
+    
     return (
         <Section1Style>
             <main className="visual-banner">
