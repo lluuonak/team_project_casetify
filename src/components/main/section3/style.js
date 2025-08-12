@@ -22,7 +22,7 @@ export const Section3Style = styled.section`
             bottom: 0;
             width: 400px;
             height: 300px;
-            background: linear-gradient(180deg, rgba(26, 26, 26, 0) 32.46%, #000 70%);
+            background: linear-gradient(180deg, rgba(26, 26, 26, 0) 32.46%, #1a1a1a 70%);
         }
         .right {
             position: absolute;
@@ -30,7 +30,7 @@ export const Section3Style = styled.section`
             bottom: 0;
             width: 400px;
             height: 300px;
-            background: linear-gradient(180deg, rgba(26, 26, 26, 0) 32.46%, #000 70%);
+            background: linear-gradient(180deg, rgba(26, 26, 26, 0) 32.46%, #1a1a1a 70%);
         }
         article {
             position: absolute;
@@ -54,7 +54,7 @@ export const Section3Style = styled.section`
                 strong {
                     text-align: center;
                     display: block;
-                    font-size: 64px;
+                    font-size: 63px;
                     font-weight: 600;
                     line-height: 80px; /* 125% */
                 }

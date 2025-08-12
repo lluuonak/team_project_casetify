@@ -24,12 +24,12 @@ const GlobalStyle = createGlobalStyle`
   section{
     width: 100%;
     height: 1240px;
-    background-color: #000;
+    background-color:#1a1a1a;
     
   }
   a {
     text-decoration: none;
-    color:#333; 
+    color:#a1a1a1; 
   }
   li { list-style:none }
   img { vertical-align: top; }

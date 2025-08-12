@@ -9,7 +9,7 @@ export const Section5Style = styled.section`
         height: 1040px;
         position:absolute;
         top: 0;
-        left: 74px;
+        left: 175px;
         display: flex;
         gap: 40px;
 
@@ -246,7 +246,7 @@ export const Section5Style = styled.section`
         position:absolute;
         width: 1043px;
         height: 383px;
-        left: 51%;
+        left: 56%;
         bottom: 378px;
         transform:translate(-50%);
         z-index: 2;
@@ -255,7 +255,7 @@ export const Section5Style = styled.section`
         width: 600px;
         height: 600px;
         position:absolute;
-        right: -145px;
+        right: -125px;
         bottom: 527px;
         transform:translate(-50%)
     }

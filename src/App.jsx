@@ -21,6 +21,7 @@ const App = () => {
   useEffect(() => {
     dispatch(mainActions.setMainPage(location.pathname));
     dispatch(mainActions.pageDiff());
+    window.scrollTo(0, 0);
   }, [location.pathname, dispatch]);
   return (
     <>
