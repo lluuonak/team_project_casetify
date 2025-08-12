@@ -1,16 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { HeaderStyle, MenuStyle, ModalOverlay } from "./style";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { mainActions } from "../../store/modules/main/mainSlice";
 
 const Header = () => {
-  const [menuState, setMenuState] = useState(false);
   const { headerShow } = useSelector((state) => state.main);
+  const { menuState } = useSelector((state) => state.main);
   const dispatch = useDispatch();
+  const location = useLocation();
   const onClickEvent = () => {
-    setMenuState(!menuState);
-    dispatch(mainActions.clickMenu(menuState));
+    dispatch(mainActions.clickMenu(location.pathname));
   };
 
   useEffect(() => {
@@ -46,7 +46,9 @@ const Header = () => {
             className="logo"
             style={{ display: headerShow ? "block" : "none" }}
           >
-            <img src="/logo.png" alt="" />
+            <Link to="/">
+              <img src="/logo.png" alt="" />
+            </Link>
           </h2>
           <ul className="top-nav">
             <li>

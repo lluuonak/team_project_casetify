@@ -56,6 +56,18 @@ export const Section2Style = styled.section`
                     align-items: center;
                 }
             }
+            &:hover{
+                .more{
+                    .text{
+                    color :  #ff5b37;
+                    }
+                    i{
+                        path{
+                            fill :  #ff5b37;
+                        }
+                    }
+                }
+            }
         }
     }
     .typo {

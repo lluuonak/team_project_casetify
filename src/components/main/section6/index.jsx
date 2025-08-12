@@ -98,7 +98,7 @@ const Section6 = () => {
         >
           {dataList.map((item, idx) => (
             <SwiperSlide style={{ background: "#999" }}>
-              <ReactCardFlip isFlipped={flip[idx]} flipDirection="vertical">
+              <ReactCardFlip isFlipped={flip[idx]} flipDirection="horizontal">
                 <div
                   className="card"
                   onClick={() => toggleFlip(idx)}

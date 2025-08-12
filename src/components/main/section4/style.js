@@ -79,42 +79,7 @@ export const Section4Style = styled.section`
                 display: flex;
                 justify-content: center;
                 gap: 60px;
-                li {
-                    /* width: 240px;
-                    height: 100%;
-                    display: flex;
-                    flex-flow: column;
-                    gap: 20px;
-                    .img-bg {
-                        width: 100%;
-                        height: 370px;
-                        background-color: #fff;
-                        border-radius: 20px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        img {
-                            width: 400px;
-                            height: 384px;
-                            display: block;
-                        }
-                    }
-                    .info {
-                        width: 100%;
-                        height: 51px;
-                        padding-left: 20px;
-                        color: #fff;
-                        strong {
-                            display: block;
-                            font-size: 20px;
-                            font-weight: 500;
-                        }
-                        span {
-                            display: block;
-                            font-size: 16px;
-                        }
-                    } */
-                }
+
             }
         }
     }
@@ -138,12 +103,12 @@ export const ListItemStyle = styled.li`
             display: block;
             position: absolute;
             left: -26%;
-            top: 7px;
+            top: 7px; 
             /* transform: translate(-50%); */
             transition: transform 0.3s ease;
 
             &:hover {
-                transform: scale(1.1);
+                /* transform: scale(1.1); */
                 cursor: pointer;
             }
         }
@@ -153,9 +118,10 @@ export const ListItemStyle = styled.li`
         }
         &:hover{
             img{
-                width: 388px;
-                height: 380px;
-                top: -4px;
+                width: 404px;
+                height: 394px;
+                left: -34%;
+                top: -7px;
             }
         }
     }

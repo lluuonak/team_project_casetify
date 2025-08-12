@@ -2,12 +2,14 @@ import styled from 'styled-components';
 
 export const HeaderStyle = styled.header`
     background: #000;
-    height: 70px;
+    height: 100px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
+    display: flex;
+    align-items:center;
     .inner {
         width: 1800px;
         height: 70px;

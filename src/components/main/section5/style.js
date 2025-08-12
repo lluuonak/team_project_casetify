@@ -11,7 +11,7 @@ export const Section5Style = styled.section`
         top: 0;
         left: 74px;
         display: flex;
-        gap: 60px;
+        gap: 40px;
 
         .left{
             width: 362px;
@@ -19,19 +19,18 @@ export const Section5Style = styled.section`
             display: flex;
             flex-flow:column;
             justify-content:flex-start;
-            gap:40px;
+            gap:20px;
 
             .l-1st{
-
                 width: 360px;
-                height: 260px;
+                height: 210px;
                 background: rgba(136, 136, 136, 0.30);
                 border-radius:20px;
                 position:relative;
                 overflow:hidden;
                 img{
-                    width: 259px;
-                    height: 259px;
+                    width: 260px;
+                    height: 260px;
                     position:absolute;
                     top: 16px;
                     left: 0;
@@ -48,18 +47,18 @@ export const Section5Style = styled.section`
             }
             .l-2nd{
                 width: 280px;
-                height: 200px;
+                height: 160px;
                 margin-left: 79px;
                 background: rgba(136, 136, 136, 0.30);
                 border-radius:20px;
                 position:relative;
                 overflow:hidden;
                 img{
-                    width: 253px;
-                    height: 253px;
+                    width: 200px;
+                    height: 200px;
                     position:absolute;
-                    top:25px;
-                    left: -51px;
+                    top: -18px;
+                    left: -14px;
                 }
                 .text-box{
                     display: flex;
@@ -80,18 +79,18 @@ export const Section5Style = styled.section`
             }
             .l-3rd{
                 width: 320px;
-                height: 200px;
+                height: 170px;
                 background: rgba(136, 136, 136, 0.30);
                 border-radius:20px;
                 overflow:hidden;
                 position:relative;
                 margin-left:42px;
                 img{
-                    width: 252px;
-                    height: 252px;
+                    width: 202px;
+                    height: 202px;
                     position:absolute; 
-                    top: -22px;
-                    left: -25px;
+                    top: -12px;
+                    left: 5px;
                     
                 }
                 .text-box{
@@ -118,21 +117,19 @@ export const Section5Style = styled.section`
             height: 1040px;
             display: flex;
             flex-flow:column;
-            gap:60px;
+            gap:20px;
 
             .r_1st{
                 width: 100%;
-                height: 209px;
+                height: 137px;
                 a{
                     width: 100%;
                     height: 100%;
                     display: flex;
                     flex-flow: column;
-                    gap:40px;
                     .text-area{
                         display: flex;
                         flex-flow:column;
-                        gap:30px;
                         span{
                             display: block;
                             color: #FFF;
@@ -141,10 +138,9 @@ export const Section5Style = styled.section`
                         strong{
                             display: block;
                             color: #FFF;
-                            text-align: center;
-                            font-size: 64px;
+                            text-align: left;
+                            font-size: 40px;
                             font-weight: 600;
-                            line-height: 80px;
                         }
                     }
                     .more{
@@ -163,18 +159,18 @@ export const Section5Style = styled.section`
                 }
             }
             .r_2nd{
-                width: 100%;
-                height: 241px;
+                width: 360px;
+                height: 200px;
                 background: rgba(136, 136, 136, 0.30);
                 border-radius:20px;
                 overflow:hidden;
                 position:relative;
                 img{
                     position:absolute;
-                    left: -40px;
-                    top: -51px;
-                    width: 361px;
-                    height: 361px;
+                    left: -37px;
+                    top: -42px;
+                    width: 280px;
+                    height: 280px;
                 }
                 .text-area{
                     position:absolute;
@@ -190,18 +186,18 @@ export const Section5Style = styled.section`
                 }
             }
             .r_3rd{
-                width: 260px;
-                height: 200px;
+                width: 220px;
+                height: 170px;
                 background: rgba(136, 136, 136, 0.30);
                 border-radius:20px;
                 overflow:hidden;
                 position:relative;
                 img{
                     position:absolute;
-                    top: 20px;
-                    right: 3px;
-                    width: 225px;
-                    height: 225px;
+                    top: -10px;
+                    right: -29px;
+                    width: 205px;
+                    height: 205px;
                 }
                 .text-area{
                     position:absolute;
@@ -217,8 +213,8 @@ export const Section5Style = styled.section`
                 }
             }
             .r_4th{
-                width: 340px;
-                height: 250px;
+                width: 286px;
+                height: 210px;
                 background: rgba(136, 136, 136, 0.30);
                 border-radius:20px;
                 overflow:hidden;
@@ -227,8 +223,8 @@ export const Section5Style = styled.section`
                     position:absolute;
                     top: 32px;
                     left: 0;
-                    width: 355px;
-                    height: 355px;
+                    width: 295px;
+                    height: 295px;
                 }
                 .text-area{
                     position:absolute;
@@ -248,17 +244,19 @@ export const Section5Style = styled.section`
 
     .bg-img1{
         position:absolute;
-        left: 55%;
-        bottom: 112px;
+        width: 1043px;
+        height: 383px;
+        left: 51%;
+        bottom: 378px;
         transform:translate(-50%);
         z-index: 2;
     }
     .bg-img2{
-        width: 900px;
-        height: 900px;
+        width: 600px;
+        height: 600px;
         position:absolute;
-        right: -514px;
-        bottom: 298px;
+        right: -145px;
+        bottom: 527px;
         transform:translate(-50%)
     }
 `;
