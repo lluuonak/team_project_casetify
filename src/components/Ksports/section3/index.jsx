@@ -1,18 +1,21 @@
 import { Section3Style } from './style';
-import KsportsData from './KsportsData';
+import KsportsData from '../../../assets/KsportsData';
 import ListItem from './ListItem';
 
 const Section3 = () => {
     return (
         <Section3Style className="products">
-            <div className="product-text">
-                <p>K-CONTENT CASE</p>
-            </div>
-            <ul className="product-item">
-                {KsportsData[0].data.map((item) => (
-                    <ListItem key={item.id} data={item} parentId={KsportsData[0].id} />
-                ))}
-            </ul>
+            {KsportsData.map((category) => (
+                <div className="product-text" key={category.id}>
+                    <p>{category.strong}</p>
+                    <ul className="product-item" key={category.id}>
+                        {category.data.map((item) => (
+                            <ListItem key={item.id} data={item} parentId={category.id} />
+                        ))}
+                    </ul>
+                </div>
+            ))}
+
             <div className="footer-banner">
                 <img src="../public/images/Ksports/Kbcak1.jpg" alt="" />
             </div>

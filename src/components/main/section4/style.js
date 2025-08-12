@@ -79,7 +79,6 @@ export const Section4Style = styled.section`
                 display: flex;
                 justify-content: center;
                 gap: 60px;
-
             }
         }
     }
@@ -103,7 +102,7 @@ export const ListItemStyle = styled.li`
             display: block;
             position: absolute;
             left: -26%;
-            top: 7px; 
+            top: 7px;
             /* transform: translate(-50%); */
             transition: transform 0.3s ease;
 
@@ -116,8 +115,8 @@ export const ListItemStyle = styled.li`
             right: 23px;
             bottom: 38px;
         }
-        &:hover{
-            img{
+        &:hover {
+            img {
                 width: 404px;
                 height: 394px;
                 left: -34%;

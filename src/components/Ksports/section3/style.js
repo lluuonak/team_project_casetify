@@ -2,27 +2,25 @@ import styled from 'styled-components';
 
 export const Section3Style = styled.section`
     width: 1920px;
-    height: 2000px;
+    height: 3090px;
     margin: 0 auto;
-    background: #000;
+    background: #1a1a1a;
     color: #fff;
     .product-text {
         width: 1600px;
-        height: 80px;
+        height: 100%;
         margin: 0 auto;
-        margin-bottom: 60px;
         p {
-            width: 100%;
             font-size: 48px;
             font-weight: 500;
             font-style: italic;
+            margin-bottom: 60px;
         }
     }
     .product-item {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         width: 1440px;
-        height: 800px;
         gap: 120px;
         row-gap: 70px;
         margin: 0 auto;
@@ -46,6 +44,7 @@ export const ListItemStyle = styled.section`
         background-color: #fff;
         border-radius: 20px;
         position: relative;
+        cursor: pointer;
         img {
             width: 366px;
             height: 351px;
@@ -55,10 +54,13 @@ export const ListItemStyle = styled.section`
             top: 7px;
             /* transform: translate(-50%); */
             transition: transform 0.3s ease;
-
-            &:hover {
-                transform: scale(1.1);
-                cursor: pointer;
+        }
+        &:hover {
+            img {
+                width: 404px;
+                height: 394px;
+                left: -34%;
+                top: -7px;
             }
         }
     }
