@@ -103,6 +103,108 @@ const Header = () => {
         </div>
       </HeaderStyle>
 
+            <MenuStyle className={`${menuState ? 'on' : ''}`}>
+                <ul className="inner">
+                    <li className="first">
+                        <strong>
+                            CASE의
+                            <br />
+                            한계를 깨다
+                        </strong>
+                        <ul className="first-contents">
+                            <li className="just-img"></li>
+                            <li className="link-to-page">
+                                <Link>
+                                    <article></article>
+                                </Link>
+                            </li>
+                        </ul>
+                    </li>
+                    <li className="second">
+                        <Link>
+                            <div className="w600">
+                                <p className="menu-title">
+                                    <strong>CASE</strong>
+                                    <span>|</span>
+                                    <span>Apple</span>
+                                    <img
+                                        src="/images/header/header1.png"
+                                        alt=""
+                                        style={{
+                                            width: 245,
+                                            height: 260,
+                                            position: 'absolute',
+                                            right: 50,
+                                        }}
+                                    />
+                                </p>
+                            </div>
+                        </Link>
+                        <Link>
+                            <div
+                                className="w600"
+                                style={{
+                                    backgroundImage: `url('/images/header/header2.png')`,
+                                    backgroundRepeat: 'no-repeat',
+                                    backgroundSize: 'cover',
+                                }}
+                            >
+                                <p className="menu-title" style={{ width: 254 }}>
+                                    <strong>CASE</strong>
+                                    <span>|</span>
+                                    <span>Samsung</span>
+                                </p>
+                            </div>
+                        </Link>
+                        <Link>
+                            <div
+                                className="w400"
+                                style={{
+                                    backgroundImage: `url('/images/header/header3.png')`,
+                                    backgroundRepeat: 'no-repeat',
+                                    backgroundSize: 'cover',
+                                }}
+                            >
+                                <p className="menu-title" style={{ justifyContent: 'flex-start' }}>
+                                    <strong>ACC</strong>
+                                    <span></span>
+                                </p>
+                            </div>
+                        </Link>
+                    </li>
+                    <li className="third">
+                        <div className="title-area">
+                            <strong>K-Content Lineup</strong>
+                        </div>
+                        <ul className="third-menus">
+                            <li
+                                style={{
+                                    backgroundImage: `url('/images/header/K1.jpg')`,
+                                }}
+                            >
+                                <Link
+                                    to="Ksports"
+                                    onClick={() => {
+                                        window.scrollTo({ top: 0, behavior: 'instant' });
+                                    }}
+                                >
+                                    K-Sports
+                                </Link>
+                            </li>
+                            <li style={{ backgroundImage: `url('/images/header/K2.jpg')` }}>
+                                <Link>K-Content</Link>
+                            </li>
+                            <li style={{ backgroundImage: `url('/images/header/k3.jpg')` }}>
+                                <Link>K-Art</Link>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </MenuStyle>
+            {menuState && <ModalOverlay />}
+        </>
+    );
+=======
       <MenuStyle className={`${menuState ? "on" : ""}`}>
         <ul className="inner">
           <li className="first">
@@ -219,6 +321,7 @@ const Header = () => {
       {menuState && <ModalOverlay />}
     </>
   );
+
 };
 
 export default Header;
