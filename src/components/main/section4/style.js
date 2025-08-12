@@ -145,6 +145,13 @@ export const ListItemStyle = styled.li`
             right: 23px;
             bottom: 38px;
         }
+        &:hover{
+            img{
+                width: 388px;
+                height: 380px;
+                top: -4px;
+            }
+        }
     }
     .info {
         width: 100%;

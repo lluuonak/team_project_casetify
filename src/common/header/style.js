@@ -253,7 +253,7 @@ export const MenuStyle = styled.div`
                 }
             }
         }
-    }
+    
     &.on {
         left: 0;
         display: block;
