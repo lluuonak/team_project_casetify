@@ -1,23 +1,29 @@
 import styled from 'styled-components';
 
 export const Section2Style = styled.section`
+    height: 750px;
     .btns {
         width: 1600px;
         margin: auto;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 50px;
-        button {
+        li {
             width: 500px;
             height: 350px;
             border-radius: 22px;
             position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             h4 {
                 color: #fff;
                 font-weight: 500;
                 font-size: 48px;
                 position: relative;
+                width: auto;
                 z-index: 10;
+                text-align: center;
             }
             &:after {
                 content: '';
@@ -42,7 +48,8 @@ export const Section2Style = styled.section`
             }
             &:nth-child(2) {
                 background-image: url('/images/colab/art.png');
-                background-size: 101%;
+                background-size: 102%;
+                background-position: 0 -2px;
             }
             &:nth-child(3) {
                 background-image: url('/images/colab/characters.png');
@@ -57,35 +64,5 @@ export const Section2Style = styled.section`
                 background-image: url('/images/colab/sports.png');
             }
         }
-    }
-`;
-
-export const MoreColabStyle = styled.div`
-    width: 1400px;
-    height: 350px;
-    margin: auto;
-    border-radius: 20px;
-    display: flex;
-    .more {
-        color: #fff;
-        box-sizing: border-box;
-        padding-left: 60px;
-        padding-top: 56px;
-        h4 {
-            font-weight: 700;
-            font-size: 40px;
-        }
-        p {
-            font-weight: 400;
-            font-size: 20px;
-        }
-    }
-    .colab-archieve {
-        width: 700px;
-        background-color: skyblue;
-    }
-    .next-up {
-        width: 700px;
-        background-color: orange;
     }
 `;

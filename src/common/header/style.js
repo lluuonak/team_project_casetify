@@ -88,17 +88,72 @@ export const MenuStyle = styled.div`
                     background-image: url('/images/header/contents2.jpg');
                     background-repeat: no-repeat;
                     background-size: cover;
+                    position:relative;
+                    a{
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+
+                
+                        article{
+                            position:absolute;
+                            left: 40px;
+                            bottom: 40px;
+                            width: 223px;
+                            height:100px;
+                            display: flex;
+                            flex-flow:column;
+                            color : #fff;
+                            strong{
+                                display: block;
+                                font-family: Inter;
+                                font-size: 46px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 70px; /* 152.174% */
+                                padding :0;
+                            }
+                            span{
+                                display: block;
+                                font-family: Pretendard;
+                                font-size: 20px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 28px; /* 140% */
+                            }
+
+                        }
+                        .arrow{
+                            position:absolute;
+                            right: 40px;
+                            bottom: 40px;
+                            width: 70px;
+                            height: 70px;
+                            display: flex;
+                            justify-content:center;
+                            align-items:center;
+                            border-radius: 20px;
+                            border: 1px solid #FFF;
+                            transition : 0.5s;
+
+                        }
+                    }
                     &:hover {
                         flex: 1.6;
                         transition: 0.5s;
-                    }
-                    a {
-                        width: 100%;
-                        height: 100%;
-                        position: relative;
-                        article {
+                        
+                            a{
+                                .arrow{
+                                    border-radius:100%;
+                                    
+                                    
+                                }
+                            
+                            }
+
                         }
                     }
+                    
                 }
             }
         }
@@ -198,7 +253,7 @@ export const MenuStyle = styled.div`
                 }
             }
         }
-    }
+    
     &.on {
         left: 0;
         display: block;

@@ -1,5 +1,5 @@
 
-const Sports = () => {
+const PhotoList = () => {
     return (
         <div>
             
@@ -7,4 +7,4 @@ const Sports = () => {
     );
 };
 
-export default Sports;
+export default PhotoList;
