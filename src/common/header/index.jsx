@@ -179,7 +179,14 @@ const Header = () => {
                                     backgroundImage: `url('/images/header/K1.jpg')`,
                                 }}
                             >
-                                <Link to='Ksports'>K-Sports</Link>
+                                <Link
+                                    to="Ksports"
+                                    onClick={() => {
+                                        window.scrollTo({ top: 0, behavior: 'instant' });
+                                    }}
+                                >
+                                    K-Sports
+                                </Link>
                             </li>
                             <li style={{ backgroundImage: `url('/images/header/K2.jpg')` }}>
                                 <Link>K-Content</Link>

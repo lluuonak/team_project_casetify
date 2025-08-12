@@ -30,7 +30,7 @@ export const Section3Style = styled.section`
     .footer-banner {
         width: 1920px;
         height: 700px;
-        z-index: -1;
+        padding-top: 200px;
     }
 `;
 

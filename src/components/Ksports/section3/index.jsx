@@ -14,7 +14,7 @@ const Section3 = () => {
                 ))}
             </ul>
             <div className="footer-banner">
-                <img src="../public/images/Ksports/Kback1.jpg" alt="" />
+                <img src="../public/images/Ksports/Kbcak1.jpg" alt="" />
             </div>
         </Section3Style>
     );
