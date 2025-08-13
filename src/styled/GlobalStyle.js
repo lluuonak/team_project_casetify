@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing:border-box;
   }
   body {
+    height: 100%;
     font-size: 16px;
     line-height: 1.6;
     /* font-family: 'Noto Sans KR', sans-serif; */
@@ -25,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 1240px;
     background-color:#1a1a1a;
+    overflow:visible;
     
   }
   a {
