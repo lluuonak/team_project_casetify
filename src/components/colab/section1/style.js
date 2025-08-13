@@ -46,10 +46,33 @@ export const Section1Style = styled.section`
                 }
             }
             .new-product-list {
-                height: 484px;
-                background-color: rgb(44, 111, 255);
                 margin-top: 40px;
+                display: flex;
+                gap: 80px;
+                li {
+                    width: 240px;
+                    height: 370px;
+                    background-color: #fff;
+                    border-radius: 20px;
+                }
             }
+        }
+
+        /* 텍스트가 사라질 때의 상태 */
+        .slide-out {
+            transform: translateY(16px);
+            opacity: 0;
+        }
+
+        /* 텍스트가 나타날 때의 상태 */
+        .slide-in {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* 전환 효과를 부드럽게 만들어주는 속성 */
+        .text-transition {
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
         }
     }
 `;

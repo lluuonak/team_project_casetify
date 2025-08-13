@@ -16,6 +16,7 @@ export const Section2Style = styled.section`
             display: flex;
             align-items: center;
             justify-content: center;
+            /* cursor: pointer; */
             h4 {
                 color: #fff;
                 font-weight: 500;
