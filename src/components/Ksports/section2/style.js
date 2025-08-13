@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Section2Style = styled.section`
     width: 1920px;
     height: 1000px;
+    margin: 0 auto;
     background: #1a1a1a;
     display: flex;
     .images {

@@ -2,33 +2,79 @@ import styled from 'styled-components';
 
 export const Section3Style = styled.section`
     width: 1920px;
-    height: 3090px;
     margin: 0 auto;
-    background: #1a1a1a;
+    min-height: auto;
+    height: auto;
+    background-color: #1a1a1a;
     color: #fff;
-    .product-text {
+    padding: 80px 0;
+    overflow: visible;
+    .category-block {
+        margin-bottom: 80px;
+    }
+
+    .category-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         width: 1600px;
-        height: 100%;
-        margin: 0 auto;
+        margin: 0 auto 40px;
+
         p {
             font-size: 48px;
             font-weight: 500;
             font-style: italic;
-            margin-bottom: 60px;
+            margin: 0;
+        }
+
+        .toggle-btn {
+            background: none;
+            /* border: 2px solid #fff; */
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            cursor: pointer;
+            line-height: 44px;
+            text-align: center;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            svg {
+                width: 36px;
+                height: 36px;
+                fill: #fff;
+            }
+        }
+
+        .toggle-btn:hover {
+            /* background-color: #fff; */
+            svg {
+                width: 36px;
+                height: 36px;
+                fill: #000;
+            }
         }
     }
+
+    .category-content {
+        overflow: hidden;
+    }
+
     .product-item {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         width: 1440px;
         gap: 120px;
-        row-gap: 70px;
+        row-gap: 80px;
         margin: 0 auto;
     }
+
     .footer-banner {
         width: 1920px;
-        height: 700px;
-        padding-top: 200px;
+        height: 620px;
+        /* padding-top: 120px; */
     }
 `;
 
@@ -66,7 +112,7 @@ export const ListItemStyle = styled.section`
     }
     .info {
         width: 100%;
-        height: 51px;
+        height: 60px;
         color: #fff;
         .name {
             display: block;
