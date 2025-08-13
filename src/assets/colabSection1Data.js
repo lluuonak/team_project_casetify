@@ -38,11 +38,11 @@ export default [
         desc: '“보헤미안 감성, 당신의 디바이스에 입히다 ”',
         img: './images/colab/ba&sh_visual.jpg',
         product: [
-            { id: 1, img: '', name: '', price: '' },
+            { id: 1, img: './images/colab/ba&sh_1.jpg', name: 'ba&sh Looks Gorgeous on you! Case', price: '89,000' },
 
-            { id: 2, img: '', name: '', price: '' },
-            { id: 3, img: '', name: '', price: '' },
-            { id: 4, img: '', name: '', price: '' },
+            { id: 2, img: './images/colab/ba&sh_2.jpg', name: 'ba&sh Collage Frame Case', price: '89,000' },
+            { id: 3, img: './images/colab/ba&sh_3.jpg', name: 'ba&sh Serpent Snappy Wallet', price: '58,000' },
+            { id: 4, img: './images/colab/ba&sh_4.jpg', name: 'ba&sh Aure Line Case', price: '108,000' },
         ],
     },
     {
@@ -51,11 +51,11 @@ export default [
         desc: '“거리의 아이콘, STAPLE의 도시화 ”',
         img: './images/colab/staple_visual.jpg',
         product: [
-            { id: 1, img: '', name: '', price: '' },
+            { id: 1, img: './images/colab/STAPLE_1.webp', name: 'STAPLE Graffiti Logo Case', price: '89,000' },
 
-            { id: 2, img: '', name: '', price: '' },
-            { id: 3, img: '', name: '', price: '' },
-            { id: 4, img: '', name: '', price: '' },
+            { id: 2, img: './images/colab/STAPLE_2.webp', name: 'STAPLE Pigeon "Poop" Watch Band', price: '64,000' },
+            { id: 3, img: './images/colab/STAPLE_3.webp', name: 'STAPLE Pigeon Postage Case', price: '89,000' },
+            { id: 4, img: './images/colab/STAPLE_4.webp', name: 'STAPLE Logo Snappy Cardholder Stand', price: '51,000' },
         ],
     },
 ];

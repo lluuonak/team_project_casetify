@@ -1,82 +1,83 @@
-import { Section1Style } from './style';
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 import data from '../../../assets/colabSection1Data';
-import { useState, useEffect } from 'react';
+import { Section1Style } from './style';
 
-const Section1 = () => {
+export default function CollabShowcase() {
     const [currentSetIndex, setCurrentSetIndex] = useState(0);
-    const [isTextAnimating, setIsTextAnimating] = useState(false);
-    const [isBoxAnimating, setIsBoxAnimating] = useState(false);
+    const [isTextAnimating, setIsTextAnimating] = useState(true);
+    const [isBoxAnimating, setIsBoxAnimating] = useState(true);
 
     useEffect(() => {
+        // 첫 등장 애니메이션 (컴포넌트 마운트 시)
+        const initialTimeout = setTimeout(() => {
+            setIsTextAnimating(false); // 텍스트 스윽 올라오며 등장
+        }, 100);
+
+        const initialBoxTimeout = setTimeout(() => {
+            setIsBoxAnimating(false); // 0.6초 후 박스 스윽 올라오며 등장
+        }, 600);
+
         const cycleDuration = 5000; // 5초 주기
 
-        const mainInterval = setInterval(() => {
-            // 1. 텍스트 즉시 등장 (0초)
-            setIsTextAnimating(true);
-            setTimeout(() => {
-                setIsTextAnimating(false);
-            }, 100); // 빠른 등장
-
-            // 2. 0.6초 후 박스 등장
-            setTimeout(() => {
-                setIsBoxAnimating(true);
-                setTimeout(() => {
-                    setIsBoxAnimating(false);
-                }, 100); // 빠른 등장
-            }, 600);
-
-            // 3. 4초 후 텍스트와 박스 동시에 사라짐
-            setTimeout(() => {
+        // 첫 사이클은 4초 후에 시작 (첫 등장 후)
+        const firstCycleTimeout = setTimeout(() => {
+            const mainInterval = setInterval(() => {
+                // 1. 현재 컨텐츠 사라짐 (4초 후)
                 setIsTextAnimating(true);
                 setIsBoxAnimating(true);
 
-                // 사라진 후 다음 세트로 변경
+                // 2. 다음 세트로 변경 (0.5초 후)
                 setTimeout(() => {
                     setCurrentSetIndex((prev) => (prev + 1) % data.length);
                 }, 500);
-            }, 4000);
-        }, cycleDuration);
 
-        return () => clearInterval(mainInterval);
+                // 3. 새로운 텍스트 등장 (1초 후)
+                setTimeout(() => {
+                    setIsTextAnimating(false);
+                }, 1000);
+
+                // 4. 새로운 박스 등장 (1.6초 후 = 1초 + 0.6초)
+                setTimeout(() => {
+                    setIsBoxAnimating(false);
+                }, 1600);
+            }, cycleDuration);
+
+            return () => clearInterval(mainInterval);
+        }, 4000);
+
+        return () => {
+            clearTimeout(initialTimeout);
+            clearTimeout(initialBoxTimeout);
+            clearTimeout(firstCycleTimeout);
+        };
     }, []);
-
-    // const animationClass = isAnimate ? 'slide-out' : 'slide-in';
 
     return (
         <Section1Style>
-            <div className="flex-1 flex flex-col items-center justify-center mb-12">
-                <div
-                    className={`text-center transition-all duration-500 ease-in-out transform ${
-                        isTextAnimating ? 'translate-y-16 opacity-0' : 'translate-y-0 opacity-100'
-                    }`}
-                >
-                    <h1 className="text-white text-6xl font-semibold mb-6">
-                        {data[currentSetIndex].title}
-                    </h1>
-                    <p className="text-white text-2xl font-medium opacity-80">
-                        {data[currentSetIndex].desc}
-                    </p>
+            {/* 텍스트 영역 */}
+            <div className="title-wrap">
+                <div className="title-box" isAnimating={isTextAnimating}>
+                    <h2>{data[currentSetIndex].title}</h2>
+                    <p>{data[currentSetIndex].desc}</p>
+                </div>
+            </div>
+
+            {/* 박스 영역 */}
+            <div className="product-wrap">
+                <div className="product-box" isAnimating={isBoxAnimating}>
+                    {data[currentSetIndex].product.map((product) => (
+                        <div className=".product-box-each" key={product.id}>
+                            <img src={product.img} alt={product.name} />
+
+                            <div className="product-info">
+                                <h3>{product.name}</h3>
+                                <p>{product.price}</p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </Section1Style>
-        //     <Section1Style>
-        //     <main className="visual-banner">
-        //         {/* 비주얼 배너 아래 정보 다 api로 map ? 이거 모듈 사용해서 상태변경 타이머 ...*/}
-        //         <div className="visual-image">
-        //             <img src="./images/colab/치이카와_visual.jpg" alt="" />
-        //             <div class="gradient-overlay"></div>
-        //         </div>
-        //         <div className="new-product">
-        //             <div className="title">
-        //                 <h2>Chiikawa × CASETiFY</h2>
-        //                 <p>“귀여움과 실용 사이, Chiikawa의 여름 휴가 ”</p>
-        //             </div>
-        //             {/* view more 애프터로 추가 */}
-        //             <div className="new-product-list">{/* 컴포넌트 map */}</div>
-        //         </div>
-        //     </main>
-        // </Section1Style>
     );
-};
-
-export default Section1;
+}

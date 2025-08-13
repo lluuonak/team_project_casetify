@@ -1,78 +1,91 @@
 import styled from 'styled-components';
 
-export const Section1Style = styled.section`
-    height: 1490px;
-    .visual-banner {
-        position: relative;
-        .visual-image {
-            width: 100%;
-            min-width: 1920px;
-            height: 1490px;
-            /* z-index: 0; */
-            position: relative;
-            img {
+export const Section1Style = styled.div`
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    .title-wrap {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 48px;
+        .title-box {
+            text-align: center;
+            transition: all 0.5s ease-in-out;
+            transform: ${(props) => (props.isAnimating ? 'translateY(64px)' : 'translateY(0)')};
+            opacity: ${(props) => (props.isAnimating ? '0' : '1')};
+            h2 {
+                color: white;
+                font-size: 56px;
+                font-weight: 700;
+                /* margin-bottom: 24px; */
             }
-            /* 이미지 bg로 띄우면 좋은데 상태관리 style component에 적용할 수 있나 */
-            .gradient-overlay {
-                position: absolute;
-                bottom: 410px;
-                left: 0;
-                width: 100%;
-                height: 60%;
-                background: linear-gradient(transparent, rgba(0, 0, 0, 1));
-                /* pointer-events: none; */
+            p {
+                color: white;
+                font-size: 24px;
+                font-weight: 600;
             }
         }
-        .new-product {
-            width: 1200px;
-            margin: auto;
-            position: absolute;
-            z-index: 10;
-            top: 700px;
-            left: 50%;
-            transform: translateX(-50%);
-            .title {
-                z-index: 10;
-                color: #fff;
-                h2 {
-                    font-size: 56px;
-                    font-weight: 700;
-                    text-align: left;
-                    margin-bottom: 0;
-                }
-                p {
-                    font-size: 24px;
-                    font-weight: 600;
-                }
-            }
-            .new-product-list {
-                margin-top: 40px;
+    }
+    .product-wrap {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .product-box {
+            display: flex;
+            gap: 80px;
+            transition: all 0.5s ease-in-out;
+            transform: ${(props) => (props.isAnimating ? 'translateY(64px)' : 'translateY(0)')};
+            opacity: ${(props) => (props.isAnimating ? '0' : '1')};
+            .product-box-each {
+                width: 240px;
+                height: 370px;
+                background-color: white;
                 display: flex;
-                gap: 80px;
-                li {
-                    width: 240px;
+                flex-direction: column;
+                justify-content: flex-end;
+                padding: 24px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 8px;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    object-fit: contain;
+                    object-position: center;
+                    width: 370px;
                     height: 370px;
-                    background-color: #fff;
-                    border-radius: 20px;
+                }
+                .product-info {
+                    background-color: rgba(0, 0, 0, 0.75);
+                    padding: 16px;
+                    border-radius: 8px;
+                    position: relative;
+                    z-index: 10;
+                    h3 {
+                        color: white;
+                        font-size: 0.875rem;
+                        font-weight: 600;
+                        margin-bottom: 8px;
+                        line-height: 1.4;
+                    }
+                    p {
+                        color: white;
+                        font-size: 1.125rem;
+                        font-weight: 700;
+                    }
                 }
             }
-        }
-
-        /* 텍스트가 사라질 때의 상태 */
-        .slide-out {
-            transform: translateY(16px);
-            opacity: 0;
-        }
-
-        /* 텍스트가 나타날 때의 상태 */
-        .slide-in {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        /* 전환 효과를 부드럽게 만들어주는 속성 */
-        .text-transition {
-            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
         }
     }
 `;

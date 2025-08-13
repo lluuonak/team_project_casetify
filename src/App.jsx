@@ -17,13 +17,11 @@ const App = () => {
 
                         <Route path="/Ksports" element={<Ksports />} />
                         <Route path="/colab" element={<Colab />} />
-                        {/* 
+                        <Route path="/colabdetail/:id" element={<ColabDetail />} />
                         <Route
                             path="/colabdetail"
                             element={<Navigate to="/colabdetail/animation" />}
                         />
-                        <Route path="/colabdetail/:id" element={<ColabDetail />} />
-                         */}
                         <Route path="*" element={<NotFiles />} />
                     </Route>
                 </Routes>

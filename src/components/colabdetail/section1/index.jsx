@@ -1,9 +1,13 @@
-const Section1 = () => {
+import { Section1Style } from './style';
+
+const Section1 = ({ data }) => {
     return (
-        <div>
-            <h2>title</h2>
-            {/* ul li? 플러그인 삽입 */}
-        </div>
+        <Section1Style>
+            <h2>{data.title.toUpperCase()}</h2>
+            <ul className="photo-list">
+                <li></li>
+            </ul>
+        </Section1Style>
     );
 };
 

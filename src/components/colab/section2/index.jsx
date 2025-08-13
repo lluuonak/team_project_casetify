@@ -9,41 +9,37 @@ const Section2 = () => {
     return (
         <Section2Style>
             <ul className="btns">
-                {/* <button onClick={() => onGo('animation')}>
-                    <h4>Animation</h4>
-                </button>*/}
-                {/* colabdetail/:id params 연결 - api 만들기 - 아래 싹 다 고쳐야함 */}
                 <li>
-                    <Link to="/colabdetail/Animation">
+                    <Link to="/colabdetail/animation">
                         <h4>Animation</h4>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/colabdetail/Art">
+                    <Link to="/colabdetail/art">
                         <h4>Art</h4>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/colabdetail/Characters">
+                    <Link to="/colabdetail/characters">
                         <h4>Characters</h4>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/colabdetail/Movies">
+                    <Link to="/colabdetail/movies">
                         <h4>
                             Movies &<br /> Entertainment
                         </h4>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/colabdetail/Fashion">
+                    <Link to="/colabdetail/fashion">
                         <h4>
                             Fashion &<br /> Lifestyle
                         </h4>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/colabdetail/Sports">
+                    <Link to="/colabdetail/sports">
                         <h4>Sports</h4>
                     </Link>
                 </li>
