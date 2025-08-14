@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Section3Style = styled.section`
-    height: 740px;
+    height: auto;
     padding-top: 190px;
     box-sizing: border-box;
     .colab-all {
@@ -12,6 +12,7 @@ export const Section3Style = styled.section`
         display: flex;
         overflow: hidden;
         /* background-color: #000; */
+        margin-bottom: 190px;
         .more {
             color: #fff;
             box-sizing: border-box;
@@ -43,6 +44,23 @@ export const Section3Style = styled.section`
             background-image: url('/images/colab/텔레토비.png');
             background-repeat: no-repeat;
             background-size: cover;
+        }
+    }
+
+    .text {
+        width: 1698px;
+        height: 806px;
+        margin: auto;
+        line-height: 1.2;
+        strong {
+            display: block;
+            text-align: left;
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: #888;
+            color: transparent; /* 글씨 내부 색상 투명 */
+            font-size: 155px;
+            font-weight: 500;
+            text-transform: uppercase;
         }
     }
 `;

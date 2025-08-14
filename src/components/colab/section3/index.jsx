@@ -18,6 +18,10 @@ const Section3 = () => {
                     <p>다가올 콜라보를 미리 엿보세요</p>
                 </div>
             </div>
+            <div className="text">
+                <strong>No right answer.</strong>
+                <strong>Just your own way.</strong>
+            </div>
         </Section3Style>
     );
 };

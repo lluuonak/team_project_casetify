@@ -5,30 +5,46 @@ const Section2 = ({ data }) => {
     return (
         <>
             <Section2Style>
-                <span>
-                    Co-Lab &gt; {title.toUpperCase()} &gt; {category[0].title}
-                </span>
-                <h3>{category[0].title}</h3>
-                <ul className="category-list">
-                    <li>기종</li>
-                    <li>시리즈</li>
-                    <li>Co-Lab</li>
-                    <li>커스텀</li>
-                    <li>단색 컬러케이스</li>
-                </ul>
-                <ul className="product-list">
-                    {product.map(({ id, title, price, img }) => (
-                        <li key={id}>
-                            <div className="img-bg">
-                                <img src={img} alt={title} />
-                            </div>
-                            <div className="info">
-                                <span>{title}</span>
-                                <span>₩{price}</span>
-                            </div>
+                <div className="product-inner">
+                    <span>
+                        Co-Lab &gt; {title.toUpperCase()} &gt; {category[0].title}
+                    </span>
+                    <h3>{category[0].title}</h3>
+                    <ul className="category-list">
+                        <li>
+                            <span>타입</span>
+                            <ul className="cate type">
+                                <li>Apple</li>
+                                <li>Samsung</li>
+                                <li>ACC</li>
+                            </ul>
                         </li>
-                    ))}
-                </ul>
+                        <li>
+                            <span>시리즈</span>
+                            <ul className="cate series">
+                                <li>바운스</li>
+                                <li>임팩트</li>
+                                <li>링</li>
+                                <li>미러</li>
+                                <li>BioVeg & 페블 레더</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul className="product-list">
+                        {product.map(({ id, title, price, img }) => (
+                            <li key={id}>
+                                <div className="img-bg">
+                                    <img src={img} alt={title} />
+                                </div>
+                                <div className="info">
+                                    <span>{title}</span>
+                                    <span>₩{price}</span>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                    <span className="view-more">VIEW MORE</span>
+                </div>
             </Section2Style>
         </>
     );
