@@ -7,6 +7,29 @@ export const Section2Style = styled.section`
     .product-inner {
         padding-bottom: 115px;
         box-sizing: border-box;
+        position: relative;
+        .line {
+            width: 1000px;
+            height: 8px;
+            background-color: #d9d9d9;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -120px;
+            border-radius: 50px;
+        }
+        /* &::before {
+            content: '';
+            display: block;
+            width: 1000px;
+            height: 8px;
+            background-color: #d9d9d9;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -120px;
+            border-radius: 50px;
+        } */
         span {
             font-size: 20px;
             color: #fff;

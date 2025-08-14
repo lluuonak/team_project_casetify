@@ -6,6 +6,7 @@ const Section2 = ({ data }) => {
         <>
             <Section2Style>
                 <div className="product-inner">
+                    <div className="line"></div>
                     <span>
                         Co-Lab &gt; {title.toUpperCase()} &gt; {category[0].title}
                     </span>
