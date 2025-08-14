@@ -2,6 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
     loginState: false,
     joinState: false,
+    isLogin: false,
+    user: {},
 };
 
 export const authSlice = createSlice({
@@ -13,6 +15,12 @@ export const authSlice = createSlice({
         },
         setJoinModalState: (state, action) => {
             state.joinState = action.payload;
+        },
+        setLoginState: (state, action) => {
+            state.isLogin = action.payload;
+        },
+        setUserInfo: (state, action) => {
+            state.user = action.payload;
         },
     },
 });

@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { LoginStyle, ModalOverlay } from './style';
 import { Link } from 'react-router-dom';
-import { ValidateLogin } from '../../utils/Login';
+import { fnLogin, ValidateLogin } from '../../utils/Login';
 import { useDispatch, useSelector } from 'react-redux';
 import { authActions } from '../../store/modules/common/authSlice';
 
@@ -58,7 +58,15 @@ const Login = () => {
                 pwdRef.current.focus();
                 return;
             case 0:
-                alert('성공');
+                // 로컬스토리지에서 정보 확인
+                const loginResult = fnLogin(formData);
+                if (!loginResult.success) {
+                    alert(loginResult.message);
+                }
+                // state에 회원정보 저장 + login 상태 변경 + 로그인 창 닫기
+                dispatch(authActions.setUserInfo(loginResult.user));
+                dispatch(authActions.setLoginState(true));
+                dispatch(authActions.setLoginModalState(false));
                 return;
         }
     };
@@ -88,6 +96,7 @@ const Login = () => {
                                 placeholder="example@example.com"
                                 onChange={emailInputOnChange}
                                 onKeyDown={onKeyDown}
+                                autoComplete="off"
                             />
                             {!emailState && <span>사용할수 없는 아이디 입니다</span>}
                         </div>

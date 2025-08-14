@@ -4,6 +4,7 @@ import '@fontsource/inter/400.css'; // 일반 두께
 import '@fontsource/inter/700.css'; // 볼드 두께
 import 'pretendard/dist/web/variable/pretendardvariable.css';
 import '@fontsource/prata';
+import 'react-tooltip/dist/react-tooltip.css';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}

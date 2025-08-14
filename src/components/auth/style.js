@@ -22,6 +22,11 @@ export const JoinStyle = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .react-tooltip-arrow {
+        left: 2px !important;
+        top: -4px !important;
+    }
     .inner {
         width: 500px;
         height: 621px;
@@ -29,7 +34,7 @@ export const JoinStyle = styled.div`
         flex-flow: column;
         align-items: center;
         justify-content: center;
-        gap: 20px;
+        gap: 40px;
         .logo {
             width: 200px;
             height: 70px;
@@ -63,6 +68,7 @@ export const JoinStyle = styled.div`
             width: 460px;
             display: flex;
             flex-flow: column;
+            align-items: center;
             gap: 40px;
             input {
                 width: 360px;
@@ -91,25 +97,6 @@ export const JoinStyle = styled.div`
                 &:focus {
                     outline: none;
                     border: 1px solid #fff;
-                }
-            }
-            .email-input {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 11px;
-                .duplicate-btn {
-                    cursor: pointer;
-                    width: 89px;
-                    height: 25px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    color: #ff5b37;
-                    font-size: 14px;
-                    font-weight: 400;
-                    border-radius: 50px;
-                    border: 1px solid #ff5b37;
                 }
             }
             .birth {
@@ -150,6 +137,23 @@ export const JoinStyle = styled.div`
                 .day {
                     width: 60px;
                 }
+            }
+        }
+        .join-btn {
+            width: 280px;
+            height: 50px;
+            border-radius: 20px;
+            background: rgba(136, 136, 136, 0.2);
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 50px; /* 125% */
+            text-transform: uppercase;
+            box-sizing: border-box;
+            &.active {
+                border: 1px solid #fff;
+                color: #fff;
+                background-color: #1a1a1a;
             }
         }
     }

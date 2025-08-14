@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { HeaderStyle, MenuStyle, ModalOverlay } from './style';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -10,14 +10,20 @@ import { authActions } from '../../store/modules/common/authSlice';
 const Header = () => {
     const { headerShow } = useSelector((state) => state.main);
     const { menuState } = useSelector((state) => state.main);
-    const { loginState, joinState } = useSelector((state) => state.auth);
+
+    const { loginState, joinState, isLogin } = useSelector((state) => state.auth);
+    const navigator = useNavigate();
     const dispatch = useDispatch();
     const location = useLocation();
     const onClickEvent = () => {
         dispatch(mainActions.clickMenu(location.pathname));
     };
     const loginClick = () => {
-        dispatch(authActions.setLoginModalState(true));
+        if (!isLogin) {
+            dispatch(authActions.setLoginModalState(true));
+        } else {
+            navigator('/mypage');
+        }
     };
 
     useEffect(() => {
