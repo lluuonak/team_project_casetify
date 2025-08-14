@@ -62,6 +62,7 @@ const Login = () => {
                 const loginResult = fnLogin(formData);
                 if (!loginResult.success) {
                     alert(loginResult.message);
+                    return;
                 }
                 // state에 회원정보 저장 + login 상태 변경 + 로그인 창 닫기
                 dispatch(authActions.setUserInfo(loginResult.user));

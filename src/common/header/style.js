@@ -42,7 +42,7 @@ export const MenuStyle = styled.div`
     z-index: 999;
     position: fixed;
     left: -9999px;
-    top: 70px;
+    top: 120px;
     transition: 0.5s;
     display: none;
     .inner {
@@ -50,11 +50,11 @@ export const MenuStyle = styled.div`
         height: 904px;
         display: flex;
         flex-flow: column;
-        gap: 40px;
+        gap: 30px;
 
         .first {
             width: 100%;
-            height: 300px;
+            height: 260px;
             display: flex;
             align-items: center;
             justify-content: space-between;

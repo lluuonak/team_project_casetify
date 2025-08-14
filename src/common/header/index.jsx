@@ -12,6 +12,7 @@ const Header = () => {
     const { menuState } = useSelector((state) => state.main);
 
     const { loginState, joinState, isLogin } = useSelector((state) => state.auth);
+
     const navigator = useNavigate();
     const dispatch = useDispatch();
     const location = useLocation();

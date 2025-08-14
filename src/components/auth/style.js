@@ -126,7 +126,7 @@ export const JoinStyle = styled.div`
                     -moz-appearance: none; /* 파이어폭스 */
                     background: #1a1a1a url('/login/mingcute_right-line.svg') no-repeat right 10px
                         center; /* 화살표 이미지 */
-                    outline: none;
+                    /* outline: none; */
                 }
                 .year {
                     width: 100px;
