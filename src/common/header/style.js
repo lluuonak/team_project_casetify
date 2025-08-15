@@ -42,7 +42,7 @@ export const MenuStyle = styled.div`
     z-index: 999;
     position: fixed;
     left: -9999px;
-    top: 120px;
+    top: 100px;
     transition: 0.5s;
     display: none;
     .inner {

@@ -6,15 +6,15 @@ export const OrderStatusStyle = styled.div`
     flex-flow: column;
     gap: 40px;
     .title-area {
-        width: 245px;
-        height: 29px;
+        width: 223px;
+        height: 24px;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 16px;
         strong {
             color: #fff;
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 400;
         }
         span {
@@ -25,7 +25,7 @@ export const OrderStatusStyle = styled.div`
     }
     .contents {
         width: 100%;
-        height: 168px;
+        height: 148px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -52,11 +52,11 @@ export const OrderStatusStyle = styled.div`
 
 export const OrderListStyle = styled.div`
     width: 100%;
-    /* height: 531px; */
     height: auto;
     display: flex;
     flex-flow: column;
     gap: 40px;
+    display: flex;
     .title-area {
         width: 131px;
         height: 29px;
@@ -65,7 +65,7 @@ export const OrderListStyle = styled.div`
         justify-content: center;
         strong {
             color: #fff;
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 400;
         }
     }
@@ -73,7 +73,8 @@ export const OrderListStyle = styled.div`
         display: flex;
         flex-flow: column;
         gap: 40px;
-        padding: 40px 0;
+        box-sizing: border-box;
+        /* border-top: 1px solid rgba(255, 255, 255, 0.8); */
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
     .bottom {
@@ -107,12 +108,12 @@ export const OrderListStyle = styled.div`
 
 export const OrderItemStyle = styled.li`
     width: 100%;
-    height: 422px;
-    padding-top: 40px;
+    height: auto;
     display: flex;
     flex-flow: column;
-    gap: 40px;
+    gap: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 40px 0;
     /* 공통 css */
     .item-btn {
         width: 85px;
@@ -130,28 +131,27 @@ export const OrderItemStyle = styled.li`
     span {
         display: block;
         color: #fff;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 400;
     }
     .top {
         width: 100%;
-        height: 78px;
+        height: 30px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         .left {
-            width: 237px;
-            height: 78px;
+            width: 337px;
+            height: 100%;
             display: flex;
-            flex-flow: column;
             justify-content: space-between;
+            align-items: center;
         }
         .right {
             width: 85px;
-            height: 78px;
+            height: 100%;
             display: flex;
-            flex-flow: column;
-            justify-content: flex-start;
+            align-items: center;
         }
     }
 

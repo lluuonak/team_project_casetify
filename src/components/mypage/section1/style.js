@@ -2,29 +2,29 @@ import styled from 'styled-components';
 
 export const Section1Style = styled.section`
     width: 100%;
-    height: 2022px;
+    height: auto;
     background: #1a1a1a;
     .inner {
         width: 1440px;
-        height: 1922px;
+        height: auto;
         display: flex;
         flex-flow: column;
-        gap: 80px;
+        gap: 60px;
         .mypage-gnb {
             display: flex;
             width: 100%;
-            height: 60px;
+            height: 50px;
             justify-content: space-between;
             align-items: center;
             .left {
-                width: 201px;
+                width: 171px;
                 height: 100%;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 .profile-img {
-                    width: 60px;
-                    height: 60px;
+                    width: 50px;
+                    height: 50px;
                     background: #d9d9d9;
                     border-radius: 100%;
                 }
@@ -37,7 +37,7 @@ export const Section1Style = styled.section`
                     gap: 10px;
                     strong {
                         color: #fff;
-                        font-size: 32px;
+                        font-size: 24px;
                     }
                     span {
                         color: #fff;

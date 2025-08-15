@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const TitleSectionStyle = styled.div`
     margin-top: 100px;
     width: 100%;
-    height: 240px;
+    height: 120px;
     display: flex;
     align-items: center;
     background-color: #1a1a1a;

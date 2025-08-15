@@ -22,3 +22,5 @@ export const WishListStyle = styled.div`
         box-sizing: border-box;
     }
 `;
+
+export const WishItemStyle = styled.li``;

@@ -10,6 +10,7 @@ const OrderList = () => {
             </div>
             <ul className="list">
                 <OrderItem />
+                <OrderItem />
             </ul>
             <div className="bottom">
                 <div className="btn-area">
