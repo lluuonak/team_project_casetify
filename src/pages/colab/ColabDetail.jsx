@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import data from '../../assets/colabDetailData';
+// import data from '../../assets/colabDetailData';
 
 import Section1 from '../../components/colabdetail/section1';
 import Section2 from '../../components/colabdetail/section2';

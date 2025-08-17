@@ -125,4 +125,4 @@ const Section1 = ({ data }) => {
   );
 };
 
-export default Section1;
+// export default Section1;
