@@ -6,6 +6,8 @@ import { Colab, Ksports, Main, MyPage, NotFiles } from './pages';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { mainActions } from './store/modules/main/mainSlice';
+import Kcontent from './pages/Kcontent';
+import Kart from './pages/Kart';
 
 const App = () => {
     const location = useLocation();
@@ -25,6 +27,8 @@ const App = () => {
                     <Route index element={<Main />} />
 
                     <Route path="/Ksports" element={<Ksports />} />
+                    <Route path="/Kcontent" element={<Kcontent />} />
+                    <Route path="/Kart" element={<Kart />} />
                     <Route path="/colab" element={<Colab />} />
                     <Route path="/mypage" element={<MyPage />} />
 

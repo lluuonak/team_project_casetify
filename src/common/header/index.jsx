@@ -217,10 +217,10 @@ const Header = () => {
                                 <Link to="/ksports">K-Sports</Link>
                             </li>
                             <li style={{ backgroundImage: `url('/images/header/K2.jpg')` }}>
-                                <Link>K-Content</Link>
+                                <Link to="/kcontent">K-Content</Link>
                             </li>
                             <li style={{ backgroundImage: `url('/images/header/k3.jpg')` }}>
-                                <Link>K-Art</Link>
+                                <Link to="Kart">K-Art</Link>
                             </li>
                         </ul>
                     </li>
