@@ -12,6 +12,7 @@ const ColabDetail = () => {
 
     useEffect(() => {
         setLoading(true);
+        
         const selectedData = data.find((item) => item.id === id);
 
         if (selectedData) {
@@ -32,8 +33,8 @@ const ColabDetail = () => {
 
     return (
         <>
-            <Section1 data={pageData} />
-            <Section2 data={pageData} />
+            <Section1 data={pageData} categoryName={id}/>
+            <Section2 data={pageData} categoryName={id}/>
         </>
     );
 };

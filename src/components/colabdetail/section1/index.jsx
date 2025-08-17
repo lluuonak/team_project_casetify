@@ -1,173 +1,68 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
+import gsapData from '../../../assets/colab/gsapData';
+import SingleCircle from './SingleCircle';
+import DoubleCircle from './DoubleCircle';
+import { Section1Style } from './style';
 
-const Section1Style = styled.section`
-    background: #000;
-    min-height: 100vh;
-    padding: 60px 0;
-    color: white;
-    
-    .container {
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-    
-    .title {
-        text-align: center;
-        font-size: 48px;
-        font-weight: bold;
-        margin-bottom: 80px;
-        letter-spacing: 8px;
-    }
-    
-    .circles-wrapper {
-        height: 480px;
-        overflow: hidden;
-        margin-bottom: 60px;
-        cursor: grab;
-        
-        &:active {
-            cursor: grabbing;
-        }
-    }
-    
-    .circles-container {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        height: 100%;
-        will-change: transform;
-        user-select: none;
-    }
-    
-    .circle-group {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        height: 480px;
-        flex-shrink: 0;
-        
-        &.single {
-            justify-content: center;
-        }
-        
-        &.double {
-            justify-content: center;
-        }
-    }
-    
-    .circle {
-        border-radius: 50%;
-        overflow: hidden;
-        position: relative;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all 0.3s ease;
-            pointer-events: none;
-        }
-        
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 2;
-        }
-        
-        .title-text {
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            text-align: center;
-            padding: 0 20px;
-            letter-spacing: 1px;
-            pointer-events: none;
-        }
-    }
-    
-    .circle.large {
-        width: 480px;
-        height: 480px;
-    }
-    
-    .circle.small {
-        width: 230px;
-        height: 230px;
-    }
-    
-    .circle.small .title-text {
-        font-size: 14px;
-    }
-    
-    .circle:hover .overlay {
-        opacity: 1;
-    }
-    
-    .divider {
-        width: 300px;
-        height: 2px;
-        background: white;
-        margin: 0 auto 40px;
-    }
-`;
-
-const InfiniteSlider = ({ pageData, categoryName = 'ANIMATION' }) => {
+const Section1 = ({ pageData, categoryName }) => {
     const containerRef = useRef(null);
     const isDragging = useRef(false);
     const startX = useRef(0);
     const scrollLeft = useRef(0);
     const animationId = useRef(null);
 
-    // 샘플 데이터 (실제로는 pageData 사용)
-    const sampleData = [
-        { imgCount: 1, data: [{ title: '에반게리온', img: 'https://picsum.photos/480/480?random=1'}] },
-        { imgCount: 2, data: [
-            { title: '드래곤볼 Z', img: 'https://picsum.photos/230/230?random=2' }, 
-            { title: '주술회전', img: 'https://picsum.photos/230/230?random=3' }
-        ]},
-        { imgCount: 1, data: [{ title: '사카모토 데이즈', img: 'https://picsum.photos/480/480?random=4' }] },
-        { imgCount: 1, data: [{ title: '기동전사 건담', img: 'https://picsum.photos/480/480?random=5' }] },
-        { imgCount: 2, data: [
-            { title: '원피스', img: 'https://picsum.photos/230/230?random=6'}, 
-            { title: '나루토', img: 'https://picsum.photos/230/230?random=7'}
-        ]},
-        { imgCount: 1, data: [{ title: '도라에몽', img: 'https://picsum.photos/480/480?random=8' }] },
-    ];
-
-    const displayData = pageData || sampleData;
+    // gsapData에서 해당 카테고리 데이터 가져오기
+   // Section1.jsx의 getCategoryData 함수 수정
+const getCategoryData = () => {
+    console.log('categoryName:', categoryName); // 디버깅용
+    console.log('pageData:', pageData); // 디버깅용
     
-    // 무한 슬라이드를 위해 데이터를 3배로 복제
-    const infiniteItems = [...displayData, ...displayData, ...displayData];
+    // pageData가 있으면 우선 사용
+    if (pageData && pageData.length > 0) {
+        return pageData;
+    }
+    
+    // categoryName이 undefined인 경우 방어 코드
+    if (!categoryName) {
+        console.warn('categoryName이 undefined입니다');
+        return [];
+    }
+    
+    // 없으면 gsapData에서 가져오기
+    const categoryKey = categoryName.toLowerCase();
+    console.log('categoryKey:', categoryKey); // 디버깅용
+    
+    return gsapData[categoryKey] || [];
+};
+
+    const displayData = getCategoryData();
+    
+    const infiniteItems = [...displayData, ...displayData, ...displayData, ...displayData, ...displayData];
 
     // 자동 슬라이드 애니메이션
     const animate = () => {
         if (!isDragging.current && containerRef.current) {
             const container = containerRef.current;
             const currentTransform = container.style.transform;
-            const currentX = currentTransform ? parseFloat(currentTransform.match(/translateX\(([^)]+)px\)/)?.[1] || 0) : 0;
+            let currentX = currentTransform ? parseFloat(currentTransform.match(/translateX\(([^)]+)px\)/)?.[1] || 0) : 0;
             
-            // 한 세트만큼 이동했으면 처음 위치로 리셋
-            const itemWidth = 490; // 원 크기 + gap
-            const setWidth = displayData.length * itemWidth;
+            // 새로운 위치 계산
+            const newX = currentX - 0.5;
             
-            if (Math.abs(currentX) >= setWidth) {
-                container.style.transform = 'translateX(0px)';
+            // 실제 컨테이너와 아이템 너비 계산
+            const containerWidth = container.scrollWidth;
+            const oneSetWidth = containerWidth / 5; // 5배로 복제했으므로
+            
+            // 양쪽 끝에 도달하면 부드럽게 위치 조정
+            if (newX <= -oneSetWidth * 4) {
+                // 너무 오른쪽으로 가면 왼쪽으로 이동
+                container.style.transform = `translateX(${newX + oneSetWidth * 2}px)`;
+            } else if (newX >= -oneSetWidth) {
+                // 너무 왼쪽으로 가면 오른쪽으로 이동  
+                container.style.transform = `translateX(${newX - oneSetWidth * 2}px)`;
             } else {
-                container.style.transform = `translateX(${currentX - 0.5}px)`;
+                container.style.transform = `translateX(${newX}px)`;
             }
         }
         animationId.current = requestAnimationFrame(animate);
@@ -184,6 +79,7 @@ const InfiniteSlider = ({ pageData, categoryName = 'ANIMATION' }) => {
 
     const handleMouseMove = (e) => {
         if (!isDragging.current) return;
+        if (e.buttons !== 1) return; // 마우스 버튼이 눌려있을 때만
         e.preventDefault();
         const x = e.pageX - containerRef.current.offsetLeft;
         const walk = (x - startX.current) * 2;
@@ -196,12 +92,34 @@ const InfiniteSlider = ({ pageData, categoryName = 'ANIMATION' }) => {
         containerRef.current.style.cursor = 'grab';
     };
 
+    const handleMouseEnter = () => {
+        // 드래그 중이 아닐 때만 애니메이션 멈춤
+        if (!isDragging.current) {
+            isDragging.current = true;
+        }
+    };
+
     const handleMouseLeave = () => {
-        isDragging.current = false;
+        // 실제 드래그 중이 아니라면 애니메이션 재개
+        if (isDragging.current) {
+            isDragging.current = false;
+        }
         containerRef.current.style.cursor = 'grab';
     };
 
     useEffect(() => {
+        // 초기 위치를 중간 세트로 설정 (2번째 세트)
+        if (containerRef.current) {
+            const container = containerRef.current;
+            // 컨테이너가 렌더링된 후에 중간 위치로 이동
+            setTimeout(() => {
+                if (container.scrollWidth > 0) {
+                    const oneSetWidth = container.scrollWidth / 5; // 5배 복제
+                    container.style.transform = `translateX(-${oneSetWidth * 2}px)`; // 3번째 세트에서 시작
+                }
+            }, 50);
+        }
+        
         animationId.current = requestAnimationFrame(animate);
         
         return () => {
@@ -221,6 +139,7 @@ const InfiniteSlider = ({ pageData, categoryName = 'ANIMATION' }) => {
                     onMouseDown={handleMouseDown}
                     onMouseMove={handleMouseMove}
                     onMouseUp={handleMouseUp}
+                    onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                 >
                     <div 
@@ -229,38 +148,20 @@ const InfiniteSlider = ({ pageData, categoryName = 'ANIMATION' }) => {
                         style={{ transform: 'translateX(0px)' }}
                     >
                         {infiniteItems.map((item, index) => (
-                            <div 
-                                key={index} 
-                                className={`circle-group ${item.imgCount === 1 ? 'single' : 'double'}`}
-                            >
+                            <React.Fragment key={index}>
                                 {item.imgCount === 1 ? (
-                                    // SingleCircle 컴포넌트 내용
-                                    <div className="circle large">
-                                        <img src={item.data[0].img} alt={item.data[0].title} />
-                                        <div className="overlay">
-                                            <div className="title-text">{item.data[0].title}</div>
-                                        </div>
-                                    </div>
+                                    <SingleCircle data={item.data} />
                                 ) : (
-                                    // DoubleCircle 컴포넌트 내용
-                                    item.data.map((dataItem, dataIndex) => (
-                                        <div key={dataIndex} className="circle small">
-                                            <img src={dataItem.img} alt={dataItem.title} />
-                                            <div className="overlay">
-                                                <div className="title-text">{dataItem.title}</div>
-                                            </div>
-                                        </div>
-                                    ))
+                                    <DoubleCircle data={item.data} />
                                 )}
-                            </div>
+                            </React.Fragment>
                         ))}
                     </div>
                 </div>
                 
-                <div className="divider"></div>
             </div>
         </Section1Style>
     );
 };
 
-export default InfiniteSlider;
+export default Section1;
