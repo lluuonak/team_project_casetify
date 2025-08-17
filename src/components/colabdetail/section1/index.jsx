@@ -1,205 +1,266 @@
-import React, { useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 
 const Section1Style = styled.section`
-    height: 100vh;
-    /* background: linear-gradient(135deg, #1a1a2e, #16213e); */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0;
-
-    h2 {
-        font-size: 3rem;
-        font-weight: 500;
-        color: #fff;
+    background: #000;
+    min-height: 100vh;
+    padding: 60px 0;
+    color: white;
+    
+    .container {
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .title {
         text-align: center;
-        margin-bottom: 4rem;
-        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        letter-spacing: 2px;
-        letter-spacing: 0;
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 80px;
+        letter-spacing: 8px;
     }
-
-    .slider-container {
-        position: relative;
-        width: 100%;
-        height: 400px;
+    
+    .circles-wrapper {
+        height: 480px;
         overflow: hidden;
-        mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-        -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-    }
-
-    .slider-track {
-        display: flex;
-        width: calc(320px * ${(props) => props.totalItems});
-        animation: scroll 20s linear infinite;
-        gap: 10px;
-
-        &.paused {
-            animation-play-state: paused;
+        margin-bottom: 60px;
+        cursor: grab;
+        
+        &:active {
+            cursor: grabbing;
         }
     }
-
-    .slide {
+    
+    .circles-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        height: 100%;
+        will-change: transform;
+        user-select: none;
+    }
+    
+    .circle-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        height: 480px;
         flex-shrink: 0;
-        width: 400px;
-        height: 400px;
+        
+        &.single {
+            justify-content: center;
+        }
+        
+        &.double {
+            justify-content: center;
+        }
+    }
+    
+    .circle {
+        border-radius: 50%;
+        overflow: hidden;
         position: relative;
         cursor: pointer;
-        transition: transform 0.3s ease;
-
-        &:hover .slide-image {
-            transform: translateY(-10px) scale(1.05);
-            z-index: 10;
+        transition: all 0.3s ease;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 2;
+        }
+        
+        .title-text {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            padding: 0 20px;
+            letter-spacing: 1px;
+            pointer-events: none;
         }
     }
-
-    .slide-content {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        border-radius: 100%;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
+    
+    .circle.large {
+        width: 480px;
+        height: 480px;
     }
-
-    .slide-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: all 0.4s ease;
+    
+    .circle.small {
+        width: 230px;
+        height: 230px;
     }
-
-    .slide-info {
-        position: absolute;
-        height: 100%;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 20px;
-        background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-        color: white;
-        transform: translateY(50px);
-        opacity: 0;
-        transition: all 0.4s ease;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    
+    .circle.small .title-text {
+        font-size: 14px;
     }
-
-    .slide-title {
-        font-size: 1.4rem;
-        font-weight: 600;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .slide:hover .slide-image {
-        filter: grayscale(0%) brightness(1);
-        transform: scale(1.1);
-    }
-
-    .slide:hover .slide-info {
-        transform: translateY(0);
+    
+    .circle:hover .overlay {
         opacity: 1;
     }
-
-    @keyframes scroll {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(calc(-320px * ${(props) => props.itemCount}));
-        }
-    }
-
-    @media (max-width: 768px) {
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .slider-container {
-            height: 300px;
-        }
-
-        .slide {
-            width: 250px;
-            height: 300px;
-        }
-
-        .controls {
-            display: none;
-        }
+    
+    .divider {
+        width: 300px;
+        height: 2px;
+        background: white;
+        margin: 0 auto 40px;
     }
 `;
 
-const Section1 = ({ data = demoData }) => {
-    const { id, title, category } = data;
-    const [isPaused, setIsPaused] = useState(false);
-    const [animationSpeed, setAnimationSpeed] = useState(20);
+const InfiniteSlider = ({ pageData, categoryName = 'ANIMATION' }) => {
+    const containerRef = useRef(null);
+    const isDragging = useRef(false);
+    const startX = useRef(0);
+    const scrollLeft = useRef(0);
+    const animationId = useRef(null);
 
-    // 무한 루프를 위해 아이템을 3번 복제
-    const infiniteItems = [...category, ...category];
+    // 샘플 데이터 (실제로는 pageData 사용)
+    const sampleData = [
+        { imgCount: 1, data: [{ title: '에반게리온', img: 'https://picsum.photos/480/480?random=1'}] },
+        { imgCount: 2, data: [
+            { title: '드래곤볼 Z', img: 'https://picsum.photos/230/230?random=2' }, 
+            { title: '주술회전', img: 'https://picsum.photos/230/230?random=3' }
+        ]},
+        { imgCount: 1, data: [{ title: '사카모토 데이즈', img: 'https://picsum.photos/480/480?random=4' }] },
+        { imgCount: 1, data: [{ title: '기동전사 건담', img: 'https://picsum.photos/480/480?random=5' }] },
+        { imgCount: 2, data: [
+            { title: '원피스', img: 'https://picsum.photos/230/230?random=6'}, 
+            { title: '나루토', img: 'https://picsum.photos/230/230?random=7'}
+        ]},
+        { imgCount: 1, data: [{ title: '도라에몽', img: 'https://picsum.photos/480/480?random=8' }] },
+    ];
 
-    const handleMouseEnter = () => {
-        setIsPaused(true);
+    const displayData = pageData || sampleData;
+    
+    // 무한 슬라이드를 위해 데이터를 3배로 복제
+    const infiniteItems = [...displayData, ...displayData, ...displayData];
+
+    // 자동 슬라이드 애니메이션
+    const animate = () => {
+        if (!isDragging.current && containerRef.current) {
+            const container = containerRef.current;
+            const currentTransform = container.style.transform;
+            const currentX = currentTransform ? parseFloat(currentTransform.match(/translateX\(([^)]+)px\)/)?.[1] || 0) : 0;
+            
+            // 한 세트만큼 이동했으면 처음 위치로 리셋
+            const itemWidth = 490; // 원 크기 + gap
+            const setWidth = displayData.length * itemWidth;
+            
+            if (Math.abs(currentX) >= setWidth) {
+                container.style.transform = 'translateX(0px)';
+            } else {
+                container.style.transform = `translateX(${currentX - 0.5}px)`;
+            }
+        }
+        animationId.current = requestAnimationFrame(animate);
+    };
+
+    // 드래그 이벤트 핸들러
+    const handleMouseDown = (e) => {
+        isDragging.current = true;
+        startX.current = e.pageX - containerRef.current.offsetLeft;
+        const transform = containerRef.current.style.transform;
+        scrollLeft.current = transform ? parseFloat(transform.match(/translateX\(([^)]+)px\)/)?.[1] || 0) : 0;
+        containerRef.current.style.cursor = 'grabbing';
+    };
+
+    const handleMouseMove = (e) => {
+        if (!isDragging.current) return;
+        e.preventDefault();
+        const x = e.pageX - containerRef.current.offsetLeft;
+        const walk = (x - startX.current) * 2;
+        const newX = scrollLeft.current + walk;
+        containerRef.current.style.transform = `translateX(${newX}px)`;
+    };
+
+    const handleMouseUp = () => {
+        isDragging.current = false;
+        containerRef.current.style.cursor = 'grab';
     };
 
     const handleMouseLeave = () => {
-        setIsPaused(false);
+        isDragging.current = false;
+        containerRef.current.style.cursor = 'grab';
     };
 
-    const changeSpeed = (speed) => {
-        setAnimationSpeed(speed);
-    };
+    useEffect(() => {
+        animationId.current = requestAnimationFrame(animate);
+        
+        return () => {
+            if (animationId.current) {
+                cancelAnimationFrame(animationId.current);
+            }
+        };
+    }, []);
 
     return (
-        <Section1Style totalItems={infiniteItems.length} itemCount={category.length}>
-            <i className="prev-icon">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="40px"
-                    height="40px"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                >
-                    <g fill="none" fill-rule="evenodd">
-                        <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
-                        <path
-                            fill="#fff"
-                            d="M8.293 12.707a1 1 0 0 1 0-1.414l5.657-5.657a1 1 0 1 1 1.414 1.414L10.414 12l4.95 4.95a1 1 0 0 1-1.414 1.414z"
-                        />
-                    </g>
-                </svg>
-            </i>
-            <h2>{title.toUpperCase()}</h2>
-            <div className="slider-container">
-                <div
-                    className={`slider-track ${isPaused ? 'paused' : ''}`}
-                    style={{ animationDuration: `${animationSpeed}s` }}
-                    onMouseEnter={handleMouseEnter}
+        <Section1Style>
+            <div className="container">
+                <h1 className="title">{categoryName.toUpperCase()}</h1>
+                
+                <div 
+                    className="circles-wrapper"
+                    onMouseDown={handleMouseDown}
+                    onMouseMove={handleMouseMove}
+                    onMouseUp={handleMouseUp}
                     onMouseLeave={handleMouseLeave}
                 >
-                    {infiniteItems.map((item, index) => (
-                        item.imgCount === 1 ? <A data={item.data}/> : item.id === 2 ? <B/> : <C/>
-                        // <div key={`${item.id}-${index}`} className="slide ">
-                            
-                        //     <div className="slide-content">
-                        //         <img src={item.img} alt={item.title} className="slide-image" />
-                        // img에 onMouseEnter 효과 개별 적용
-                        //         <div className="slide-info">
-                        //             <h3 className="slide-title">{item.title}</h3>
-                        //         </div>
-                        //     </div>
-                        // </div>
-                    ))}
+                    <div 
+                        ref={containerRef}
+                        className="circles-container"
+                        style={{ transform: 'translateX(0px)' }}
+                    >
+                        {infiniteItems.map((item, index) => (
+                            <div 
+                                key={index} 
+                                className={`circle-group ${item.imgCount === 1 ? 'single' : 'double'}`}
+                            >
+                                {item.imgCount === 1 ? (
+                                    // SingleCircle 컴포넌트 내용
+                                    <div className="circle large">
+                                        <img src={item.data[0].img} alt={item.data[0].title} />
+                                        <div className="overlay">
+                                            <div className="title-text">{item.data[0].title}</div>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    // DoubleCircle 컴포넌트 내용
+                                    item.data.map((dataItem, dataIndex) => (
+                                        <div key={dataIndex} className="circle small">
+                                            <img src={dataItem.img} alt={dataItem.title} />
+                                            <div className="overlay">
+                                                <div className="title-text">{dataItem.title}</div>
+                                            </div>
+                                        </div>
+                                    ))
+                                )}
+                            </div>
+                        ))}
+                    </div>
                 </div>
+                
+                <div className="divider"></div>
             </div>
         </Section1Style>
     );
 };
 
-export default Section1;
+export default InfiniteSlider;

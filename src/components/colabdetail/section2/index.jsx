@@ -1,12 +1,12 @@
 import { Section2Style } from './style';
 
 const Section2 = ({ data }) => {
-    const { id, title, category, product } = data;
+    // const { id, title, category, product } = data;
     return (
         <>
             <Section2Style>
                 <div className="product-inner">
-                    <div className="line"></div>
+                    {/* <div className="line"></div>
                     <span>
                         Co-Lab &gt; {title.toUpperCase()} &gt; {category[0].title}
                     </span>
@@ -44,7 +44,7 @@ const Section2 = ({ data }) => {
                             </li>
                         ))}
                     </ul>
-                    <span className="view-more">VIEW MORE</span>
+                    <span className="view-more">VIEW MORE</span> */}
                 </div>
             </Section2Style>
         </>

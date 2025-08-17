@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-// import data from '../../../assets/colabSection1Data';
+import data from '../../../assets/colab/colabSection1Data';
 import { Section1Style } from './style';
 
 export default function CollabShowcase() {

@@ -11,36 +11,29 @@ const ColabDetail = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-    console.log('🔍 디버깅 시작');
-    console.log('받은 id:', id);
-    console.log('전체 data:', data);
-    
-    if (!data) {
-        console.log('❌ data가 undefined 또는 null');
-        return;
-    }
-    
-    console.log('사용가능한 키들:', Object.keys(data));
-    
-    const selectedData = data[id];
-    console.log(`data["${id}"] 결과:`, selectedData);
-    
-    setPageData(selectedData || null);
-    setLoading(false);
-}, [id]);   
+        setLoading(true);
+        const selectedData = data.find((item) => item.id === id);
+
+        if (selectedData) {
+            setPageData(selectedData);
+        } else {
+            setPageData(null); // 데이터가 없을 경우
+        }
+        setLoading(false);
+    }, [id]);
 
     if (loading) {
         return <div>로딩 중...</div>;
     }
 
     if (!pageData) {
-        return <div>데이터를 찾을 수 없습니다요.</div>;
+        return <div>데이터를 찾을 수 없습니다.</div>;
     }
 
     return (
         <>
-            <Section1 pageData={pageData} />
-            <Section2 pageData={pageData} />
+            <Section1 data={pageData} />
+            <Section2 data={pageData} />
         </>
     );
 };

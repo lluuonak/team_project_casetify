@@ -2,16 +2,6 @@ export default [
     {
         id: 'animation',
         title: 'animation',
-        category: [
-            { id: 1, title: '에반게리온', img: '../images/colab/에반게리온.jpg' },
-            { id: 2, title: '드래곤볼 Z', img: '../images/colab/드래곤볼.jpg' },
-            { id: 3, title: '사카모토 데이즈', img: '../images/colab/사카모토데이즈.jpg' },
-            { id: 4, title: '기동전사 건담', img: '../images/colab/기동전사건담.jpg' },
-            { id: 5, title: '원피스', img: '../images/colab/원피스.jpg' },
-            { id: 6, title: '도라에몽', img: '../images/colab/도라에몽.png' },
-            { id: 7, title: '주술회전', img: '../images/colab/주술회전.jpg' },
-            { id: 8, title: '나루토', img: '../images/colab/나루토.jpg' },
-        ],
         product: [
             {
                 id: 1,
