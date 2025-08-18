@@ -1,83 +1,145 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import data from '../../../assets/colab/colabSection1Data';
 import { Section1Style } from './style';
+import { useSelector } from 'react-redux';
 
-export default function CollabShowcase() {
-    const [currentSetIndex, setCurrentSetIndex] = useState(0);
-    const [isTextAnimating, setIsTextAnimating] = useState(true);
-    const [isBoxAnimating, setIsBoxAnimating] = useState(true);
+const BackgroundSlide = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url(${(props) => props.bgImage});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: ${(props) => (props.active ? 1 : 0)};
+    transition: opacity 1.2s ease-in-out;
+    z-index: 1;
+`;
+
+const TextContent = styled.div`
+    text-align: center;
+    color: white;
+    margin-bottom: 60px;
+    opacity: ${(props) => (props.active ? 1 : 0)};
+    transform: ${(props) => (props.active ? 'translateY(0)' : 'translateY(50px)')};
+    transition: all 1s ease-out;
+`;
+
+const Title = styled.h1`
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+`;
+
+const Description = styled.p`
+    font-size: 18px;
+    opacity: 0.9;
+    max-width: 600px;
+    line-height: 1.6;
+    margin: 0;
+`;
+
+const ProductGrid = styled.div`
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    width: 100%;
+    opacity: ${(props) => (props.active ? 1 : 0)};
+    transform: ${(props) => (props.active ? 'translateY(0)' : 'translateY(50px)')};
+    transition: all 1s ease-out 0.2s;
+`;
+
+const ProductCard = styled.div`
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+`;
+
+const ProductImage = styled.div`
+    width: 100%;
+    height: 120px;
+    background: url(${(props) => props.img}) no-repeat center;
+    background-size: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+`;
+
+const ProductName = styled.h4`
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+    line-height: 1.3;
+`;
+
+const ProductPrice = styled.p`
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+`;
+
+const Section1 = () => {
+    const { newProduct, colabVisualData } = useSelector((state) => state.colab);
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [isTransitioning, setIsTransitioning] = useState(false);
 
     useEffect(() => {
-        // 첫 등장 애니메이션 (컴포넌트 마운트 시)
-        const initialTimeout = setTimeout(() => {
-            setIsTextAnimating(false); // 텍스트 스윽 올라오며 등장
-        }, 100);
+        const interval = setInterval(() => {
+            setIsTransitioning(true);
 
-        const initialBoxTimeout = setTimeout(() => {
-            setIsBoxAnimating(false); // 0.6초 후 박스 스윽 올라오며 등장
-        }, 600);
+            setTimeout(() => {
+                setCurrentSlide((prev) => (prev + 1) % colabVisualData.length);
+                setIsTransitioning(false);
+            }, 300);
+        }, 5000);
 
-        const cycleDuration = 5000; // 5초 주기
-
-        // 첫 사이클은 4초 후에 시작 (첫 등장 후)
-        const firstCycleTimeout = setTimeout(() => {
-            const mainInterval = setInterval(() => {
-                // 1. 현재 컨텐츠 사라짐 (4초 후)
-                setIsTextAnimating(true);
-                setIsBoxAnimating(true);
-
-                // 2. 다음 세트로 변경 (0.5초 후)
-                setTimeout(() => {
-                    setCurrentSetIndex((prev) => (prev + 1) % data.length);
-                }, 500);
-
-                // 3. 새로운 텍스트 등장 (1초 후)
-                setTimeout(() => {
-                    setIsTextAnimating(false);
-                }, 1000);
-
-                // 4. 새로운 박스 등장 (1.6초 후 = 1초 + 0.6초)
-                setTimeout(() => {
-                    setIsBoxAnimating(false);
-                }, 1600);
-            }, cycleDuration);
-
-            return () => clearInterval(mainInterval);
-        }, 4000);
-
-        return () => {
-            clearTimeout(initialTimeout);
-            clearTimeout(initialBoxTimeout);
-            clearTimeout(firstCycleTimeout);
-        };
-    }, []);
+        return () => clearInterval(interval);
+    }, [colabVisualData.length]);
 
     return (
         <Section1Style>
-            {/* 텍스트 영역 */}
-            <div className="title-wrap">
-                <div className="title-box" isAnimating={isTextAnimating}>
-                    <h2>{data[currentSetIndex].title}</h2>
-                    <p>{data[currentSetIndex].desc}</p>
-                </div>
-            </div>
+            <div className="visual-container">
+                {colabVisualData.map((item, index) => (
+                    <BackgroundSlide
+                        key={item.id}
+                        bgImage={item.img}
+                        active={index === currentSlide}
+                    />
+                ))}
 
-            {/* 박스 영역 */}
-            <div className="product-wrap">
-                <div className="product-box" isAnimating={isBoxAnimating}>
-                    {data[currentSetIndex].product.map((product) => (
-                        <div className=".product-box-each" key={product.id}>
-                            <img src={product.img} alt={product.name} />
+                <div className="content-wrap">
+                    <div className="text" active={!isTransitioning}>
+                        <Title>{colabVisualData[currentSlide]?.title}</Title>
+                        <Description>{colabVisualData[currentSlide]?.desc}</Description>
+                    </div>
 
-                            <div className="product-info">
-                                <h3>{product.name}</h3>
-                                <p>{product.price}</p>
-                            </div>
-                        </div>
-                    ))}
+                    <ProductGrid active={!isTransitioning}>
+                        {newProduct[currentSlide]?.product.map((product, index) => (
+                            <ProductCard key={index}>
+                                <ProductImage img={product.img} />
+                                <ProductName>{product.name}</ProductName>
+                                <ProductPrice>₩{product.price}</ProductPrice>
+                            </ProductCard>
+                        ))}
+                    </ProductGrid>
                 </div>
             </div>
         </Section1Style>
     );
-}
+};
+
+export default Section1;

@@ -3,7 +3,7 @@ const initialState = {
     opacityState: false,
 };
 
-export const headerSlice = createSlice({
+ const headerSlice = createSlice({
     name: 'header',
     initialState,
     reducers: {

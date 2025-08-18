@@ -117,15 +117,20 @@ export const Section2Style = styled.section`
                         color: #fff;
                         display: block;
                         &:first-child {
-                            font-weight: 500;
                             font-size: 20px;
-                            width: 200px;
-                            height: 48px;
+                            font-weight: 500;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: normal;
+                            margin-bottom: 20px;
                         }
                         &:last-child {
-                            font-weight: 300;
+                            display: block;
                             font-size: 16px;
-                            margin-top: 14px;
                         }
                     }
                 }
