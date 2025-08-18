@@ -129,12 +129,17 @@ export const ListItemStyle = styled.li`
         height: 51px;
         padding-left: 20px;
         color: #fff;
-        strong {
-            display: block;
+        .name {
+            height: 70px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
             font-size: 20px;
             font-weight: 500;
         }
-        span {
+        .price {
             display: block;
             font-size: 16px;
         }

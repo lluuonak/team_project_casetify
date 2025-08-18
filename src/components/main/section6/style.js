@@ -6,7 +6,7 @@ export const Section6Style = styled.section`
     height: 1626px;
     .inner {
         width: 1440px;
-        height: 620px;
+        /* height: 620px; */
         margin: auto;
         display: flex;
         flex-flow: column;
@@ -63,6 +63,7 @@ export const Section6Style = styled.section`
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
+                        border-radius: 20px;
                     }
                     span {
                         display: inline-block; /* 또는 block */
@@ -84,6 +85,7 @@ export const Section6Style = styled.section`
                         width: 100%;
                         height: 100%;
                         position: absolute;
+                        border-radius: 20px;
                         left: 0;
                         top: 0;
                         background: linear-gradient(

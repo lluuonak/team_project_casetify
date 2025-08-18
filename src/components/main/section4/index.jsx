@@ -26,13 +26,7 @@ const Section4 = () => {
                                 <strong>{strong}</strong>
                                 <span>{span}</span>
                             </div>
-                            <Link
-                                to="Ksports"
-                                className="more"
-                                onClick={() => {
-                                    window.scrollTo({ top: 0, behavior: 'instant' });
-                                }}
-                            >
+                            <Link to={link} className="more">
                                 MORE
                             </Link>
                         </div>
