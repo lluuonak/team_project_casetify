@@ -72,7 +72,7 @@ export const OrderListStyle = styled.div`
     .list {
         display: flex;
         flex-flow: column;
-        gap: 40px;
+        /* gap: 40px; */
         box-sizing: border-box;
         /* border-top: 1px solid rgba(255, 255, 255, 0.8); */
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);

@@ -4,6 +4,8 @@ export const Section1Style = styled.section`
     width: 100%;
     height: auto;
     background: #1a1a1a;
+    padding-bottom: 80px;
+
     .inner {
         width: 1440px;
         height: auto;

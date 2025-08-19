@@ -1,11 +1,12 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import GlobalStyle from './styled/GlobalStyle';
 import Layout from './common/Layout';
 
-import { Colab, Ksports, Main, MyPage, NotFiles } from './pages';
+import { Cart, Colab, Ksports, Main, MyPage, NotFiles, Step2 } from './pages';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { mainActions } from './store/modules/main/mainSlice';
+import Step1 from './pages/cart/Step1';
 
 const App = () => {
     const location = useLocation();
@@ -27,6 +28,11 @@ const App = () => {
                     <Route path="/Ksports" element={<Ksports />} />
                     <Route path="/colab" element={<Colab />} />
                     <Route path="/mypage" element={<MyPage />} />
+                    <Route path="/cart" element={<Cart />}>
+                        <Route index element={<Navigate to="step1" replace />} />
+                        <Route path="step1" element={<Step1 />} />
+                        <Route path="step2" element={<Step2 />} />
+                    </Route>
 
                     <Route path="*" element={<NotFiles />} />
                 </Route>
