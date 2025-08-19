@@ -122,7 +122,7 @@ const Section1 = ({ pageData, categoryName }) => {
 
     return (
         <Section1Style>
-            {/* <BeforeIcon /> */}
+            <img className="before" src="../images/colab/mingcute_left-line.svg" alt="" />
             <div className="container">
                 <h2 className="title">{categoryName.toUpperCase()}</h2>
 

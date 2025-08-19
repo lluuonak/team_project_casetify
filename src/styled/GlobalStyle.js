@@ -24,7 +24,8 @@ const GlobalStyle = createGlobalStyle`
   section{
     width: 100%;
     height: 1240px;
-    background-color: #000;
+    background-color: #1a1a1a;
+    /* 수정함 */
     
   }
   a {

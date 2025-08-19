@@ -8,7 +8,7 @@ export const Section1Style = styled.section`
 
     /* background: #000; */
     background-color: none;
-    background-image: url('./images/colab/colab_detail_bg.png');
+    /* background-image: url('./images/colab/colab_detail_bg.png'); */
     background-position: 0 0;
     background-repeat: no-repeat;
 
@@ -18,38 +18,42 @@ export const Section1Style = styled.section`
 
     box-sizing: border-box;
 
+    .before {
+        margin-left: 50px;
+        margin-top: 60px;
+    }
     .container {
         margin: 0 auto;
         padding: 220px 0 150px 0;
-    }
 
-    .title {
-        text-align: center;
-        font-size: 40px;
-        font-weight: bold;
-        margin-bottom: 80px;
-        letter-spacing: 0px;
-        font-weight: 600;
-    }
-
-    .circles-wrapper {
-        height: 480px;
-        overflow: hidden;
-        margin-bottom: 60px;
-        cursor: grab;
-
-        &:active {
-            cursor: grabbing;
+        .title {
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 80px;
+            letter-spacing: 0px;
+            font-weight: 600;
         }
-    }
 
-    .circles-container {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        height: 100%;
-        will-change: transform;
-        user-select: none;
+        .circles-wrapper {
+            height: 480px;
+            overflow: hidden;
+            margin-bottom: 60px;
+            cursor: grab;
+
+            &:active {
+                cursor: grabbing;
+            }
+        }
+
+        .circles-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            height: 100%;
+            will-change: transform;
+            user-select: none;
+        }
     }
 `;
 

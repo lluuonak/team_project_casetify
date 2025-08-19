@@ -4,6 +4,7 @@ import Layout from './common/Layout';
 
 import { Colab, ColabDetail, Main, NotFiles } from './pages';
 import Ksports from './pages/Ksports';
+import Custom from './components/custom/index';
 
 const App = () => {
     return (
@@ -22,6 +23,8 @@ const App = () => {
                             path="/colabdetail"
                             element={<Navigate to="/colabdetail/animation" />}
                         />
+                        {/* 임시 */}
+                        <Route path="/custom" element={<Custom />} />
                         <Route path="*" element={<NotFiles />} />
                     </Route>
                 </Routes>

@@ -3,13 +3,13 @@ export default [
         id: 'Chiikawa',
         product: [
             {
-                img: './images/colab/치이카와1.jpg',
+                img: './images/colab/치이카와1.webp',
                 name: 'Chiikawa Summer Party Sticker Case',
                 price: '89,000',
             },
 
             {
-                img: './images/colab/치이카와2.jpg',
+                img: './images/colab/치이카와2.png',
                 name: 'Chiikawa Summer Party Beads Strap',
                 price: '77,000',
             },
@@ -19,7 +19,7 @@ export default [
                 price: '83,000',
             },
             {
-                img: './images/colab/치이카와4.jpg',
+                img: './images/colab/치이카와4.webp',
                 name: 'Chiikawa Sunshine Snappy Cardholder Stand',
                 price: '89,000',
             },
@@ -29,22 +29,22 @@ export default [
         id: 'ba&sh',
         product: [
             {
-                img: './images/colab/ba&sh_1.jpg',
+                img: './images/colab/ba&sh_1.webp',
                 name: 'ba&sh Looks Gorgeous on you! Case',
                 price: '89,000',
             },
 
             {
-                img: './images/colab/ba&sh_2.jpg',
+                img: './images/colab/ba&sh_2.webp',
                 name: 'ba&sh Collage Frame Case',
                 price: '89,000',
             },
             {
-                img: './images/colab/ba&sh_3.jpg',
+                img: './images/colab/ba&sh_3.webp',
                 name: 'ba&sh Serpent Snappy Wallet',
                 price: '58,000',
             },
-            { img: './images/colab/ba&sh_4.jpg', name: 'ba&sh Aure Line Case', price: '108,000' },
+            { img: './images/colab/ba&sh_4.webp', name: 'ba&sh Aure Line Case', price: '108,000' },
         ],
     },
     {
