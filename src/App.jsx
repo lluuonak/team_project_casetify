@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Router } from 'react-router-dom';
 import GlobalStyle from './styled/GlobalStyle';
 import Layout from './common/Layout';
 
@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 import { mainActions } from './store/modules/main/mainSlice';
 import Kcontent from './pages/Kcontent';
 import Kart from './pages/Kart';
+import Product from './pages/product';
 
 const App = () => {
     const location = useLocation();
@@ -31,6 +32,7 @@ const App = () => {
                     <Route path="/Kart" element={<Kart />} />
                     <Route path="/colab" element={<Colab />} />
                     <Route path="/mypage" element={<MyPage />} />
+                    <Route path="/product" element={<Product />} />
 
                     <Route path="*" element={<NotFiles />} />
                 </Route>

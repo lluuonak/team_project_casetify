@@ -28,7 +28,7 @@ const Section3 = () => {
                     </div>
 
                     <div className="more">
-                        <Link to="">MORE VIEW</Link>
+                        <Link to="/product">MORE VIEW</Link>
                     </div>
                 </article>
             </div>
