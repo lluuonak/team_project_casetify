@@ -48,7 +48,7 @@ const index = () => {
                 </div>
                 <div className="image-upload">
                     <h6>이미지 업로드</h6>
-                    <ul className="model">
+                    <ul className="model"> 
                         <li>
                             <img src="" alt="" />
                             <span>갤러리</span>

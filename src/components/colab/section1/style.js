@@ -4,7 +4,7 @@ export const Section1Style = styled.div`
     width: 100%;
     position: relative;
     padding-bottom: 500px;
-    background-color: #000;
+    background-color: #1a1a1a;
 
     .visual-container {
         position: relative;
@@ -18,7 +18,7 @@ export const Section1Style = styled.div`
             left: 0;
             width: 100%;
             height: 400px;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 1));
+            background: linear-gradient(to bottom, transparent 0%, #1a1a1a 100%);
             z-index: 2;
         }
 
