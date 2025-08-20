@@ -4,6 +4,7 @@ import gsapData from '../../../assets/colab/gsapData';
 import SingleCircle from './SingleCircle';
 import DoubleCircle from './DoubleCircle';
 import { Section1Style } from './style';
+import { useNavigate } from 'react-router-dom';
 // import BeforeIcon from '../../icons/BeforeIcon';
 
 const Section1 = ({ pageData, categoryName }) => {
@@ -12,6 +13,7 @@ const Section1 = ({ pageData, categoryName }) => {
     const startX = useRef(0);
     const scrollLeft = useRef(0);
     const animationId = useRef(null);
+    const navigate = useNavigate();
 
     const getCategoryData = () => {
         if (pageData && pageData.length > 0) {
@@ -122,7 +124,13 @@ const Section1 = ({ pageData, categoryName }) => {
 
     return (
         <Section1Style>
-            <img className="before" src="../images/colab/mingcute_left-line.svg" alt="" />
+            <img
+                className="before"
+                src="../images/colab/mingcute_left-line.svg"
+                alt=""
+                onClick={() => navigate(-1)}
+                style={{ cursor: 'pointer' }}
+            />
             <div className="container">
                 <h2 className="title">{categoryName.toUpperCase()}</h2>
 

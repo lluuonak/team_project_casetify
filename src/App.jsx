@@ -2,7 +2,7 @@ import { Routes, Route, useLocation, Navigate, BrowserRouter } from 'react-route
 import GlobalStyle from './styled/GlobalStyle';
 import Layout from './common/Layout';
 
-import { Cart, Colab, ColabDetail, Custom, Ksports, Main, MyPage, NotFiles, Step2 } from './pages';
+import { Cart, Colab, ColabDetail, Ksports, Main, MyPage, NotFiles, Step2 } from './pages';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { mainActions } from './store/modules/main/mainSlice';
@@ -35,8 +35,6 @@ const App = () => {
                     <Route path="/colabdetail/:id" element={<ColabDetail />} />
                     <Route path="/colabdetail" element={<Navigate to="/colabdetail/animation" />} />
 
-                    {/* 임시 */}
-                    <Route path="/custom" element={<Custom />} />
                     <Route path="/mypage" element={<MyPage />} />
                     <Route path="/product" element={<Product />} />
                     <Route path="/cart" element={<Cart />}>

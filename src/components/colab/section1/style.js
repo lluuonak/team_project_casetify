@@ -123,7 +123,7 @@ export const ProductCard = styled.div`
     width: 240px;
 
     &:hover {
-        transform: translateY(-5px);
+        /* transform: translateY(-5px); */
     }
     .img-bg {
         width: 240px;
@@ -144,6 +144,10 @@ export const ProductCard = styled.div`
             left: -26%;
             top: 7px;
             transition: transform 0.3s ease;
+            &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
         }
     }
     .text {
