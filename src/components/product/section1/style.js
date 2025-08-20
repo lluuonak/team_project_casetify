@@ -190,6 +190,7 @@ export const Section1Style = styled.section`
 
     /* 네비게이션 버튼 */
     .visual-nav {
+        z-index: 100;
         position: absolute;
         right: 40px;
         top: 50%;
