@@ -1,5 +1,5 @@
 // 기존 코드 유지
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Section1Style } from './style';
 
 const images = [
@@ -23,12 +23,21 @@ const images = [
 const Index = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [prevSlide, setPrevSlide] = useState(null);
+    const slideCount = images.length;
 
     const handleSlideChange = (index) => {
         if (index === currentSlide) return;
         setPrevSlide(currentSlide);
         setCurrentSlide(index);
     };
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setPrevSlide(currentSlide);
+            setCurrentSlide((prev) => (prev + 1) % slideCount);
+        }, 5000);
+
+        return () => clearInterval(timer);
+    }, [currentSlide, slideCount]);
 
     return (
         <Section1Style>
