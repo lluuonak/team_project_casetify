@@ -95,6 +95,9 @@ export const Section1Style = styled.section`
                     span {
                         display: block;
                     }
+                    .second {
+                        white-space: pre-line;
+                    }
                 }
             }
             .bottom {
@@ -230,6 +233,32 @@ export const Section1Style = styled.section`
             height: 100px;
             display: block;
         }
+    }
+`;
+export const SelectPartialStyle = styled.div`
+    width: 300px;
+    height: 44px;
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    gap: 16px;
+    /* flex: 1 0 0; */
+    border-radius: 50px;
+    border: 1px solid #fff;
+    span {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        display: block;
+    }
+    i {
+        display: block;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 `;
 
