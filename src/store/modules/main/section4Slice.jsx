@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import dataList from '../../../assets/section4Data';
+import dataList from '../../../assets/main/section4Data';
 const initialState = {
     contentList: dataList,
 };

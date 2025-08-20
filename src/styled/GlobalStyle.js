@@ -22,12 +22,16 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    overscroll-behavior: none; /* 상/하/좌/우 모든 바운스 효과 제거 */
+
+
   }
   section{
     width: 100%;
     height: 1240px;
     background-color:#1a1a1a;
-    overflow:visible;
+    /* overflow:visible; */
+
     
   }
   a {
