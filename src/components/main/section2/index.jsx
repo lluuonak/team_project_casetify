@@ -48,7 +48,7 @@ const Section2 = () => {
                     onMouseLeave={handleMouseLeave}
                 >
                     <div className="more">
-                        <span className="text">More View</span>
+                        <span className="text">VIEW MORE</span>
                         <i>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
