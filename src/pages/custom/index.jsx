@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { CustomStyle } from './style';
 
-const index = () => {
+const Custom = () => {
     return (
         <CustomStyle>
             <div className="sample-image">
@@ -23,7 +23,7 @@ const index = () => {
                             <img src="" alt="" />
                             <span>삼성</span>
                         </li>
-                    </ul>                    
+                    </ul>
                 </div>
                 <div className="type">
                     <h6>기기 타입</h6>
@@ -44,11 +44,11 @@ const index = () => {
                             <img src="" alt="" />
                             <span>미러</span>
                         </li>
-                    </ul>                    
+                    </ul>
                 </div>
                 <div className="image-upload">
                     <h6>이미지 업로드</h6>
-                    <ul className="model"> 
+                    <ul className="model">
                         <li>
                             <img src="" alt="" />
                             <span>갤러리</span>
@@ -57,12 +57,11 @@ const index = () => {
                             <img src="" alt="" />
                             <span>없음</span>
                         </li>
-                    </ul>                    
+                    </ul>
                 </div>
             </div>
-            
         </CustomStyle>
     );
 };
 
-export default index;
+export default Custom;

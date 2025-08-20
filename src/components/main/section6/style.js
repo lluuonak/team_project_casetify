@@ -110,7 +110,8 @@ export const Section6Style = styled.section`
             -webkit-text-stroke-width: 3px;
             -webkit-text-stroke-color: #888;
             color: transparent; /* 글씨 내부 색상 투명 */
-            font-size: 160px;
+            font-size: 159px;
+
             font-weight: 500;
             text-transform: uppercase;
         }
