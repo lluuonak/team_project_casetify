@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
     mainPage: false,
+    menuState: false,
     headerShow: true,
     scrollY: 0,
 };
@@ -13,9 +14,13 @@ export const mainSlice = createSlice({
         setScrollY: (state, action) => {
             state.scrollY = action.payload;
         },
-        setMainPage: (state) => {
-            state.mainPage = true;
+        setMainPage: (state, action) => {
+            state.mainPage = false;
+            if (action.payload === '/' || action.payload === undefined) {
+                state.mainPage = true;
+            }
         },
+
         setHeaderShow: (state, action) => {
             if (state.mainPage) {
                 if (action.payload > 500) {
@@ -26,7 +31,8 @@ export const mainSlice = createSlice({
             }
         },
         clickMenu: (state, action) => {
-            const menuOpen = !action.payload;
+            state.menuState = !state.menuState;
+            const menuOpen = state.menuState;
             //현재 메인페이지에서 메뉴 오픈 한 경우
             if (state.mainPage) {
                 if (menuOpen) {
@@ -42,6 +48,10 @@ export const mainSlice = createSlice({
                 }
             }
             //메인페이지가 아닌 경우에는 항상 headerShow는 true
+        },
+        pageDiff: (state, action) => {
+            state.menuState = false;
+            state.headerShow = true;
         },
     },
 });

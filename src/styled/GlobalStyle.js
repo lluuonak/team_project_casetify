@@ -4,6 +4,7 @@ import '@fontsource/inter/400.css'; // 일반 두께
 import '@fontsource/inter/700.css'; // 볼드 두께
 import 'pretendard/dist/web/variable/pretendardvariable.css';
 import '@fontsource/prata';
+import 'react-tooltip/dist/react-tooltip.css';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -12,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing:border-box;
   }
   body {
+    height: 100%;
     font-size: 16px;
     line-height: 1.6;
     /* font-family: 'Noto Sans KR', sans-serif; */
@@ -20,6 +22,9 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    overscroll-behavior: none; /* 상/하/좌/우 모든 바운스 효과 제거 */
+
+
   }
   section{
     width: 100%;
@@ -30,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
   }
   a {
     text-decoration: none;
-    color:#333; 
+    color:#a1a1a1; 
   }
   li { list-style:none }
   img { vertical-align: top; }
