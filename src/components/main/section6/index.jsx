@@ -7,10 +7,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import ReactCardFlip from 'react-card-flip';
-import dataList from '../../../assets/section6Data';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import ReactCardFlip from 'react-card-flip';
 import dataList from '../../../assets/main/section6Data';
 const Section6 = () => {
     const prevRef = useRef(null);

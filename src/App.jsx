@@ -1,4 +1,3 @@
-import { Routes, Route, useLocation, Router } from 'react-router-dom';
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import GlobalStyle from './styled/GlobalStyle';
 import Layout from './common/Layout';
