@@ -38,7 +38,7 @@ export const Section2Style = styled.section`
             width: 197px;
             height: 197px;
             border-radius: 50%;
-            background-color: #000;
+            background-color: #1a1a1a;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -56,14 +56,14 @@ export const Section2Style = styled.section`
                     align-items: center;
                 }
             }
-            &:hover{
-                .more{
-                    .text{
-                    color :  #ff5b37;
+            &:hover {
+                .more {
+                    .text {
+                        color: #ff5b37;
                     }
-                    i{
-                        path{
-                            fill :  #ff5b37;
+                    i {
+                        path {
+                            fill: #ff5b37;
                         }
                     }
                 }

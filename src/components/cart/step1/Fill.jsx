@@ -3,7 +3,6 @@ import CartItem from './CartItem';
 import { FillStyle } from './style';
 import { useState } from 'react';
 import { cartActions } from '../../../store/modules/cart/cartSlice';
-
 const Fill = () => {
     const { cart, totalPrice } = useSelector((state) => state.cart);
     const [checkedItems, setCheckedItems] = useState([]);
@@ -44,10 +43,10 @@ const Fill = () => {
             <ul className="list">
                 {cart.map((item) => (
                     <CartItem
-                        key={item.id}
+                        key={item.cartId}
                         data={item}
-                        checked={checkedItems.includes(item.id)}
-                        onToggle={() => handleItemToggle(item.id)}
+                        checked={checkedItems.includes(item.cartId)}
+                        onToggle={() => handleItemToggle(item.cartId)}
                     />
                 ))}
             </ul>

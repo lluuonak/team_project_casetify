@@ -4,13 +4,15 @@ import { useDispatch } from 'react-redux';
 import { cartActions } from '../../../store/modules/cart/cartSlice';
 
 const CartItem = ({ data, checked, onToggle }) => {
-    const { id, name, category, phone, qty, price } = data;
+    const { cartId, id, name, category, phone, qty, price, folder } = data;
     const dispatch = useDispatch();
     return (
         <CartItemStyle>
             <input type="checkbox" name="" id="" checked={checked} onChange={onToggle} />
             <div className="item">
-                <div className="img"></div>
+                <div className="img">
+                    <img src={`/images/detail/phone/${folder}/1.webp`} alt="" />
+                </div>
                 <div className="info">
                     <div className="text">
                         <strong>{name}</strong>
@@ -20,18 +22,18 @@ const CartItem = ({ data, checked, onToggle }) => {
                     </div>
                     <span className="price">₩{price.toLocaleString()}</span>
                     <div className="qty">
-                        <div className="btn" onClick={() => dispatch(cartActions.minusQty(id))}>
+                        <div className="btn" onClick={() => dispatch(cartActions.minusQty(cartId))}>
                             -
                         </div>
                         <div>{qty}</div>
-                        <div className="btn" onClick={() => dispatch(cartActions.plusQty(id))}>
+                        <div className="btn" onClick={() => dispatch(cartActions.plusQty(cartId))}>
                             +
                         </div>
                     </div>
                     <i
                         className="del"
                         onClick={() => {
-                            dispatch(cartActions.deleteCartItem(id));
+                            dispatch(cartActions.deleteCartItem(cartId));
                         }}
                     >
                         <svg

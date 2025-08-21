@@ -1,6 +1,5 @@
 import { useSelector } from 'react-redux';
 import OrderNav from '../../orderNav';
-import Banner from './Banner';
 import Empty from './Empty';
 import Fill from './Fill';
 import { Section1Style } from './style';
