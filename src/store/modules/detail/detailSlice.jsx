@@ -6,8 +6,9 @@ import phoneCaseData from '../../../assets/detail/phoneCaseData';
     detail 페이지에서 사용되는 데이터는 고정 데이터로 사용 될 수 있도록 처리 하였습니다.
  */
 const initialState = {
-    phoneData: phoneCaseData,
+    data: phoneCaseData,
     currentData: {},
+    otherList: [],
 };
 
 export const detailSlice = createSlice({
@@ -18,7 +19,7 @@ export const detailSlice = createSlice({
             switch (action.payload) {
                 case 'phone':
                 default:
-                    const phoneData = state.phoneData.find((item) => item.type === action.payload);
+                    const phoneData = state.data.find((item) => item.type === action.payload);
                     const currentCaseData = phoneData.case.find((item) => item.id === 1);
                     state.currentData = {
                         type: 'phone',
@@ -29,9 +30,18 @@ export const detailSlice = createSlice({
             아름다운 계절에 꽃처럼 물든 컬러로 만나보세요.`,
                         forPhone: '아이폰 16 Pro Max',
                         caseData: currentCaseData,
+                        colors: ['white', '#D3BDAF', '#EDBAD2', '#2D59C5', '#000080', '#000'],
                     };
+                    state.otherList = phoneData.case;
                     break;
             }
+        },
+        editCurrentItem: (state, action) => {
+            const { type, id } = action.payload;
+            const dataList = state.data.find((item) => item.type === type);
+
+            const target = dataList.case.find((item) => item.id === id);
+            state.currentData.caseData = target;
         },
     },
 });

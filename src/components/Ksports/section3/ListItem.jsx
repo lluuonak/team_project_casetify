@@ -1,15 +1,11 @@
-import { useDispatch } from 'react-redux';
 import { ListItemStyle } from './style';
 import { useNavigate } from 'react-router-dom';
-import { detailActions } from '../../../store/modules/detail/detailSlice';
 
 const ListItem = ({ data }) => {
     const { img, name, price, like, id } = data;
 
-    const dispatch = useDispatch();
     const navigator = useNavigate();
     const onClickHandler = () => {
-        dispatch(detailActions.getDetail('phone'));
         navigator('/detail');
     };
     return (

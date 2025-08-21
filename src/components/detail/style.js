@@ -147,7 +147,7 @@ export const Section1Style = styled.section`
                         margin-right: 60px;
                     }
                 }
-                .color {
+                /* .color {
                     width: 100%;
                     height: 30px;
                     display: flex;
@@ -173,7 +173,7 @@ export const Section1Style = styled.section`
                             cursor: pointer;
                         }
                     }
-                }
+                } */
 
                 .buy {
                     width: 100%;
@@ -259,6 +259,34 @@ export const SelectPartialStyle = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+`;
+
+export const ColorPartialStyle = styled.div`
+    width: 100%;
+    height: 30px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    .label {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        margin-right: 60px;
+    }
+    ul {
+        width: auto;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        li {
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            cursor: pointer;
+        }
     }
 `;
 

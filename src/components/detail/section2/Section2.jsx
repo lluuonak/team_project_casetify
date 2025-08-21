@@ -1,6 +1,17 @@
+import { useDispatch, useSelector } from 'react-redux';
 import { Section2Style } from '../style';
+import { detailActions } from '../../../store/modules/detail/detailSlice';
+import { useEffect } from 'react';
 
-const Section2 = () => {
+const Section2 = ({ type }) => {
+    const { otherList } = useSelector((state) => state.detail);
+
+    const dispatch = useDispatch();
+    const onClickHandler = (idx) => {
+        const data = { type, id: idx + 1 };
+        dispatch(detailActions.editCurrentItem(data));
+        window.scrollTo(0, 0);
+    };
     return (
         <Section2Style>
             <div className="inner">
@@ -26,45 +37,22 @@ const Section2 = () => {
                 </div>
 
                 <ul className="items">
-                    <li>
-                        <div className="img">
-                            <img src="/images/detail/phone/Big Bobo/1.webp" alt="" />
-                        </div>
-                        <div className="text-area">
-                            <strong>Ripple Case - Periwinkle</strong>
-                            <span className="price">₩89,000</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div className="img">
-                            <img src="/images/detail/phone/Black Kingsnake/1.webp" alt="" />
-                        </div>
-                        <div className="text-area">
-                            <strong>Ripple Case - Periwinkle</strong>
-                            <span className="price">₩89,000</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div className="img">
-                            <img src="/images/detail/phone/Black Organza Ribbon/1.webp" alt="" />
-                        </div>
-                        <div className="text-area">
-                            <strong>Ripple Case - Periwinkle</strong>
-                            <span className="price">₩89,000</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div className="img">
-                            <img
-                                src="/images/detail/phone/Blue Background Wavy Border/1.webp"
-                                alt=""
-                            />
-                        </div>
-                        <div className="text-area">
-                            <strong>Ripple Case - Periwinkle</strong>
-                            <span className="price">₩89,000</span>
-                        </div>
-                    </li>
+                    {otherList.map((item, idx) => (
+                        <li key={idx}>
+                            <div
+                                className="img"
+                                onClick={() => {
+                                    onClickHandler(idx);
+                                }}
+                            >
+                                <img src={`/images/detail/${type}/${item.folder}/1.webp`} alt="" />
+                            </div>
+                            <div className="text-area">
+                                <strong>{item.name}</strong>
+                                <span className="price">₩{item.price.toLocaleString()}</span>
+                            </div>
+                        </li>
+                    ))}
                 </ul>
 
                 <span className="more">MORE VIEW</span>
