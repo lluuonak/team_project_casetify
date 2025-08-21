@@ -1,5 +1,5 @@
 import OrderNav from '../../../orderNav';
-import OrderItemInfo from '../OrderItemInfo';
+import OrderItemInfo from './OrderItemInfo';
 import { Section1Style } from './style';
 
 const Section1 = () => {
