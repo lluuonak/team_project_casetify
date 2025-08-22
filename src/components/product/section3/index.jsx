@@ -42,7 +42,7 @@ const Section3 = () => {
             <div className="container">
                 {productData.map((category) => {
                     const filteredItems =
-                        activeTags.includes('전체') || activeTags.length === 0
+                        activeTags.includes('All') || activeTags.length === 0
                             ? category.product // '전체'가 선택되었거나 태그가 선택되지 않았을 경우 모든 상품 표시
                             : category.product.filter((item) =>
                                   activeTags.some((tag) => item.tags.includes(tag))
@@ -65,27 +65,59 @@ const Section3 = () => {
 
                             {/* 필터 태그들 */}
                             <div className="filter-tags">
-                                {[
-                                    '전체',
-                                    'COMPACT',
-                                    'KEI',
-                                    '빅보보',
-                                    '블랙',
-                                    '컬랩',
-                                    '크로스',
-                                    '폰케이스',
-                                    '시계줄',
-                                ].map((tag, index) => (
-                                    <span
-                                        key={index}
-                                        className={`tag ${
-                                            activeTags.includes(tag) ? 'active' : ''
-                                        }`}
-                                        onClick={() => handleTagClick(tag)} // 태그 클릭 이벤트
-                                    >
-                                        {tag}
-                                    </span>
-                                ))}
+                                <div className="K">
+                                    <p>K -</p>
+                                    {['All', 'SPORTS', 'CONTENT', 'ART'].map((tag, index) => (
+                                        <span
+                                            key={index}
+                                            className={`tag ${
+                                                activeTags.includes(tag) ? 'active' : ''
+                                            }`}
+                                            onClick={() => handleTagClick(tag)} // 태그 클릭 이벤트
+                                        >
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                                <div className="series">
+                                    <p>시리즈</p>
+                                    {[
+                                        'All',
+                                        '바운스',
+                                        '임팩트',
+                                        '링',
+                                        '미러',
+                                        'BioVeg & 페블 레더',
+                                    ].map((tag, index) => (
+                                        <span
+                                            key={index}
+                                            className={`tag ${
+                                                activeTags.includes(tag) ? 'active' : ''
+                                            }`}
+                                            onClick={() => handleTagClick(tag)} // 태그 클릭 이벤트
+                                        >
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="filter-tags">
+                                <div className="Co-Lab">
+                                    <p>Co-Lab</p>
+                                    {['치이카와', 'ba & sh', 'V & A', '바빌론 LA', '스테이플'].map(
+                                        (tag, index) => (
+                                            <span
+                                                key={index}
+                                                className={`tag ${
+                                                    activeTags.includes(tag) ? 'active' : ''
+                                                }`}
+                                                onClick={() => handleTagClick(tag)} // 태그 클릭 이벤트
+                                            >
+                                                {tag}
+                                            </span>
+                                        )
+                                    )}
+                                </div>
                             </div>
 
                             {/* 상품 그리드 */}

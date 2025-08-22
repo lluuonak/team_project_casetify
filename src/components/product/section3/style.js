@@ -32,28 +32,47 @@ export const Section3Style = styled.section`
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
-        gap: 12px;
+        gap: 20px;
         margin-bottom: 30px;
-    }
-
-    .tag {
-        padding: 8px 20px;
-        background-color: transparent;
-        color: #888;
-        border: 1px solid #555;
-        border-radius: 20px;
-        font-size: 12px;
-        cursor: pointer;
-        transition: all 0.3s;
-
-        &.active {
-            border: 1px solid #fff;
-            color: white;
+        .K {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            p {
+                padding: 5px 20px;
+                color: #888;
+                font-size: 16px;
+            }
         }
+        .series {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            p {
+                padding: 5px 15px;
+                color: #888;
+                font-size: 16px;
+            }
+        }
+        .tag {
+            padding: 5px 15px;
+            background-color: transparent;
+            color: #888;
+            border: 1px solid #555;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
 
-        &:hover {
-            border: 1px solid #fff;
-            color: white;
+            &.active {
+                border: 1px solid #fff;
+                color: white;
+            }
+
+            &:hover {
+                border: 1px solid #fff;
+                color: white;
+            }
         }
     }
 

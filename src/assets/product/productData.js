@@ -8,14 +8,14 @@ export default [
                 title: 'Shinji Ikari Case',
                 price: '89,000',
                 img: '../images/colab/Shinji_Ikari_Case_1.webp',
-                tags: ['COMPACT', '블랙'],
+                tags: ['SPORTS', '임팩트'],
             },
             {
                 id: 2,
                 title: 'Rei Ayanami Case',
                 price: '89,000',
                 img: '../images/colab/Rei_Ayanami_Case_1.webp',
-                tags: ['블랙'],
+                tags: ['임팩트'],
             },
             {
                 id: 3,
@@ -148,14 +148,14 @@ export default [
                 title: 'Typography Case',
                 price: '89,000',
                 img: '../images/colab/Typography_Case .webp',
-                tags: ['블랙'],
+                tags: ['SPORTS', '임팩트'],
             },
             {
                 id: 9,
                 title: 'Sounds Only Case 04',
                 price: '91,000',
                 img: '../images/colab/Sounds_Only_Case_04.webp',
-                tags: ['블랙'],
+                tags: ['임팩트'],
             },
             {
                 id: 10,
