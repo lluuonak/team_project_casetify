@@ -2,10 +2,11 @@ import styled from 'styled-components';
 
 export const Section2Style = styled.section`
     width: 1920px;
-    height: 900px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 155px;
     background-color: #1a1a1a;
     .text-box {
-        padding-top: 200px;
         width: 500px;
         margin: 0 auto;
         text-align: center;
@@ -30,16 +31,22 @@ export const Section2Style = styled.section`
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
+                cursor: pointer;
                 p {
                     margin-top: 20px;
                     font-size: 20px;
                     color: #fff;
+                }
+                &:hover img {
+                    transform: scale(1.1);
+                    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
                 }
             }
             img {
                 width: 170px;
                 height: 170px;
                 object-fit: cover;
+                transition: transform 0.4s ease;
             }
         }
     }

@@ -71,7 +71,7 @@ const images = [
     ],
 ];
 
-const Index = () => {
+const section1 = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [prevSlide, setPrevSlide] = useState(null);
     const slideCount = images.length;
@@ -154,4 +154,4 @@ const Index = () => {
     );
 };
 
-export default Index;
+export default section1;

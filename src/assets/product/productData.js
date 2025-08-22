@@ -1,0 +1,158 @@
+export default [
+    {
+        id: 'apple',
+        title: 'apple',
+        product: [
+            {
+                id: 1,
+                title: 'Shinji Ikari Case',
+                price: '89,000',
+                img: '../images/colab/Shinji_Ikari_Case_1.webp',
+            },
+            {
+                id: 2,
+                title: 'Rei Ayanami Case',
+                price: '89,000',
+                img: '../images/colab/Rei_Ayanami_Case_1.webp',
+            },
+            {
+                id: 3,
+                title: 'Asuka Shikinami Langley Case',
+                price: '89,000',
+                img: '../images/colab/Asuka_Shikinami_Langley_Case.webp',
+            },
+            {
+                id: 4,
+                title: 'Kaworu Nagisa Case',
+                price: '89,000',
+                img: '../images/colab/Kaworu_Nagisa_Case.webp',
+            },
+            {
+                id: 5,
+                title: 'NERV Logo Case',
+                price: '89,000',
+                img: '../images/colab/NERV_Logo_Case.webp',
+            },
+            {
+                id: 6,
+                title: 'Evangelion Test Type-01',
+                price: '102,000',
+                img: '../images/colab/Evangelion_Test_Type-01_Case.webp',
+            },
+            {
+                id: 7,
+                title: 'Evangelion Proto Type Unit-00',
+                price: '77,000',
+                img: '../images/colab/Evangelion_Proto_Type_Unit-00_Case.webp',
+            },
+            {
+                id: 8,
+                title: 'Typography Case',
+                price: '89,000',
+                img: '../images/colab/Typography_Case .webp',
+            },
+            {
+                id: 9,
+                title: 'Sounds Only Case 04',
+                price: '91,000',
+                img: '../images/colab/Sounds_Only_Case_04.webp',
+            },
+            {
+                id: 10,
+                title: 'SEELE Logo Case',
+                price: '89,000',
+                img: '../images/colab/SEELE_Logo_Case .webp',
+            },
+            {
+                id: 11,
+                title: 'Shinji Ikari Watch Band',
+                price: '64,000',
+                img: '../images/colab/Shinji_Ikari_Watch_Band .webp',
+            },
+            {
+                id: 12,
+                title: 'NERV Watch Band',
+                price: '64,000',
+                img: '../images/colab/NERV_Watch_Band.webp',
+            },
+        ],
+    },
+    {
+        id: 'samsung',
+        title: 'samsung',
+        product: [
+            {
+                id: 1,
+                title: 'Shinji Ikari Case',
+                price: '89,000',
+                img: '../images/colab/Shinji_Ikari_Case_1.webp',
+            },
+            {
+                id: 2,
+                title: 'Rei Ayanami Case',
+                price: '89,000',
+                img: '../images/colab/Rei_Ayanami_Case_1.webp',
+            },
+            {
+                id: 3,
+                title: 'Asuka Shikinami Langley Case',
+                price: '89,000',
+                img: '../images/colab/Asuka_Shikinami_Langley_Case.webp',
+            },
+            {
+                id: 4,
+                title: 'Kaworu Nagisa Case',
+                price: '89,000',
+                img: '../images/colab/Kaworu_Nagisa_Case.webp',
+            },
+            {
+                id: 5,
+                title: 'NERV Logo Case',
+                price: '89,000',
+                img: '../images/colab/NERV_Logo_Case.webp',
+            },
+            {
+                id: 6,
+                title: 'Evangelion Test Type-01',
+                price: '102,000',
+                img: '../images/colab/Evangelion_Test_Type-01_Case.webp',
+            },
+            {
+                id: 7,
+                title: 'Evangelion Proto Type Unit-00',
+                price: '77,000',
+                img: '../images/colab/Evangelion_Proto_Type_Unit-00_Case.webp',
+            },
+            {
+                id: 8,
+                title: 'Typography Case',
+                price: '89,000',
+                img: '../images/colab/Typography_Case .webp',
+            },
+            {
+                id: 9,
+                title: 'Sounds Only Case 04',
+                price: '91,000',
+                img: '../images/colab/Sounds_Only_Case_04.webp',
+            },
+            {
+                id: 10,
+                title: 'SEELE Logo Case',
+                price: '89,000',
+                img: '../images/colab/SEELE_Logo_Case .webp',
+            },
+            {
+                id: 11,
+                title: 'Shinji Ikari Watch Band',
+                price: '64,000',
+                img: '../images/colab/Shinji_Ikari_Watch_Band .webp',
+            },
+            {
+                id: 12,
+                title: 'NERV Watch Band',
+                price: '64,000',
+                img: '../images/colab/NERV_Watch_Band.webp',
+            },
+        ],
+    },
+];
