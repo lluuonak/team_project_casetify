@@ -6,7 +6,7 @@ export const Section3Style = styled.section`
     background-color: #1a1a1a;
     margin: 0 auto;
     margin-bottom: 200px;
-    /* 헤더 스타일 */
+    /* 타이틀 스타일 */
     .title {
         width: 1200px;
         height: 40px;
@@ -47,12 +47,12 @@ export const Section3Style = styled.section`
         transition: all 0.3s;
 
         &.active {
-            background-color: #444;
+            border: 1px solid #fff;
             color: white;
         }
 
         &:hover {
-            background-color: #555;
+            border: 1px solid #fff;
             color: white;
         }
     }
@@ -64,21 +64,20 @@ export const Section3Style = styled.section`
     }
 
     .more-view-btn {
-        padding: 12px 32px;
+        padding: 8px 30px;
         background-color: transparent;
-        border: 1px solid #dc2626;
-        color: #dc2626;
-        border-radius: 4px;
-        font-size: 12px;
-        font-weight: 500;
+        border: 1px solid #fff;
+        color: #fff;
+        border-radius: 200px;
+        font-size: 16px;
         letter-spacing: 1px;
         cursor: pointer;
         text-transform: uppercase;
         transition: all 0.3s;
 
         &:hover {
-            background-color: #dc2626;
-            color: #fff;
+            border-color: #ff5b37;
+            color: #ff5b37;
         }
     }
 
@@ -128,6 +127,7 @@ export const ListItemStyle = styled.section`
         height: 90px;
         color: #fff;
         padding: 0 20px;
+        cursor: pointer;
         .name {
             height: 70px;
             display: -webkit-box;
