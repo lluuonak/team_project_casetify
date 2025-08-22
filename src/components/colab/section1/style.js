@@ -158,6 +158,7 @@ export const ProductCard = styled.div`
             margin-bottom: 8px;
             color: #fff;
             line-height: 1.2;
+            height: 70px;
 
             display: -webkit-box;
             -webkit-box-orient: vertical;

@@ -17,7 +17,7 @@ const Section2 = ({ categoryName }) => {
 
     const { title, product } = currentCategory;
 
-    const getFirstTitleFromGsap = () => {
+    const getFirstTitle = () => {
         const gsapCategory = gsapData[categoryName];
         if (
             gsapCategory &&
@@ -30,7 +30,7 @@ const Section2 = ({ categoryName }) => {
         return title;
     };
 
-    const firstTitle = getFirstTitleFromGsap();
+    const firstTitle = getFirstTitle();
 
     // 타입과 시리즈 목록 추출
     const availableTypes = useMemo(() => {
@@ -143,7 +143,7 @@ const Section2 = ({ categoryName }) => {
                             </div>
                             <div className="info">
                                 <span>{title}</span>
-                                <span>₩{price}</span>
+                                <span>₩{price.toLocaleString()}</span>
                             </div>
                         </li>
                     ))}

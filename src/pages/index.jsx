@@ -5,6 +5,7 @@ export { default as Ksports } from './Ksports';
 
 export { default as Colab } from './colab';
 export { default as ColabDetail } from './colab/ColabDetail';
+export { default as Acc } from './acc';
 
 export { default as MyPage } from './mypage';
 

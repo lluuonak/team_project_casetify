@@ -4,6 +4,13 @@ export const Section2Style = styled.section`
     height: auto;
     text-align: center;
     line-height: 1.2;
+    background: transparent;
+    /* background-image: url('../images/colab/2.png'); */
+    /* background-position: 0 -300px; */
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: cover;
+
     .category-list {
         li {
             ul.cate {
@@ -125,7 +132,7 @@ export const Section2Style = styled.section`
                         left: -26%;
                         top: 7px;
                         /* transform: translate(-50%); */
-                        transition: transform 0.3s ease;
+                        /* transition: transform 0.3s ease; */
                         &:hover {
                             transform: scale(1.1);
                             cursor: pointer;

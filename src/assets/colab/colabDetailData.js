@@ -6,7 +6,7 @@ export default [
             {
                 id: 1,
                 title: 'Shinji Ikari Case',
-                price: '89,000',
+                price: 89000,
                 img: '../images/colab/Shinji_Ikari_Case_1.webp',
                 type: 'apple',
                 series: 'mirror',
@@ -14,7 +14,7 @@ export default [
             {
                 id: 2,
                 title: 'Rei Ayanami Case',
-                price: '89,000',
+                price: 89000,
                 img: '../images/colab/Rei_Ayanami_Case_1.webp',
                 type: 'apple',
                 series: 'mirror',
@@ -22,7 +22,7 @@ export default [
             {
                 id: 3,
                 title: 'Asuka Shikinami Langley Case',
-                price: '89,000',
+                price: 89000,
                 img: '../images/colab/Asuka_Shikinami_Langley_Case.webp',
                 type: 'apple',
                 series: 'mirror',
@@ -30,7 +30,7 @@ export default [
             {
                 id: 4,
                 title: 'Kaworu Nagisa Case',
-                price: '89,000',
+                price: 89000,
                 img: '../images/colab/Kaworu_Nagisa_Case.webp',
                 type: 'apple',
                 series: 'mirror',
@@ -38,7 +38,7 @@ export default [
             {
                 id: 5,
                 title: 'NERV Logo Case',
-                price: '89,000',
+                price: 89000,
                 img: '../images/colab/NERV_Logo_Case.webp',
                 type: 'apple',
                 series: 'mirror',
@@ -47,7 +47,7 @@ export default [
             {
                 id: 6,
                 title: 'NERV Watch Band',
-                price: '64,000',
+                price: 64000,
                 img: '../images/colab/NERV_Watch_Band.webp',
                 type: 'acc',
                 series: 'impact',
@@ -55,7 +55,7 @@ export default [
             {
                 id: 7,
                 title: 'Evangelion Proto Type Unit-00',
-                price: '77,000',
+                price: 77000,
                 img: '../images/colab/Evangelion_Proto_Type_Unit-00_Case.webp',
                 type: 'apple',
                 series: 'impact',
@@ -63,7 +63,7 @@ export default [
             {
                 id: 8,
                 title: 'Evangelion Mark.06 Case',
-                price: '89,000',
+                price: 89000,
                 img: '../images/colab/Evangelion Mark.06 Case89000.webp',
                 type: 'samsung',
                 series: 'impact',
@@ -71,7 +71,7 @@ export default [
             {
                 id: 9,
                 title: 'Sounds Only Case 04',
-                price: '91,000',
+                price: 91000,
                 img: '../images/colab/Sounds_Only_Case_04.webp',
                 type: 'apple',
                 series: 'impact',
@@ -79,7 +79,7 @@ export default [
             {
                 id: 10,
                 title: 'SEELE Logo Case',
-                price: '89,000',
+                price: 89000,
                 img: '../images/colab/SEELE_Logo_Case .webp',
                 type: 'apple',
                 series: 'mirror',
@@ -87,7 +87,7 @@ export default [
             {
                 id: 11,
                 title: 'Evangelion Test Type-01',
-                price: '102,000',
+                price: 102000,
                 img: '../images/colab/Evangelion_Test_Type-01_Case.webp',
                 type: 'apple',
                 series: 'bounce',
@@ -95,7 +95,7 @@ export default [
             {
                 id: 12,
                 title: 'Shinji Ikari Watch Band',
-                price: '64,000',
+                price: 64000,
                 img: '../images/colab/Shinji_Ikari_Watch_Band .webp',
                 type: 'acc',
                 series: 'impact',
@@ -103,7 +103,7 @@ export default [
             {
                 id: 13,
                 title: 'Angel MagSafe Wallet',
-                price: '58,000',
+                price: 58000,
                 img: '../images/colab/Angel MagSafe Wallet58000.webp',
                 type: 'acc',
                 series: '',
@@ -111,7 +111,7 @@ export default [
             {
                 id: 14,
                 title: 'NERV Logo Magnetic Wireless Charger',
-                price: '51,000',
+                price: 51000,
                 img: '../images/colab/NERV Logo Magnetic Wireless Charger51000.webp',
                 type: 'acc',
                 series: '',
@@ -119,7 +119,7 @@ export default [
             {
                 id: 15,
                 title: 'Evangelion Production Model -08 Case',
-                price: '102,000',
+                price: 102000,
                 img: '../images/colab/Evangelion Production Model -08 Case102000.webp',
                 type: 'samsung',
                 series: 'ring',
@@ -127,7 +127,7 @@ export default [
             {
                 id: 16,
                 title: 'NERV Logo Snappy Grip Stand',
-                price: '45,000',
+                price: 45000,
                 img: '../images/colab/NERV Logo Snappy Grip Stand45000.webp',
                 type: 'apple',
                 series: '',
@@ -141,7 +141,7 @@ export default [
             {
                 id: 1,
                 title: 'Pyramide du Louvre inversee Case',
-                price: '89,000',
+                price: 89000,
                 img: '../images/colab/Pyramide_du_Louvre_inverse_Case.webp',
                 type: 'apple',
                 series: 'impact',
@@ -149,7 +149,7 @@ export default [
             {
                 id: 2,
                 title: 'Louvre monochromatique Case',
-                price: '102,000',
+                price: 102000,
                 img: '../images/colab/Louvre monochromatique Case - 1.webp',
                 type: 'apple',
                 series: 'bounce',
@@ -157,7 +157,7 @@ export default [
             {
                 id: 3,
                 title: 'Louvre nuage monochromatique Case',
-                price: '89,000',
+                price: 89000,
                 img: '../images/colab/Louvre nuage monochromatique Case - 1.webp',
                 type: 'samsung',
                 series: 'impact',
@@ -165,7 +165,7 @@ export default [
             {
                 id: 4,
                 title: 'LOUVRE Rope Cross-body Strap with Card (Black) - LA JOCONDE PORTRAIT DE MONNA LISA',
-                price: '96,000',
+                price: 96000,
                 img: '../images/colab/LOUVRE Rope Cross-body Strap with Card (Black) - LA JOCONDE PORTRAIT DE MONNA LISA - 1.png',
                 type: 'acc',
                 series: '',
@@ -173,7 +173,7 @@ export default [
             {
                 id: 5,
                 title: "LOUVRE Strap Card (Black) - PSYCHE RANIMEE PAR LE BAISER DE L'AMOUR",
-                price: '26,000',
+                price: 26000,
                 img: '../images/colab/LOUVRE Strap Card (Black) - PSYCHE RANIMEE PAR LE BAISER DE LAMOUR.png',
                 type: 'acc',
                 series: '',
@@ -181,7 +181,7 @@ export default [
             {
                 id: 6,
                 title: 'LOUVRE Strap Card (Black) - LE SPHINX DE TANIS',
-                price: '26,000',
+                price: 26000,
                 img: '../images/colab/LOUVRE Strap Card (Black) - LE SPHINX DE TANIS.png',
                 type: 'acc',
                 series: '',
@@ -189,7 +189,7 @@ export default [
             {
                 id: 7,
                 title: 'Venus de Milo PowerThru Power Bank',
-                price: '96,000',
+                price: 96000,
                 img: '../images/colab/Venus de Milo PowerThru Power Bank - 1.png',
                 type: 'acc',
                 series: '',
@@ -197,7 +197,7 @@ export default [
             {
                 id: 8,
                 title: 'Girl with a Pearl Earring Snappy Grip Stand',
-                price: '45,000',
+                price: 45000,
                 img: '../images/colab/Girl with a Pearl Earring Snappy Grip Stand.webp',
                 type: 'acc',
                 series: '',
@@ -205,7 +205,7 @@ export default [
             {
                 id: 9,
                 title: 'Ingres Snappy Ring Holder',
-                price: '45,000',
+                price: 45000,
                 img: '../images/colab/Ingres Snappy Ring Holder - 1.webp',
                 type: 'acc',
                 series: '',
@@ -213,7 +213,7 @@ export default [
             {
                 id: 10,
                 title: 'Louvre Collage Snappy Cardholder Stand',
-                price: '51,000',
+                price: 51000,
                 img: '../images/colab/Louvre Collage Snappy Cardholder Stand.webp',
                 type: 'acc',
                 series: '',
@@ -221,7 +221,7 @@ export default [
             {
                 id: 11,
                 title: 'Louvre Nuage Case - Noir Series Case',
-                price: '108,000',
+                price: 108000,
                 img: '../images/colab/Louvre Nuage Case - Noir Series Case - 1.webp',
                 type: 'apple',
                 series: 'impact',
@@ -230,7 +230,7 @@ export default [
             {
                 id: 12,
                 title: 'Département des Objets d’Art - Salle 612 Case',
-                price: '96,000',
+                price: 96000,
                 img: '../images/colab/Département des Objets d’Art - Salle 612 Case108000.webp',
                 type: 'apple',
                 series: 'ring',
@@ -238,7 +238,7 @@ export default [
             {
                 id: 13,
                 title: 'I am a Masterpiece Snappy Grip Stand',
-                price: '45,000',
+                price: 45000,
                 img: '../images/colab/I am a Masterpiece Snappy Grip Stand45000.webp',
                 type: 'acc',
                 series: 'ring',
@@ -246,7 +246,7 @@ export default [
             {
                 id: 14,
                 title: 'Département des Sculptures - Psyché ranimée par le baiser de l’Amour - Salle 403 Case',
-                price: '77,000',
+                price: 77000,
                 img: '../images/colab/Département des Sculptures - Psyché ranimée par le baiser de l’Amour - Salle 403 Case77000.webp',
                 type: 'samsung',
                 series: '',
@@ -254,7 +254,7 @@ export default [
             {
                 id: 15,
                 title: 'La Grande Odalisque Case',
-                price: '77,000',
+                price: 77000,
                 img: '../images/colab/La Grande Odalisque Case77000.webp',
                 type: 'samsung',
                 series: '',
@@ -263,7 +263,7 @@ export default [
             {
                 id: 16,
                 title: 'Département des Peintures - Salle 711 Case',
-                price: '89,000',
+                price: 89000,
                 img: '../images/colab/Département des Peintures - Salle 711 Case89000.webp',
                 type: 'samsung',
                 series: '',
@@ -277,7 +277,7 @@ export default [
             {
                 id: 1,
                 title: 'Hello Kitty Konbini Phone Charm',
-                price: '89,000',
+                price: 89000,
                 img: '../images/colab/Hello Kitty Konbini Phone Charm - 1.png',
                 type: 'acc',
                 series: '',
@@ -285,7 +285,7 @@ export default [
             {
                 id: 2,
                 title: 'Hello Kitty Sticker Case',
-                price: '89,000',
+                price: 89000,
                 img: '../images/colab/Hello Kitty Sticker Case - 1.webp',
                 type: 'apple',
                 series: '',
@@ -293,7 +293,7 @@ export default [
             {
                 id: 3,
                 title: 'Hello Kitty Milk Tea Case',
-                price: '89,000',
+                price: 89000,
                 img: '../images/colab/Hello Kitty Milk Tea Case - 1.webp',
                 type: 'apple',
                 series: '',
@@ -301,7 +301,7 @@ export default [
             {
                 id: 4,
                 title: 'Hello Kitty 50th Anniversary - Candy Machine Case',
-                price: '89,000',
+                price: 89000,
                 img: '../images/colab/Hello Kitty 50th Anniversary - Candy Machine Case.webp',
                 type: 'apple',
                 series: 'mirror',
@@ -309,7 +309,7 @@ export default [
             {
                 id: 5,
                 title: 'Hello Kitty Biscuit Case',
-                price: '89,000',
+                price: 89000,
                 img: '../images/colab/Hello Kitty Biscuit Case.webp',
                 type: 'samsung',
                 series: '',
@@ -317,7 +317,7 @@ export default [
             {
                 id: 6,
                 title: 'Hello Kitty Coffee Case',
-                price: '89,000',
+                price: 89000,
                 img: '../images/colab/Hello Kitty Coffee Case.webp',
                 type: 'samsung',
                 series: '',
@@ -325,7 +325,7 @@ export default [
             {
                 id: 7,
                 title: 'Hello Kitty Sticker PowerThru 2-in-1 Charging Stand',
-                price: '127,000',
+                price: 127000,
                 img: '../images/colab/Hello Kitty Sticker PowerThru 2-in-1 Charging Stand.webp',
                 type: 'acc',
                 series: '',
@@ -333,7 +333,7 @@ export default [
             {
                 id: 8,
                 title: 'Hello Kitty Coffee PowerThru 2-in-1 Charging Stand',
-                price: '127,000',
+                price: 127000,
                 img: '../images/colab/Hello Kitty Coffee PowerThru 2-in-1 Charging Stand.webp',
                 type: 'acc',
                 series: '',
@@ -341,7 +341,7 @@ export default [
             {
                 id: 9,
                 title: 'Hello Kitty Biscuit Watchband',
-                price: '64,000',
+                price: 64000,
                 img: '../images/colab/Hello Kitty Biscuit Watchband.webp',
                 type: 'acc',
                 series: '',
@@ -349,7 +349,7 @@ export default [
             {
                 id: 10,
                 title: 'Hello Kitty Sticker Snappy Ring Holder',
-                price: '45,000',
+                price: 45000,
                 img: '../images/colab/Hello Kitty Sticker Snappy Ring Holder - 1.webp',
                 type: 'acc',
                 series: '',
@@ -357,7 +357,7 @@ export default [
             {
                 id: 11,
                 title: 'Hello Kitty Sticker Snappy Grip Stand',
-                price: '45,000',
+                price: 45000,
                 img: '../images/colab/Hello Kitty Sticker Snappy Grip Stand.webp',
                 type: 'acc',
                 series: '',
@@ -365,7 +365,7 @@ export default [
             {
                 id: 12,
                 title: 'Hello Kitty Milk Tea Snappy Cardholder Stand',
-                price: '51,000',
+                price: 51000,
                 img: '../images/colab/Hello Kitty Milk Tea Snappy Cardholder Stand.webp',
                 type: 'acc',
                 series: 'mirror',
@@ -379,7 +379,7 @@ export default [
             {
                 id: 1,
                 title: 'Hogwarts Crest Case',
-                price: '102,000',
+                price: 102000,
                 img: '../images/colab/Hogwarts Crest Case.webp',
                 type: 'apple',
                 series: 'bounce',
@@ -387,7 +387,7 @@ export default [
             {
                 id: 2,
                 title: 'Gryffindor Case',
-                price: '89,000',
+                price: 89000,
                 img: '../images/colab/Gryffindor Case - 1.webp',
                 type: 'apple',
                 series: 'impact',
@@ -395,7 +395,7 @@ export default [
             {
                 id: 3,
                 title: 'Slytherin Case',
-                price: '89,000',
+                price: 89000,
                 img: '../images/colab/Slytherin Case - 1.webp',
                 type: 'apple',
                 series: 'impact',
@@ -403,7 +403,7 @@ export default [
             {
                 id: 4,
                 title: 'Ravenclaw Case',
-                price: '89,000',
+                price: 89000,
                 img: '../images/colab/Ravenclaw Case - 1.webp',
                 type: 'apple',
                 series: 'impact',
@@ -411,7 +411,7 @@ export default [
             {
                 id: 5,
                 title: 'Harry Potter Phone Charm - Ravenclaw',
-                price: '64,000',
+                price: 64000,
                 img: '../images/colab/Harry Potter Phone Charm - Ravenclaw - 1.png',
                 type: 'acc',
                 series: '',
@@ -419,7 +419,7 @@ export default [
             {
                 id: 6,
                 title: 'Hogwarts Crest PowerThru 2-in-1 Charging Stand',
-                price: '127,000',
+                price: 127000,
                 img: '../images/colab/Hogwarts Crest PowerThru 2-in-1 Charging Stand.webp',
                 type: 'acc',
                 series: '',
@@ -427,7 +427,7 @@ export default [
             {
                 id: 7,
                 title: 'Harry Potter Phone Charm - Gryffindor',
-                price: '64,000',
+                price: 64000,
                 img: '../images/colab/Harry Potter Phone Charm - Gryffindor.png',
                 type: 'acc',
                 series: '',
@@ -435,7 +435,7 @@ export default [
             {
                 id: 8,
                 title: 'Hogwarts Crest Snappy Cardholder Stand',
-                price: '51,000',
+                price: 51000,
                 img: '../images/colab/Hogwarts Crest Snappy Cardholder Stand.webp',
                 type: 'acc',
                 series: '',
@@ -443,7 +443,7 @@ export default [
             {
                 id: 9,
                 title: "Marauder's Map Case",
-                price: '83,000',
+                price: 83000,
                 img: "../images/colab/Marauder's Map Case.webp",
                 type: '',
                 series: '',
@@ -451,7 +451,7 @@ export default [
             {
                 id: 10,
                 title: "Marauder's Map Snappy Cardholder Stand",
-                price: '51,000',
+                price: 51000,
                 img: "../images/colab/Marauder's Map Snappy Cardholder Stand.webp",
                 type: 'acc',
                 series: 'mirror',
@@ -459,7 +459,7 @@ export default [
             {
                 id: 11,
                 title: 'Ravenclaw Watch Band',
-                price: '64,000',
+                price: 64000,
                 img: '../images/colab/Ravenclaw Watch Band.webp',
                 type: 'acc',
                 series: '',
@@ -467,7 +467,7 @@ export default [
             {
                 id: 12,
                 title: 'Gryffindor Mascot Case',
-                price: '83,000',
+                price: 83000,
                 img: '../images/colab/Gryffindor Mascot Case.webp',
                 type: 'apple',
                 series: 'impact',
@@ -475,7 +475,7 @@ export default [
             {
                 id: 13,
                 title: 'Honeydukes™ Goodie Bag Case',
-                price: '102,000',
+                price: 102000,
                 img: '../images/colab/Honeydukes™ Goodie Bag Case102000impact.webp',
                 type: 'apple',
                 series: 'bounce',
@@ -483,7 +483,7 @@ export default [
             {
                 id: 14,
                 title: 'Hufflepuff Case',
-                price: '102,000',
+                price: 102000,
                 img: '../images/colab/Hufflepuff Case102000.webp',
                 type: 'apple',
                 series: 'bounce',
@@ -491,7 +491,7 @@ export default [
             {
                 id: 15,
                 title: 'Hufflepuff Mascot Case',
-                price: '102,000',
+                price: 102000,
                 img: '../images/colab/Hufflepuff Mascot Case102000.png',
                 type: 'samsung',
                 series: 'ring',
@@ -499,7 +499,7 @@ export default [
             {
                 id: 16,
                 title: 'Polyjuice Potion™ Case',
-                price: '83,000',
+                price: 83000,
                 img: '../images/colab/Polyjuice Potion™ Case102000.webp',
                 type: 'samsung',
                 series: 'ring',
@@ -513,7 +513,7 @@ export default [
             {
                 id: 1,
                 title: 'Maison Kitsune Sprinkles Phone Charm',
-                price: '97,000',
+                price: 97000,
                 img: '../images/colab/Maison Kitsune Sprinkles Phone Charm.png',
                 type: 'acc',
                 series: '',
@@ -521,7 +521,7 @@ export default [
             {
                 id: 2,
                 title: 'Maison Kitsune Sound Wave Case',
-                price: '137,000',
+                price: 137000,
                 img: '../images/colab/Maison Kitsune Sound Wave Case.png',
                 type: 'apple',
                 series: '',
@@ -529,7 +529,7 @@ export default [
             {
                 id: 3,
                 title: 'Maison Kitsuné Sprinkles Multi Case',
-                price: '125,000',
+                price: 125000,
                 img: '../images/colab/Maison Kitsuné Sprinkles Multi Case.webp',
                 type: 'apple',
                 series: 'impact',
@@ -537,7 +537,7 @@ export default [
             {
                 id: 4,
                 title: 'Maison Kitsuné Bold Fox Head Green Tea Case',
-                price: '125,000',
+                price: 125000,
                 img: '../images/colab/Maison Kitsuné Bold Fox Head Green Tea Case.webp',
                 type: 'apple',
                 series: 'impact',
@@ -545,7 +545,7 @@ export default [
             {
                 id: 5,
                 title: 'Maison Kitsuné Bold Fox Head Wisteria Purple Case',
-                price: '125,000',
+                price: 125000,
                 img: '../images/colab/Maison Kitsuné Bold Fox Head Wisteria Purple Case.webp',
                 type: 'apple',
                 series: 'impact',
@@ -553,7 +553,7 @@ export default [
             {
                 id: 6,
                 title: 'Maison Kitsuné Bold Fox Head Slate Grey Case',
-                price: '148,000',
+                price: 148000,
                 img: '../images/colab/Maison Kitsuné Bold Fox Head Slate Grey Case.webp',
                 type: 'samsung',
                 series: 'ring',
@@ -561,7 +561,7 @@ export default [
             {
                 id: 7,
                 title: 'Maison Kitsuné Bold Fox Head Tournesol Case',
-                price: '148,000',
+                price: 148000,
                 img: '../images/colab/Maison Kitsuné Bold Fox Head Tournesol Case.webp',
                 type: 'apple',
                 series: 'ring',
@@ -569,7 +569,7 @@ export default [
             {
                 id: 8,
                 title: 'Maison Kitsuné Patch Magnetic Wireless Charger',
-                price: '77,000',
+                price: 77000,
                 img: '../images/colab/Maison Kitsuné Patch Magnetic Wireless Charger.png',
                 type: 'acc',
                 series: '',
@@ -577,7 +577,7 @@ export default [
             {
                 id: 9,
                 title: 'Maison Kitsuné Green Tea Snappy Ring Holder',
-                price: '60,000',
+                price: 60000,
                 img: '../images/colab/Maison Kitsuné Green Tea Snappy Ring Holder.webp',
                 type: 'acc',
                 series: '',
@@ -585,7 +585,7 @@ export default [
             {
                 id: 10,
                 title: 'Maison Kitsuné Silver Case',
-                price: '103,000',
+                price: 103000,
                 img: '../images/colab/Maison Kitsuné Silver Case.webp',
                 type: 'apple',
                 series: 'mirror',
@@ -593,7 +593,7 @@ export default [
             {
                 id: 11,
                 title: 'Maison Kitsuné Wisteria Purple Snappy Ring Holder',
-                price: '70,000',
+                price: 70000,
                 img: '../images/colab/Maison Kitsuné Wisteria Purple Snappy Ring Holder.webp',
                 type: 'acc',
                 series: '',
@@ -601,7 +601,7 @@ export default [
             {
                 id: 12,
                 title: 'Maison Kitsuné Grey Phone Charm',
-                price: '60,000',
+                price: 60000,
                 img: '../images/colab/Maison Kitsuné Grey Phone Charm.png',
                 type: 'acc',
                 series: '',
@@ -615,7 +615,7 @@ export default [
             {
                 id: 1,
                 title: 'Boston Celtics Vintage Jersey Case',
-                price: '89,000',
+                price: 89000,
                 img: '../images/colab/Boston Celtics Vintage Jersey Case - 1.webp',
                 type: 'apple',
                 series: 'impact',
@@ -623,7 +623,7 @@ export default [
             {
                 id: 2,
                 title: 'Retro Logos Sticker Case',
-                price: '102,000',
+                price: 102000,
                 img: '../images/colab/Retro Logos Sticker Case - 1.webp',
                 type: 'apple',
                 series: 'bounce',
@@ -631,7 +631,7 @@ export default [
             {
                 id: 3,
                 title: 'Chicago Bulls Vintage Jersey Case',
-                price: '89,000',
+                price: 89000,
                 img: '../images/colab/Chicago Bulls Vintage Jersey Case - 1.webp',
                 type: 'apple',
                 series: 'impact',
@@ -639,7 +639,7 @@ export default [
             {
                 id: 4,
                 title: 'Los Angeles Lakers Vintage Jersey Case',
-                price: '108,000',
+                price: 108000,
                 img: '../images/colab/Los Angeles Lakers Vintage Jersey Case - 1.webp',
                 type: 'apple',
                 series: 'ring',
@@ -647,7 +647,7 @@ export default [
             {
                 id: 5,
                 title: 'NBA Basketball Trophy Case',
-                price: '102,000',
+                price: 102000,
                 img: '../images/colab/NBA Basketball Trophy Case.png',
                 type: 'apple',
                 series: '',
@@ -655,7 +655,7 @@ export default [
             {
                 id: 6,
                 title: 'Milwaukee Bucks Vintage Jersey Case',
-                price: '89,000',
+                price: 89000,
                 img: '../images/colab/Milwaukee Bucks Vintage Jersey Case.webp',
                 type: 'samsung',
                 series: 'impact',
@@ -663,7 +663,7 @@ export default [
             {
                 id: 7,
                 title: 'Warriors Jersey Logo Magnetic Wireless Charger',
-                price: '51,000',
+                price: 51000,
                 img: '../images/colab/Warriors Jersey Logo Magnetic Wireless Charger.webp',
                 type: 'acc',
                 series: '',
@@ -671,7 +671,7 @@ export default [
             {
                 id: 8,
                 title: 'Logoman Medley Case',
-                price: '89,000',
+                price: 89000,
                 img: '../images/colab/Logoman Medley Case.webp',
                 type: '',
                 series: '',
@@ -679,7 +679,7 @@ export default [
             {
                 id: 9,
                 title: 'CAVALIERS Mania Case',
-                price: '89,000',
+                price: 89000,
                 img: '../images/colab/CAVALIERS Mania Case.webp',
                 type: '',
                 series: 'impact',
@@ -687,7 +687,7 @@ export default [
             {
                 id: 10,
                 title: 'Celtics Jersey Logo Magnetic Wireless Charger',
-                price: '51,000',
+                price: 51000,
                 img: '../images/colab/Celtics Jersey Logo Magnetic Wireless Charger.webp',
                 type: 'acc',
                 series: '',
@@ -695,7 +695,7 @@ export default [
             {
                 id: 11,
                 title: 'Team Stickers MacBook Case',
-                price: '83,000',
+                price: 83000,
                 img: '../images/colab/Team Stickers MacBook Case.webp',
                 type: 'acc',
                 series: 'bounce',
@@ -703,7 +703,7 @@ export default [
             {
                 id: 12,
                 title: 'WARRIORS Mania Case',
-                price: '89,000',
+                price: 89000,
                 img: '../images/colab/WARRIORS Mania Case.webp',
                 type: 'apple',
                 series: 'impact',
@@ -711,7 +711,7 @@ export default [
             {
                 id: 13,
                 title: 'Philadelphia 76ers Vintage Jersey Case',
-                price: '108,000',
+                price: 108000,
                 img: '../images/colab/Philadelphia 76ers Vintage Jersey Case108000ring.webp',
                 type: 'apple',
                 series: 'ring',
@@ -719,7 +719,7 @@ export default [
             {
                 id: 14,
                 title: 'Lakers Jersey Logo Magnetic Wireless Charger',
-                price: '51,000',
+                price: 51000,
                 img: '../images/colab/Lakers Jersey Logo Magnetic Wireless Charger51000.webp',
                 type: 'acc',
                 series: '',
@@ -727,7 +727,7 @@ export default [
             {
                 id: 15,
                 title: 'CELTICS Mania Case',
-                price: '96,000',
+                price: 96000,
                 img: '../images/colab/CELTICS Mania Case96000bounce.webp',
                 type: 'apple',
                 series: 'bounce',
@@ -735,7 +735,7 @@ export default [
             {
                 id: 16,
                 title: 'THUNDERS Mania Case',
-                price: '102,000',
+                price: 102000,
                 img: '../images/colab/THUNDERS Mania Case102000impact.webp',
                 type: 'apple',
                 series: 'ring',

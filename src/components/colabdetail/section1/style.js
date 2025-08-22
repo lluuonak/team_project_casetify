@@ -6,11 +6,13 @@ export const Section1Style = styled.section`
     position: relative;
     width: 100%;
 
-    /* background: #000; */
-    background-color: none;
-    /* background-image: url('./images/colab/colab_detail_bg.png'); */
-    background-position: 0 0;
+    /* background: linear-gradient(to bottom, #1a1a1a, #0a0a0a); */
+    /* background-image: url('../images/colab/1.png'); */
+    background: transparent;
+    /* background-position: 50% 50%; */
     background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    /* background-size: cover; */
 
     min-height: 100vh;
     padding: 60px 0;

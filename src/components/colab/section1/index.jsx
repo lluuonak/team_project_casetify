@@ -53,7 +53,7 @@ const Section1 = () => {
                                 {/* <ProductImage img={product.img} /> */}
                                 <div className="text">
                                     <h4>{product.name}</h4>
-                                    <span>₩{product.price}</span>
+                                    <span>₩{product.price.toLocaleString()}</span>
                                 </div>
                             </ProductCard>
                         ))}
