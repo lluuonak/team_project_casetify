@@ -44,6 +44,7 @@ export const Section3Style = styled.section`
                     justify-content: center;
                     align-items: center;
                     cursor: pointer;
+                    white-space: nowrap;
                     &.on {
                         border: 1px solid #fff;
                         color: #fff;

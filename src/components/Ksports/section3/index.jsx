@@ -12,7 +12,6 @@ const Section3 = () => {
             [categoryId]: !prev[categoryId],
         }));
     };
-
     return (
         <Section3Style className="products">
             {KsportsData.map((category) => {
@@ -46,7 +45,12 @@ const Section3 = () => {
                         <div className="category-content">
                             <ul className="product-item">
                                 {visibleItems.map((item) => (
-                                    <ListItem key={item.id} data={item} parentId={category.id} />
+                                    <ListItem
+                                        key={item.id}
+                                        data={item}
+                                        parentId={category.id}
+                                        strong={category.strong}
+                                    />
                                 ))}
                             </ul>
                         </div>
