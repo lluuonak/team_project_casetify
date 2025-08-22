@@ -42,7 +42,7 @@ export const OrderItemInfoStyle = styled.div`
 
 export const ItemStyle = styled.li`
     width: 100%;
-    height: 244px;
+    height: auto;
     .title {
         display: flex;
         gap: 30px;
@@ -72,6 +72,16 @@ export const ItemStyle = styled.li`
                 width: 160px;
                 height: 160px;
                 border: 1px solid #fff;
+                background: #fff;
+                position: relative;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
             }
             .name-price {
                 width: 1020px;
@@ -127,6 +137,16 @@ export const OtherOrderItemStyle = styled.li`
         width: 120px;
         height: 120px;
         border: 1px solid #fff;
+        position: relative;
+        background-color: #fff;
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
     .inner {
         width: 1030px;
@@ -165,6 +185,7 @@ export const OtherOrderItemStyle = styled.li`
             color: #fff;
             font-size: 16px;
             font-weight: 400;
+            margin-left: 160px;
         }
         .qty {
             display: flex;

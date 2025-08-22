@@ -24,12 +24,12 @@ export const Section2Style = styled.section`
 
 export const UserInfoStyle = styled.form`
     width: 100%;
-    height: 495px;
+    height: 605px;
     border-top: 1px solid rgba(255, 255, 255, 0.8);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
     flex-flow: column;
-    gap: 20px;
+    gap: 40px;
     padding: 40px 0;
     .user-info {
         width: 100%;
@@ -54,6 +54,20 @@ export const UserInfoStyle = styled.form`
                 line-height: normal;
                 display: flex;
                 align-items: center;
+            }
+            input {
+                border-radius: 10px;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                outline: none;
+                height: 35px;
+                background-color: transparent;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                padding: 0 30px;
+                width: 114px;
+                color: rgba(255, 255, 255, 0.5);
             }
             strong {
                 color: rgba(255, 255, 255, 0.5);
@@ -130,14 +144,19 @@ export const UserInfoStyle = styled.form`
             display: flex;
             align-items: center;
         }
-        strong {
-            color: rgba(255, 255, 255, 0.5);
+        input {
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            outline: none;
+            height: 35px;
+            background-color: transparent;
+            font-size: 16px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            padding: 0 30px;
+            width: 350px;
+            color: rgba(255, 255, 255, 0.5);
         }
     }
 
@@ -188,6 +207,7 @@ export const UserInfoStyle = styled.form`
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                color: rgba(255, 255, 255, 0.5);
             }
             select {
                 -webkit-appearance: none; /* 크롬 화살표 없애기 */
@@ -197,7 +217,8 @@ export const UserInfoStyle = styled.form`
                 border: 1px solid rgba(255, 255, 255, 0.5);
                 outline: none;
                 height: 35px;
-                background-color: transparent;
+                /* background-color: transparent; */
+                background-color: #1a1a1a;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
@@ -220,6 +241,35 @@ export const UserInfoStyle = styled.form`
                 font-weight: 400;
                 line-height: normal;
                 cursor: pointer;
+            }
+        }
+    }
+    .context-area {
+        width: 100%;
+        height: 60px;
+        padding: 0 60px;
+        display: flex;
+        gap: 30px;
+        label {
+            width: 137px;
+            height: 100%;
+            color: #fff;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            display: flex;
+            align-items: center;
+        }
+        .text {
+            width: 366px;
+            height: 100%;
+            p {
+                color: rgba(255, 255, 255, 0.5);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 30px; /* 187.5% */
             }
         }
     }

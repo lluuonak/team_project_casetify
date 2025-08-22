@@ -15,3 +15,4 @@ export { default as MyPage } from './mypage';
 export { default as Cart } from './cart';
 export { default as Step1 } from './cart/Step1';
 export { default as Step2 } from './cart/Step2';
+export { default as Step3 } from './cart/Step3';

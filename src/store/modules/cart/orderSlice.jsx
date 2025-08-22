@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
+const orderStorage = JSON.parse(localStorage.getItem('order')) || [];
 const initialState = {
-    orderList: [],
+    orderList: orderStorage,
 };
 
 export const orderSlice = createSlice({
@@ -14,6 +15,13 @@ export const orderSlice = createSlice({
             const orderNo = `${currentYear}${paddedOrderNumber}`;
             const data = { orderNo, items: action.payload, isComplete: false };
             state.orderList.push(data);
+            localStorage.setItem('order', JSON.stringify(state.orderList));
+        },
+        completeOrder: (state, action) => {
+            state.orderList = state.orderList.map((order) =>
+                order.orderNo === action.payload ? { ...order, isComplete: true } : order
+            );
+            localStorage.setItem('order', JSON.stringify(state.orderList));
         },
     },
 });

@@ -6,6 +6,7 @@ import auth from './modules/common/authSlice';
 import cart from './modules/cart/cartSlice';
 import colab from './modules/colab/colabSlice';
 import detail from './modules/detail/detailSlice';
+import order from './modules/cart/orderSlice';
 
 const store = configureStore({
     reducer: {
@@ -16,6 +17,7 @@ const store = configureStore({
         cart,
         colab,
         detail,
+        order,
     },
 });
 

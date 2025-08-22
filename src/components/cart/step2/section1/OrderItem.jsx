@@ -2,22 +2,30 @@ import React, { useState } from 'react';
 import { ItemStyle, OtherOrderItemsStyle } from './style';
 import OtherOrderItems from './OtherOrderItems';
 
-const OrderItem = () => {
+const OrderItem = ({ data, orderNo }) => {
     const [isOpen, setIsOpen] = useState(false);
+
+    const mainItem = data[0];
+    const otherItems = data.slice(1);
+    const totalPrice = data.reduce((sum, item) => sum + Number(item.price), 0);
 
     return (
         <>
             <ItemStyle>
                 <div className="title">
                     <span>주문번호</span>
-                    <span className="order-no">2024596854794</span>
+                    <span className="order-no">{orderNo}</span>
                 </div>
                 <div className="info">
                     <div className="inner">
-                        <div className="img"></div>
+                        <div className="img">
+                            <img src={`/images/detail/phone/${mainItem.folder}/1.webp`} alt="" />
+                        </div>
                         <div className="name-price">
-                            <span className="name">BEARS Collage Case 외 n 종</span>
-                            <span className="price">186,600 원</span>
+                            <span className="name">
+                                {mainItem.name} 외 {otherItems.length} 종
+                            </span>
+                            <span className="price">{totalPrice.toLocaleString()} 원</span>
                         </div>
                         <i
                             className={`toggle-icon ${isOpen ? 'open' : ''}`}
@@ -42,6 +50,7 @@ const OrderItem = () => {
                         </i>
                     </div>
                 </div>
+                {isOpen && <OtherOrderItems data={otherItems} />}
             </ItemStyle>
         </>
     );
