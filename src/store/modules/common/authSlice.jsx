@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
     loginState: false,
     joinState: false,
-    isLogin: false,
+    isLogin: localStorage.getItem('isLogin') || false,
     user: {},
 };
 
@@ -18,6 +18,7 @@ export const authSlice = createSlice({
         },
         setLoginState: (state, action) => {
             state.isLogin = action.payload;
+            localStorage.setItem('isLogin', JSON.stringify(state.isLogin));
         },
         setUserInfo: (state, action) => {
             state.user = action.payload;

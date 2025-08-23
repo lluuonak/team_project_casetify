@@ -3,22 +3,51 @@ import { Section1Style } from '../style';
 import SelectPartial from './SelectPartial';
 import ColorPartial from './ColorPartial';
 import { cartActions } from '../../../store/modules/cart/cartSlice';
+import { authActions } from '../../../store/modules/common/authSlice';
+import { orderActions } from '../../../store/modules/cart/orderSlice';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Section1 = ({ setIsModal, setModalTitle }) => {
     const { currentData } = useSelector((state) => state.detail);
+    const { isLogin } = useSelector((state) => state.auth);
+    const { isbusy } = useSelector((state) => state.order);
     const { type, name, firstTitle, secondTitle, forPhone, caseData } = currentData;
     const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const addToOrderList = () => {
+        const orderData = { ...currentData.caseData, cartId: 0 };
+        const items = [];
+        items.push(orderData);
+        dispatch(orderActions.setOrderList(items));
+    };
     const addToCart = () => {
-        dispatch(cartActions.addCartItem(currentData.caseData));
-        setIsModal(true);
-        setModalTitle('CART');
+        if (isLogin) {
+            dispatch(cartActions.addCartItem(currentData.caseData));
+            setIsModal(true);
+            setModalTitle('CART');
+        } else {
+            dispatch(authActions.setLoginModalState(true));
+        }
     };
 
     const addToWishList = () => {
-        dispatch(cartActions.addWishItem(currentData));
-        setIsModal(true);
-        setModalTitle('WISH LIST');
+        if (isLogin) {
+            dispatch(cartActions.addWishItem(currentData));
+            setIsModal(true);
+            setModalTitle('WISH LIST');
+        } else {
+            dispatch(authActions.setLoginModalState(true));
+        }
     };
+
+    useEffect(() => {
+        if (isbusy) {
+            navigate('/cart/step2');
+            dispatch(orderActions.setBusyControl());
+        }
+    }, [isbusy]);
     return (
         <Section1Style>
             <div className="inner">
@@ -56,7 +85,9 @@ const Section1 = ({ setIsModal, setModalTitle }) => {
                         </div>
 
                         <ColorPartial />
-                        <div className="buy">BUY NOW</div>
+                        <div className="buy" onClick={addToOrderList}>
+                            BUY NOW
+                        </div>
                         <div className="fn-btns">
                             <span onClick={addToCart}>ADD TO CART</span>
                             <span onClick={addToWishList}>WISH LIST</span>

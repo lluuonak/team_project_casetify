@@ -168,7 +168,16 @@ export const OrderItemStyle = styled.li`
         .img-area {
             width: 160px;
             height: 160px;
-            border: 1px solid #fff;
+            background-color: #fff;
+            position: relative;
+            img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
         .text-area {
             width: 1030px;

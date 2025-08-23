@@ -4,8 +4,8 @@ import OtherOrderItems from './OtherOrderItems';
 
 const OrderItem = ({ data, orderNo }) => {
     const [isOpen, setIsOpen] = useState(false);
-
     const mainItem = data[0];
+
     const otherItems = data.slice(1);
     const totalPrice = data.reduce((sum, item) => sum + Number(item.price), 0);
 
@@ -22,9 +22,12 @@ const OrderItem = ({ data, orderNo }) => {
                             <img src={`/images/detail/phone/${mainItem.folder}/1.webp`} alt="" />
                         </div>
                         <div className="name-price">
-                            <span className="name">
-                                {mainItem.name} 외 {otherItems.length} 종
-                            </span>
+                            {data.length > 1 && (
+                                <span className="name">
+                                    {mainItem.name} 외 {otherItems.length} 종
+                                </span>
+                            )}
+                            {data.length == 1 && <span className="name">{mainItem.name}</span>}
                             <span className="price">{totalPrice.toLocaleString()} 원</span>
                         </div>
                         <i

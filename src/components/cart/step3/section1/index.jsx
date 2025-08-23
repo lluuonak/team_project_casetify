@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import OrderNav from '../../../orderNav';
 import Banner from '../../step1/Banner';
 import { Section1Style } from './style';
@@ -18,6 +19,8 @@ const Section1 = ({ formData }) => {
 
         return `${year}.${month}.${day}`;
     };
+
+    const navigate = useNavigate();
     return (
         <Section1Style>
             <div className="inner">
@@ -29,7 +32,13 @@ const Section1 = ({ formData }) => {
                     </div>
                     <div className="btn-area">
                         <span>쇼핑 계속하기</span>
-                        <span>주문내역 확인</span>
+                        <span
+                            onClick={() => {
+                                navigate('/mypage');
+                            }}
+                        >
+                            주문내역 확인
+                        </span>
                     </div>
                     <div className="oder-area">
                         <div className="order-info">
@@ -47,9 +56,15 @@ const Section1 = ({ formData }) => {
                                 />
                             </div>
                             <div className="item-info">
-                                <span className="name">
-                                    {mainData.name} 외 {formData.orderItem.items.length - 1} 종
-                                </span>
+                                {formData.orderItem.items.length > 1 && (
+                                    <span className="name">
+                                        {mainData.name} 외 {formData.orderItem.items.length - 1} 종
+                                    </span>
+                                )}
+                                {formData.orderItem.items.length == 1 && (
+                                    <span className="name">{mainData.name}</span>
+                                )}
+
                                 <span className="price">{totalPrice.toLocaleString()} 원</span>
                             </div>
                         </div>

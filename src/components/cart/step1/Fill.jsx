@@ -7,6 +7,8 @@ import { orderActions } from '../../../store/modules/cart/orderSlice';
 import { useNavigate } from 'react-router-dom';
 const Fill = () => {
     const { cart, totalPrice } = useSelector((state) => state.cart);
+    const { isbusy } = useSelector((state) => state.order);
+
     const [checkedItems, setCheckedItems] = useState([]);
     const dispatch = useDispatch();
     const navigator = useNavigate();
@@ -35,9 +37,23 @@ const Fill = () => {
         // 1.장바구니 목록에서 선택된 친구들 조회
         const selectItems = [];
         checkedItems.map((item) => selectItems.push(cart.find((item2) => item2.cartId === item)));
-        dispatch(orderActions.setOrderList(selectItems));
-        navigator('/cart/step2');
+        if (selectItems.length > 0) {
+            dispatch(orderActions.setOrderList(selectItems));
+            navigator('/cart/step2');
+        } else {
+            alert('결제하실 제품을 선택해주세요');
+        }
     };
+    const sendToOrderAll = () => {
+        dispatch(orderActions.setOrderList(cart));
+    };
+
+    useEffect(() => {
+        if (isbusy) {
+            navigate('/cart/step2');
+            dispatch(orderActions.setBusyControl());
+        }
+    }, [isbusy]);
     return (
         <FillStyle>
             <div className="nav-area">
@@ -69,7 +85,7 @@ const Fill = () => {
             </div>
             <div className="end-btns">
                 <span onClick={sendToOrder}>선택상품 주문 / 결제</span>
-                <span>전체 주문 / 결제</span>
+                <span onClick={sendToOrderAll}>전체 주문 / 결제</span>
             </div>
         </FillStyle>
     );

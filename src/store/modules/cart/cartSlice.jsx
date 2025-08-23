@@ -78,6 +78,14 @@ export const cartSlice = createSlice({
             state.wishList = state.wishList.filter((item) => item.wishId !== action.payload.wishId);
             localStorage.setItem('wish', JSON.stringify(state.wishList));
         },
+        completeOrder: (state, action) => {
+            const cartIds = action.payload;
+
+            cartIds.map(
+                (cartId) => (state.cart = state.cart.filter((item) => item.cartId !== cartId))
+            );
+            localStorage.setItem('cart', JSON.stringify(state.cart));
+        },
     },
 });
 
