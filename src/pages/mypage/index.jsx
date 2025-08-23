@@ -8,13 +8,14 @@ import Section3 from '../../components/mypage/section3';
 
 const MyPage = () => {
     const { isLogin } = useSelector((state) => state.auth);
-    const navigator = useNavigate();
+    const navigate = useNavigate();
 
-    // useEffect(() => {
-    //     if (!isLogin) {
-    //         navigator('/');
-    //     }
-    // }, []);
+    useEffect(() => {
+        if (isLogin === 'false') {
+            navigate('/');
+        }
+    }, [isLogin]); // ✅ isLogin을 의존성에 추가
+
     return (
         <>
             <TitleSection title={'MY PAGE'} />

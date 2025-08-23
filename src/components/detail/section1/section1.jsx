@@ -17,13 +17,17 @@ const Section1 = ({ setIsModal, setModalTitle }) => {
     const navigate = useNavigate();
 
     const addToOrderList = () => {
-        const orderData = { ...currentData.caseData, cartId: 0 };
-        const items = [];
-        items.push(orderData);
-        dispatch(orderActions.setOrderList(items));
+        if (isLogin === 'true') {
+            const orderData = { ...currentData.caseData, cartId: 0 };
+            const items = [];
+            items.push(orderData);
+            dispatch(orderActions.setOrderList(items));
+        } else {
+            dispatch(authActions.setLoginModalState(true));
+        }
     };
     const addToCart = () => {
-        if (isLogin) {
+        if (isLogin === 'true') {
             dispatch(cartActions.addCartItem(currentData.caseData));
             setIsModal(true);
             setModalTitle('CART');
@@ -33,7 +37,7 @@ const Section1 = ({ setIsModal, setModalTitle }) => {
     };
 
     const addToWishList = () => {
-        if (isLogin) {
+        if (isLogin === 'true') {
             dispatch(cartActions.addWishItem(currentData));
             setIsModal(true);
             setModalTitle('WISH LIST');

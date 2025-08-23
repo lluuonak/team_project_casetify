@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import CartItem from './CartItem';
 import { FillStyle } from './style';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { cartActions } from '../../../store/modules/cart/cartSlice';
 import { orderActions } from '../../../store/modules/cart/orderSlice';
 import { useNavigate } from 'react-router-dom';
@@ -11,7 +11,7 @@ const Fill = () => {
 
     const [checkedItems, setCheckedItems] = useState([]);
     const dispatch = useDispatch();
-    const navigator = useNavigate();
+    const navigate = useNavigate();
 
     const handleAllToggle = () => {
         if (checkedItems.length === cart.length) {

@@ -23,6 +23,10 @@ export const authSlice = createSlice({
         setUserInfo: (state, action) => {
             state.user = action.payload;
         },
+        setLogOut: (state, action) => {
+            state.isLogin = false;
+            localStorage.setItem('isLogin', JSON.stringify(state.isLogin));
+        },
     },
 });
 
