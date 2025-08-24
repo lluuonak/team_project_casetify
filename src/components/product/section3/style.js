@@ -5,7 +5,10 @@ export const Section3Style = styled.section`
     height: auto;
     background-color: #1a1a1a;
     margin: 0 auto;
+<<<<<<< HEAD
     margin-top: 40px;
+=======
+>>>>>>> 26dfdb5460a29bd1521c17ccbb592babf7b3632e
     margin-bottom: 200px;
     /* 타이틀 스타일 */
     .title {
@@ -55,6 +58,7 @@ export const Section3Style = styled.section`
                 font-size: 16px;
             }
         }
+<<<<<<< HEAD
         .Co-Lab{
             display: flex;
             align-items: center;
@@ -66,6 +70,8 @@ export const Section3Style = styled.section`
             }
 
         }
+=======
+>>>>>>> 26dfdb5460a29bd1521c17ccbb592babf7b3632e
         .tag {
             padding: 5px 15px;
             background-color: transparent;
