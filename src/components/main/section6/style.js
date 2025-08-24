@@ -58,12 +58,14 @@ export const Section6Style = styled.section`
                     width: 100%;
                     height: 100%;
                     position: relative;
+                    cursor: pointer;
                     img {
                         display: block;
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
                         border-radius: 20px;
+                        transition: filter 0.3s;
                     }
                     span {
                         display: inline-block; /* 또는 block */
@@ -77,8 +79,30 @@ export const Section6Style = styled.section`
                         font-size: 32px;
                         font-weight: 600;
                         white-space: pre-line; /* \n 줄바꿈 허용 */
+                        opacity: 0;
+                        transition: opacity 0.3s;
+                        z-index: 2;
+                        pointer-events: none;
                     }
-                }
+                    &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0; left: 0;
+                    width: 100%; height: 100%;
+                    border-radius: 20px;
+                    background: rgba(0,0,0,0.6);
+                    opacity: 0;
+                    transition: opacity 0.3s;
+                    z-index: 1;
+                    }   
+
+                    &:hover span {
+                        opacity: 1;
+                    }
+                    &:hover::after {
+                        opacity: 1;
+                    }
+                    }
 
                 .card-case {
                     .bg {

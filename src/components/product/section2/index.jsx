@@ -1,7 +1,7 @@
 import React from 'react';
 import { Section2Style } from './style';
 
-const index = () => {
+const section2 = () => {
     return (
         <Section2Style>
             {/* 상단 텍스트 영역 */}
@@ -37,4 +37,4 @@ const index = () => {
     );
 };
 
-export default index;
+export default section2;
