@@ -8,14 +8,10 @@ const Section3 = () => {
         samsung: false,
         apple: false,
     });
-<<<<<<< HEAD
     const [activeTags, setActiveTags] = useState({
         samsung: ['All'],
         apple: ['All'],
     });
-=======
-    const [activeTags, setActiveTags] = useState(['전체']); // 기본값을 '전체'로 설정
->>>>>>> 26dfdb5460a29bd1521c17ccbb592babf7b3632e
 
     const toggleCategory = (categoryId) => {
         setExpanded((prev) => ({
@@ -24,7 +20,6 @@ const Section3 = () => {
         }));
     };
 
-<<<<<<< HEAD
     const handleTagClick = (categoryId, tag) => {
         setActiveTags((prevTags) => {
             const prevCategoryTags = prevTags[categoryId];
