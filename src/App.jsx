@@ -6,7 +6,7 @@ import {
     Cart,
     Colab,
     ColabDetail,
-    Custom,
+    // Custom,
     Detail,
     Ksports,
     Main,
@@ -47,11 +47,8 @@ const App = () => {
                     <Route path="/colab" element={<Colab />} />
                     <Route path="/colabdetail/:id" element={<ColabDetail />} />
                     <Route path="/colabdetail" element={<Navigate to="/colabdetail/animation" />} />
-
                     <Route path="/detail" element={<Navigate to="/detail/phone" />} />
                     <Route path="/detail/:type" element={<Detail />} />
-                    {/* 임시 */}
-                    <Route path="/custom" element={<Custom />} />
                     <Route path="/mypage" element={<MyPage />} />
                     <Route path="/product" element={<Product />} />
                     <Route path="/acc" element={<Acc />} />

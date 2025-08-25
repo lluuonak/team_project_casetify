@@ -3,7 +3,6 @@ export { default as Main } from './main';
 
 export { default as Ksports } from './Ksports';
 
-// export { default as Custom } from './custom';
 
 export { default as Detail } from './detail';
 
