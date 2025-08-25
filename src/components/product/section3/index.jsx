@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import productData from '../../../assets/product/productData';
 import { Section3Style } from './style';
 import ListItem from './ListItem';
 
-const Section3 = () => {
+const Section3 = React.forwardRef((props, ref) => {
+    const { appleRef, samsungRef } = ref;
+
     const [expanded, setExpanded] = useState({
         samsung: false,
         apple: false,
@@ -45,6 +47,8 @@ const Section3 = () => {
         <Section3Style>
             <div className="container">
                 {productData.map((category) => {
+                    const ref = category.id === 'samsung' ? samsungRef : appleRef;
+
                     const filteredItems =
                         activeTags[category.id].includes('All') ||
                         activeTags[category.id].length === 0
@@ -58,14 +62,14 @@ const Section3 = () => {
                         : filteredItems.slice(0, 8);
 
                     return (
-                        <div key={category.id} className="category-section">
+                        <div key={category.id} className="category-section" ref={ref}>
                             <div className="title">
-                                <h2 className="title-text">
-                                    {category.id === 'samsung' ? 'Samsung' : 'Apple'}
+                                <div className="title-text">
+                                    <span>{category.id === 'samsung' ? 'Samsung' : 'Apple'}</span>
                                     <span className="subtitle">
                                         {category.id === 'samsung' ? ' 삼성' : ' 애플'}
                                     </span>
-                                </h2>
+                                </div>
                             </div>
 
                             {/* 필터 태그들 */}
@@ -163,6 +167,6 @@ const Section3 = () => {
             </div>
         </Section3Style>
     );
-};
+});
 
 export default Section3;

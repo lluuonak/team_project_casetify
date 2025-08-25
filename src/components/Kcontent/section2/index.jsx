@@ -5,10 +5,10 @@ const Section2 = () => {
         <Section2Style>
             <div className="images">
                 <div className="image-wrapper-left">
-                    <img src="/images/Kcontent/오징어게임 (4).jpg" alt="left" />
+                    <img src="/images/Kcontent/Kco_1.jpg" alt="left" />
                 </div>
                 <div className="image-wrapper-right">
-                    <img src="/images/Kcontent/오징어게임 (6).jpg" alt="right" />
+                    <img src="/images/Kcontent/Kco_2.jpg" alt="right" />
                 </div>
                 <div className="image-wrapper-top">
                     <img src="/images/Kcontent/kcontent-logo.png" alt="logo" />

@@ -6,7 +6,7 @@ import Custom from '../../custom';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const section2 = () => {
+const Section2 = ({ scrollToSection }) => {
     const dispatch = useDispatch();
     const { customState } = useSelector((state) => state.custom);
     const customClick = () => {
@@ -22,11 +22,11 @@ const section2 = () => {
             {/* 이미지 영역 */}
             <div className="img-box">
                 <ul>
-                    <li>
+                    <li onClick={() => scrollToSection('애플')}>
                         <img src="/images/product/product-menu1.png" alt="" />
                         <p>Apple</p>
                     </li>
-                    <li>
+                    <li onClick={() => scrollToSection('삼성')}>
                         <img src="/images/product/product-menu2.png" alt="" />
                         <p>Samsung</p>
                     </li>
@@ -40,7 +40,6 @@ const section2 = () => {
                             <img src="/images/product/product-menu4.png" alt="" />
                             <p>ACC</p>
                         </Link>
-
                     </li>
                 </ul>
             </div>
@@ -69,4 +68,4 @@ const section2 = () => {
     );
 };
 
-export default section2;
+export default Section2;

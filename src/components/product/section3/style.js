@@ -10,20 +10,25 @@ export const Section3Style = styled.section`
     /* 타이틀 스타일 */
     .title {
         width: 1200px;
-        height: 40px;
+        height: auto;
         display: flex;
         margin: 0 auto;
         margin-bottom: 60px;
         .title-text {
+            width: 100%;
+            height: auto;
+            text-align: left;
             font-size: 32px;
-            font-weight: 300;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 20px;
             color: #fff;
+            .subtitle {
+                font-size: 16px;
+                color: #fff;
+            }
         }
-    }
-
-    .subtitle {
-        font-size: 18px;
-        color: #666;
     }
 
     /* 필터 태그 스타일 */

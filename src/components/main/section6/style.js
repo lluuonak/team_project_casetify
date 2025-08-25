@@ -120,6 +120,10 @@ export const Section6Style = styled.section`
                             rgba(0, 0, 0, 0.6) 100%
                         );
                     }
+                    &::after {
+                        background: none;
+                        opacity: 0;
+                    }
                 }
             }
         }
