@@ -21,7 +21,7 @@ const section4 = () => {
                 </ul>
             </div>
             <div className="bottom-img">
-                <img src="../../public/images/product/bottom-img.png" alt="" />
+                <img src="/images/product/bottom-img.png" alt="" />
             </div>
         </Section4Style>
     );

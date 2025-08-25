@@ -13,19 +13,19 @@ const section2 = () => {
             <div className="img-box">
                 <ul>
                     <li>
-                        <img src="../../public/images/product/product-menu1.png" alt="" />
+                        <img src="/images/product/product-menu1.png" alt="" />
                         <p>Apple</p>
                     </li>
                     <li>
-                        <img src="../../public/images/product/product-menu2.png" alt="" />
+                        <img src="/images/product/product-menu2.png" alt="" />
                         <p>Samsung</p>
                     </li>
                     <li>
-                        <img src="../../public/images/product/product-menu3.png" alt="" />
+                        <img src="/images/product/product-menu3.png" alt="" />
                         <p>Custom</p>
                     </li>
                     <li>
-                        <img src="../../public/images/product/product-menu4.png" alt="" />
+                        <img src="/images/product/product-menu4.png" alt="" />
                         <p>ACC</p>
                     </li>
                 </ul>

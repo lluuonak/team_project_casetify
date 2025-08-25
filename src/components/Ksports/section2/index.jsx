@@ -5,13 +5,13 @@ const Section2 = () => {
         <Section2Style>
             <div className="images">
                 <div className="image-wrapper-left">
-                    <img src="../public/images/Ksports/KBO 콜라보 (3).jpg" alt="left" />
+                    <img src="/images/Ksports/KBO 콜라보 (3).jpg" alt="left" />
                 </div>
                 <div className="image-wrapper-right">
-                    <img src="../public/images/Ksports/KBO 콜라보 (2).jpg" alt="right" />
+                    <img src="/images/Ksports/KBO 콜라보 (2).jpg" alt="right" />
                 </div>
                 <div className="image-wrapper-top">
-                    <img src="../public/images/Ksports/ksports-logo.png" alt="logo" />
+                    <img src="/images/Ksports/ksports-logo.png" alt="logo" />
                 </div>
                 <div className="text">
                     <p>KBO × 케이스티파이 한정판</p>

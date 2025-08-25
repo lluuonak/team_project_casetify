@@ -55,7 +55,7 @@ const Section3 = () => {
             })}
 
             <div className="footer-banner">
-                <img src="../public/images/Kcontent/KC-bcak1.jpg" alt="" />
+                <img src="/images/Kcontent/KC-bcak1.jpg" alt="" />
             </div>
         </Section3Style>
     );

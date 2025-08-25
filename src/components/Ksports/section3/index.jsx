@@ -59,7 +59,7 @@ const Section3 = () => {
             })}
 
             <div className="footer-banner">
-                <img src="../public/images/Ksports/Kbcak1.jpg" alt="" />
+                <img src="/images/Ksports/Kbcak1.jpg" alt="" />
             </div>
         </Section3Style>
     );

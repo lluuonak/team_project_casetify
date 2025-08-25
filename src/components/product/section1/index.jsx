@@ -55,19 +55,19 @@ const slides = [
 ];
 const images = [
     [
-        '../../public/images/product/product-banner1.jpg',
-        '../../public/images/product/product-banner2.jpg',
-        '../../public/images/product/product-banner3.jpg',
+        '/images/product/product-banner1.jpg',
+        '/images/product/product-banner2.jpg',
+        '/images/product/product-banner3.jpg',
     ],
     [
-        '../../public/images/product/product-banner4.jpg',
-        '../../public/images/product/product-banner5.jpg',
-        '../../public/images/product/product-banner6.jpg',
+        '/images/product/product-banner4.jpg',
+        '/images/product/product-banner5.jpg',
+        '/images/product/product-banner6.jpg',
     ],
     [
-        '../../public/images/product/product-banner7.jpg',
-        '../../public/images/product/product-banner8.jpg',
-        '../../public/images/product/product-banner9.jpg',
+        '/images/product/product-banner7.jpg',
+        '/images/product/product-banner8.jpg',
+        '/images/product/product-banner9.jpg',
     ],
 ];
 

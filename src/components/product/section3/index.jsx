@@ -54,7 +54,7 @@ const Section3 = () => {
 
                     const visibleItems = expanded[category.id]
                         ? filteredItems
-                        : filteredItems.slice(0, 4);
+                        : filteredItems.slice(0, 8);
 
                     return (
                         <div key={category.id} className="category-section">
