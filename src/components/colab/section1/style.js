@@ -136,6 +136,7 @@ export const ProductCardStyle = styled.div`
         position: relative;
         overflow: hidden;
         margin-bottom: 20px;
+        background-color: #fff;
         img {
             width: 366px;
             height: 351px;

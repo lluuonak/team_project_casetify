@@ -39,7 +39,7 @@ const Fill = () => {
         checkedItems.map((item) => selectItems.push(cart.find((item2) => item2.cartId === item)));
         if (selectItems.length > 0) {
             dispatch(orderActions.setOrderList(selectItems));
-            navigator('/cart/step2');
+            navigate('/cart/step2');
         } else {
             alert('결제하실 제품을 선택해주세요');
         }

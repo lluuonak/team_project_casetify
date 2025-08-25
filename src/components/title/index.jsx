@@ -1,16 +1,51 @@
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { TitleSectionStyle } from './style';
+import { useDispatch } from 'react-redux';
+import { orderActions } from '../../store/modules/cart/orderSlice';
+import { useEffect } from 'react';
 
 const TitleSection = ({ title }) => {
-    const navigator = useNavigate();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const dispatch = useDispatch();
+
+    const clickBtnBack = () => {
+        if (location.pathname.includes('/step2')) {
+            if (window.confirm('주문하기가 취소됩니다.')) {
+                dispatch(orderActions.setOrderCancel());
+                navigate('/cart/step1');
+            }
+        } else {
+            navigate(-1);
+        }
+    };
+
+    useEffect(() => {
+        if (!location.pathname.includes('/step2')) return;
+
+        // step2 진입 시 임시 history state 쌓기
+        history.pushState(null, '', location.href);
+
+        const handlePopState = () => {
+            if (window.confirm('주문하기가 취소됩니다.')) {
+                dispatch(orderActions.setOrderCancel());
+                navigate('/cart/step1', { replace: true });
+            } else {
+                // 뒤로가기를 취소하고 다시 현재 페이지로 push
+                history.pushState(null, '', location.href);
+            }
+        };
+
+        window.addEventListener('popstate', handlePopState);
+
+        return () => {
+            window.removeEventListener('popstate', handlePopState);
+        };
+    }, [location.pathname, dispatch, navigate]);
     return (
         <TitleSectionStyle>
             <div className="common-title">
-                <i
-                    onClick={() => {
-                        navigator(-1);
-                    }}
-                >
+                <i onClick={clickBtnBack}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="40"

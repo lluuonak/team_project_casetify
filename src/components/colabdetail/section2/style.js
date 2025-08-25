@@ -124,6 +124,7 @@ export const Section2Style = styled.section`
                     border-radius: 20px;
                     position: relative;
                     overflow: hidden;
+                    background-color: #fff;
                     img {
                         width: 366px;
                         height: 351px;

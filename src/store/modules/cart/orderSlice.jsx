@@ -33,6 +33,10 @@ export const orderSlice = createSlice({
         setBusyControl: (state, action) => {
             state.isbusy = false;
         },
+        setOrderCancel: (state, action) => {
+            state.orderList = state.orderList.filter((item) => item.isComplete !== false);
+            localStorage.setItem('order', JSON.stringify(state.orderList));
+        },
     },
 });
 
