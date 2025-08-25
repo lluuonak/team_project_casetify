@@ -11,7 +11,7 @@ const MyPage = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (isLogin === 'false') {
+        if (isLogin === 'false' || isLogin === false) {
             navigate('/');
         }
     }, [isLogin]); // ✅ isLogin을 의존성에 추가

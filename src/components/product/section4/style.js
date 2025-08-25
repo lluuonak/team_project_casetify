@@ -80,12 +80,28 @@ export const Section4Style = styled.section`
             }
         }
     }
-    .bottom-img {
+    /* .bottom-img {
         width: 1700px;
         margin: 0 auto;
         padding-bottom: 200px;
         img {
             object-fit: cover;
+        }
+    } */
+    .text {
+        width: 1698px;
+        height: 806px;
+        margin: auto;
+        line-height: 1.2;
+        strong {
+            display: block;
+            text-align: left;
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: #888;
+            color: transparent;
+            font-size: 155px;
+            font-weight: 500;
+            text-transform: uppercase;
         }
     }
 `;

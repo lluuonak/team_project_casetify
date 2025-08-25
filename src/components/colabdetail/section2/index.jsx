@@ -2,12 +2,18 @@ import React, { useState, useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import gsapData from '../../../assets/colab/gsapData';
 import { Section2Style } from './style';
+import { useNavigate } from 'react-router-dom';
 
 const Section2 = ({ categoryName }) => {
     const { colabDetail } = useSelector((state) => state.colab);
     const [selectedType, setSelectedType] = useState('all');
     const [selectedSeries, setSelectedSeries] = useState('all');
     const [showAll, setShowAll] = useState(false);
+
+    const navigator = useNavigate();
+    const onClickHandler = () => {
+        navigator('/detail');
+    };
 
     const currentCategory = colabDetail.find((item) => item.id === categoryName);
 
@@ -137,7 +143,7 @@ const Section2 = ({ categoryName }) => {
                 </ul>
                 <ul className="product-list">
                     {displayedProducts.map(({ id, title, price, img }) => (
-                        <li key={id}>
+                        <li key={id} onClick={onClickHandler}>
                             <div className="img-bg">
                                 <img src={img} alt={title} />
                             </div>

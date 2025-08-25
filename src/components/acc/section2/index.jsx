@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Section2Style } from '../style';
 import { useMemo, useState } from 'react';
 import { accActions } from '../../../store/modules/acc/accSlice';
+import { useNavigate } from 'react-router-dom';
 
 const Section2 = () => {
     const { accProductData, selectedVisualIndex, currentCategoryTitle } = useSelector(
@@ -10,6 +11,11 @@ const Section2 = () => {
     const [selectedCate, setSelectedCate] = useState('wearable');
     const [showAll, setShowAll] = useState(false);
     const dispatch = useDispatch();
+
+    const navigator = useNavigate();
+    const onClickHandler = () => {
+        navigator('/detail');
+    };
 
     const availableCate = useMemo(() => {
         const cate = [...new Set(accProductData.map((item) => item.cate).filter(Boolean))];
@@ -83,7 +89,7 @@ const Section2 = () => {
                 </ul>
                 <ul className="product-list">
                     {displayedProducts.map(({ id, title, price, img }) => (
-                        <li key={id}>
+                        <li key={id} onClick={onClickHandler}>
                             <div className="img-bg">
                                 <img src={img} alt={title} />
                             </div>

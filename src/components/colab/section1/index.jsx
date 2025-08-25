@@ -5,9 +5,10 @@ import {
     BackgroundSlide,
     TextContent,
     ProductGrid,
-    ProductCard,
+    ProductCardStyle,
     ProductImage,
 } from './style';
+import { useNavigate } from 'react-router-dom';
 
 const Section1 = () => {
     const { newProduct, colabVisualData } = useSelector((state) => state.colab);
@@ -27,6 +28,10 @@ const Section1 = () => {
         return () => clearInterval(interval);
     }, [colabVisualData.length]);
 
+    const navigator = useNavigate();
+    const onClickHandler = () => {
+        navigator('/detail');
+    };
     return (
         <Section1Style>
             <div className="visual-container">
@@ -46,7 +51,7 @@ const Section1 = () => {
 
                     <ProductGrid active={!isTransitioning}>
                         {newProduct[currentSlide]?.product.map((product, index) => (
-                            <ProductCard key={index}>
+                            <ProductCardStyle key={index} onClick={onClickHandler}>
                                 <div className="img-bg">
                                     <img src={product.img} alt={product.title} />
                                 </div>
@@ -55,7 +60,7 @@ const Section1 = () => {
                                     <h4>{product.name}</h4>
                                     <span>₩{product.price.toLocaleString()}</span>
                                 </div>
-                            </ProductCard>
+                            </ProductCardStyle>
                         ))}
                     </ProductGrid>
                 </div>

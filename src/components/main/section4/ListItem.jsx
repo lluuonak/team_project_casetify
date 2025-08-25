@@ -1,10 +1,12 @@
+import { useNavigate } from 'react-router-dom';
 import { ListItemStyle } from './style';
 
 const ListItem = ({ data }) => {
     const { id, img, name, price } = data;
+    const navigate = useNavigate();
 
     return (
-        <ListItemStyle>
+        <ListItemStyle onClick={() => navigate('/detail')}>
             <div className="img-bg">
                 <img src={img} alt="" />
             </div>

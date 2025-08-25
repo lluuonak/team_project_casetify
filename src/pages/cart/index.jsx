@@ -10,7 +10,8 @@ const Cart = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        if (isLogin === 'false') {
+        if (isLogin === 'false' || isLogin === false) {
+            console.log(isLogin);
             navigate('/');
             dispatch(authActions.setLoginModalState(true));
         }

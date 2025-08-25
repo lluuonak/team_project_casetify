@@ -47,7 +47,7 @@ const App = () => {
                     <Route path="/colab" element={<Colab />} />
                     <Route path="/colabdetail/:id" element={<ColabDetail />} />
                     <Route path="/colabdetail" element={<Navigate to="/colabdetail/animation" />} />
-                    <Route path="/detail" element={<Navigate to="/detail/phone" />} />
+                    <Route path="/detail" element={<Detail defaultType="phone" />} />
                     <Route path="/detail/:type" element={<Detail />} />
                     <Route path="/mypage" element={<MyPage />} />
                     <Route path="/product" element={<Product />} />

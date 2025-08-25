@@ -2,26 +2,29 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Section1 from '../../components/detail/section1/section1';
 import Section2 from '../../components/detail/section2/Section2';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { detailActions } from '../../store/modules/detail/detailSlice';
 import Modal from '../../components/modal';
 
-const Detail = () => {
+const Detail = ({ defaultType }) => {
     const { type } = useParams();
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const [isLoading, setIsLoading] = useState(false);
     const [isModal, setIsModal] = useState(false);
     const [modalTitle, setModalTitle] = useState('');
     useEffect(() => {
-        dispatch(detailActions.getDetail(type));
-        setIsLoading(true);
-    }, [dispatch, type]);
+        if (!type && defaultType) {
+            dispatch(detailActions.getDetail('phone'));
+            setIsLoading(true);
+        }
+    }, [dispatch, defaultType, type, navigate]);
 
     if (!isLoading) return <div>로딩중...</div>;
     return (
         <>
             <Section1 setIsModal={setIsModal} setModalTitle={setModalTitle} />
-            <Section2 type={type} />
+            <Section2 type={'phone'} />
             {isModal && <Modal title={modalTitle} setIsModal={setIsModal} />}
         </>
     );
