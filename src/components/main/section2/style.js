@@ -32,6 +32,7 @@ export const Section2Style = styled.section`
             }
         }
         .circle {
+            cursor: pointer;
             position: absolute;
             right: 1px;
             top: 1px;

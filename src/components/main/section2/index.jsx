@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Section2Style } from './style';
 import gsap from 'gsap';
 import { useEffect, useRef } from 'react';
@@ -7,6 +7,7 @@ import PhoneList from './PhoneList';
 const Section2 = () => {
     const circleRef = useRef(null);
     const rotationTween = useRef(null); // 애니메이션 참조 저장
+    const navigate = useNavigate();
 
     useEffect(() => {
         rotationTween.current = gsap.to('.circle-wrapper', {
@@ -32,6 +33,10 @@ const Section2 = () => {
             'linear-gradient(135deg, #ffffff, rgba(255, 255, 255, 0))';
     };
 
+    const clickHandle = () => {
+        navigate('/colab');
+    };
+
     return (
         <Section2Style>
             <div className="inner">
@@ -42,8 +47,9 @@ const Section2 = () => {
                 </span>
                 <span className="second-context">Taste is attitude.</span>
                 <div ref={circleRef} className="circle-wrapper"></div>
-                <Link
+                <span
                     className="circle"
+                    onClick={clickHandle}
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                 >
@@ -64,7 +70,7 @@ const Section2 = () => {
                             </svg>
                         </i>
                     </div>
-                </Link>
+                </span>
             </div>
             <div className="typo">
                 <span className="left">CASETIFY</span>
