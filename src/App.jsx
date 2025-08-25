@@ -6,13 +6,15 @@ import {
     Cart,
     Colab,
     ColabDetail,
-    Custom,
+    // Custom,
     Detail,
     Ksports,
     Main,
     MyPage,
     NotFiles,
     Step2,
+    Acc,
+    Step3,
 } from './pages';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
@@ -47,14 +49,14 @@ const App = () => {
                     <Route path="/colabdetail" element={<Navigate to="/colabdetail/animation" />} />
                     <Route path="/detail" element={<Navigate to="/detail/phone" />} />
                     <Route path="/detail/:type" element={<Detail />} />
-                    {/* 임시 */}
-                    <Route path="/custom" element={<Custom />} />
                     <Route path="/mypage" element={<MyPage />} />
                     <Route path="/product" element={<Product />} />
+                    <Route path="/acc" element={<Acc />} />
                     <Route path="/cart" element={<Cart />}>
                         <Route index element={<Navigate to="step1" replace />} />
                         <Route path="step1" element={<Step1 />} />
                         <Route path="step2" element={<Step2 />} />
+                        <Route path="step3" element={<Step3 />} />
                     </Route>
 
                     <Route path="*" element={<NotFiles />} />

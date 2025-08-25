@@ -1,26 +1,39 @@
 import { Link } from 'react-router-dom';
 import { OrderItemStyle } from './style';
 
-const OrderItem = () => {
+const OrderItem = ({ data }) => {
+    const mainData = data.items[0];
+    const totalPrice = data.items.reduce((sum, item) => sum + Number(item.price), 0);
+    const count = data.items.length;
+
+    console.log(data);
+
     return (
         <OrderItemStyle>
             <div className="top">
                 <div className="left">
-                    <span>2025.08.02</span>
-                    <span>주문번호 2024596854794</span>
+                    <span>{data.orderDate}</span>
+                    <span>주문번호 {data.orderNo}</span>
                 </div>
                 <div className="right">
                     <Link className="item-btn">상세 보기</Link>
                 </div>
             </div>
             <div className="middle">
-                <div className="img-area"></div>
+                <div className="img-area">
+                    <img src={`/images/detail/phone/${mainData.folder}/1.webp`} alt="" />
+                </div>
                 <div className="text-area">
                     <div className="name">
-                        <span>제품 ~~~ 외 5종</span>
+                        {count > 1 && (
+                            <span>
+                                {mainData.name}외 {count - 1}종
+                            </span>
+                        )}
+                        {count == 1 && <span>{mainData.name}</span>}
                     </div>
                     <div className="price">
-                        <span>총 토탈 가격</span>
+                        <span>{totalPrice.toLocaleString()}</span>
                     </div>
                 </div>
                 <i className="delete-btn">

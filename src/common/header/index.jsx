@@ -127,7 +127,7 @@ const Header = () => {
                         <ul className="first-contents">
                             <li className="just-img"></li>
                             <li className="link-to-page">
-                                <Link>
+                                <Link to="/colab">
                                     <article>
                                         <strong>Co-Lab</strong>
                                         <span>최신 콜라보를 확인해보세요</span>
@@ -188,7 +188,7 @@ const Header = () => {
                                 </p>
                             </div>
                         </Link>
-                        <Link>
+                        <Link to="/acc">
                             <div
                                 className="w400"
                                 style={{
