@@ -113,7 +113,7 @@ export const ProductGrid = styled.div`
     transition: all 1s ease-out 0.2s;
 `;
 
-export const ProductCard = styled.div`
+export const ProductCardStyle = styled.div`
     /* background: rgba(255, 255, 255, 0.95); */
     border-radius: 20px;
     /* backdrop-filter: blur(10px); */
