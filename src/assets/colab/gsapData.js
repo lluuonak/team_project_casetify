@@ -306,16 +306,13 @@ export default {
     sports: [
         {
             imgCount: 1,
-            data: [{ title: 'KBO', img: '../images/colab/KBO.jpg' }],
+            data: [{ title: 'NBA', img: '../images/colab/NBA.jpg' }],
         },
         {
             imgCount: 2,
             data: [
+                { title: 'KBO', img: '../images/colab/KBO.jpg' },
                 { title: 'MLB', img: '../images/colab/MLB.png' },
-                {
-                    title: 'NBA',
-                    img: '../images/colab/NBA.jpg',
-                },
             ],
         },
     ],

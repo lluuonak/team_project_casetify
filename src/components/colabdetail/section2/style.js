@@ -4,7 +4,37 @@ export const Section2Style = styled.section`
     height: auto;
     text-align: center;
     line-height: 1.2;
+    background: transparent;
+    /* background-image: url('../images/colab/2.png'); */
+    /* background-position: 0 -300px; */
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: cover;
+
+    .category-list {
+        li {
+            ul.cate {
+                li {
+                    cursor: pointer;
+                    padding: 8px 12px;
+                    border-radius: 4px;
+
+                    &:hover {
+                        border: 2px solid #fff;
+                        /* color: #ff5b37; */
+                    }
+
+                    &.active {
+                        /* background: #ff5b37; */
+                        color: white;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
     .product-inner {
+        min-width: 1200px;
         padding-bottom: 115px;
         box-sizing: border-box;
         position: relative;
@@ -84,6 +114,7 @@ export const Section2Style = styled.section`
             width: 1200px;
             margin: auto;
             margin-top: 60px;
+            justify-content: left;
             li {
                 width: 240px;
                 .img-bg {
@@ -101,7 +132,7 @@ export const Section2Style = styled.section`
                         left: -26%;
                         top: 7px;
                         /* transform: translate(-50%); */
-                        transition: transform 0.3s ease;
+                        /* transition: transform 0.3s ease; */
                         &:hover {
                             transform: scale(1.1);
                             cursor: pointer;
@@ -135,7 +166,6 @@ export const Section2Style = styled.section`
                     }
                 }
             }
-            justify-content: center;
         }
         .view-more {
             color: #fff;
@@ -149,6 +179,7 @@ export const Section2Style = styled.section`
             user-select: none;
             margin-top: 80px;
             font-size: 16px;
+            background-color: #1a1a1a;
             &:hover {
                 color: #ff5b37;
                 border: 1px solid #ff5b37;
