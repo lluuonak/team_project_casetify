@@ -1,12 +1,17 @@
 import { useDispatch, useSelector } from 'react-redux';
 import CartItem from './CartItem';
 import { FillStyle } from './style';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { cartActions } from '../../../store/modules/cart/cartSlice';
+import { orderActions } from '../../../store/modules/cart/orderSlice';
+import { useNavigate } from 'react-router-dom';
 const Fill = () => {
     const { cart, totalPrice } = useSelector((state) => state.cart);
+    const { isbusy } = useSelector((state) => state.order);
+
     const [checkedItems, setCheckedItems] = useState([]);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const handleAllToggle = () => {
         if (checkedItems.length === cart.length) {
@@ -14,7 +19,7 @@ const Fill = () => {
             setCheckedItems([]);
         } else {
             // 전체선택
-            setCheckedItems(cart.map((item) => item.id));
+            setCheckedItems(cart.map((item) => item.cartId));
         }
     };
 
@@ -25,6 +30,30 @@ const Fill = () => {
             setCheckedItems([...checkedItems, id]);
         }
     };
+
+    const sendToOrder = () => {
+        // 장바구니 목록에서 선택된 친구들만 주문목록으로 옮겨주기
+        // 주문 처리가 완료 되면 장바구니 목록에서 삭제 시켜준다
+        // 1.장바구니 목록에서 선택된 친구들 조회
+        const selectItems = [];
+        checkedItems.map((item) => selectItems.push(cart.find((item2) => item2.cartId === item)));
+        if (selectItems.length > 0) {
+            dispatch(orderActions.setOrderList(selectItems));
+            navigator('/cart/step2');
+        } else {
+            alert('결제하실 제품을 선택해주세요');
+        }
+    };
+    const sendToOrderAll = () => {
+        dispatch(orderActions.setOrderList(cart));
+    };
+
+    useEffect(() => {
+        if (isbusy) {
+            navigate('/cart/step2');
+            dispatch(orderActions.setBusyControl());
+        }
+    }, [isbusy]);
     return (
         <FillStyle>
             <div className="nav-area">
@@ -55,8 +84,8 @@ const Fill = () => {
                 <span>₩{totalPrice.toLocaleString()}</span>
             </div>
             <div className="end-btns">
-                <span>선택상품 주문 / 결제</span>
-                <span>전체 주문 / 결제</span>
+                <span onClick={sendToOrder}>선택상품 주문 / 결제</span>
+                <span onClick={sendToOrderAll}>전체 주문 / 결제</span>
             </div>
         </FillStyle>
     );

@@ -2,13 +2,12 @@ import React from 'react';
 import { OtherOrderItemsStyle } from './style';
 import OtherOrderItem from './OtherOrderItem';
 
-const OtherOrderItems = () => {
+const OtherOrderItems = ({ data }) => {
     return (
         <OtherOrderItemsStyle>
-            <OtherOrderItem />
-            <OtherOrderItem />
-            <OtherOrderItem />
-            <OtherOrderItem />
+            {data.map((item) => (
+                <OtherOrderItem key={item.id} data={item} />
+            ))}
         </OtherOrderItemsStyle>
     );
 };

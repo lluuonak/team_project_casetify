@@ -4,8 +4,12 @@ import { Section1Style } from './style';
 import OrderStatus from './order/OrderStatus';
 import OrderList from './order/OrderList';
 import WishList from './wish/WishList';
+import { useDispatch } from 'react-redux';
+import { authActions } from '../../../store/modules/common/authSlice';
 
 const Section1 = () => {
+    const dispatch = useDispatch();
+
     return (
         <Section1Style>
             <div className="inner">
@@ -19,7 +23,14 @@ const Section1 = () => {
                     </div>
                     <div className="right">
                         <Link className="edit">회원 정보 수정</Link>
-                        <Link className="logout">로그아웃</Link>
+                        <Link
+                            className="logout"
+                            onClick={() => {
+                                dispatch(authActions.setLogOut());
+                            }}
+                        >
+                            로그아웃
+                        </Link>
                     </div>
                 </div>
                 {/* 주문현황 영역 */}

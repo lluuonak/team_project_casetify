@@ -7,5 +7,4 @@ const Banner = () => {
         </BannerStyle>
     );
 };
-
 export default Banner;

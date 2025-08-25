@@ -14,6 +14,7 @@ import {
     NotFiles,
     Step2,
     Acc,
+    Step3,
 } from './pages';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
@@ -58,6 +59,7 @@ const App = () => {
                         <Route index element={<Navigate to="step1" replace />} />
                         <Route path="step1" element={<Step1 />} />
                         <Route path="step2" element={<Step2 />} />
+                        <Route path="step3" element={<Step3 />} />
                     </Route>
 
                     <Route path="*" element={<NotFiles />} />

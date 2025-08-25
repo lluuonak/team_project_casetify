@@ -1,8 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
+
+const cartStorage = JSON.parse(localStorage.getItem('cart')) || [];
+
 const initialState = {
-    cart: JSON.parse(localStorage.getItem('cart')) || [],
+    cart: cartStorage,
     wishList: JSON.parse(localStorage.getItem('wish')) || [],
-    totalPrice: 0,
+    totalPrice: cartStorage.reduce((sum, item) => sum + Number(item.price), 0),
 };
 
 export const cartSlice = createSlice({
@@ -74,6 +77,14 @@ export const cartSlice = createSlice({
             localStorage.setItem('cart', JSON.stringify(state.cart));
             state.wishList = state.wishList.filter((item) => item.wishId !== action.payload.wishId);
             localStorage.setItem('wish', JSON.stringify(state.wishList));
+        },
+        completeOrder: (state, action) => {
+            const cartIds = action.payload;
+
+            cartIds.map(
+                (cartId) => (state.cart = state.cart.filter((item) => item.cartId !== cartId))
+            );
+            localStorage.setItem('cart', JSON.stringify(state.cart));
         },
     },
 });

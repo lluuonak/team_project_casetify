@@ -1,24 +1,26 @@
 import React from 'react';
 import { OtherOrderItemStyle } from './style';
 
-const OtherOrderItem = () => {
+const OtherOrderItem = ({ data }) => {
     return (
         <OtherOrderItemStyle>
-            <div className="img"></div>
+            <div className="img">
+                <img src={`/images/detail/phone/${data.folder}/1.webp`} alt="" />
+            </div>
             <div className="inner">
                 <div className="name-category">
-                    <span className="name">BEARS Collage Case</span>
+                    <span className="name">{data.name}</span>
                     <span className="category">Beige / 아이폰 16 Pro Max</span>
                 </div>
                 <div className="price">
-                    <span>96,000 원</span>
+                    <span>{data.price.toLocaleString()} 원</span>
                 </div>
-                <div className="qty">
+                {/* <div className="qty">
                     <div className="btn">-</div>
                     <div>1</div>
                     <div className="btn">+</div>
-                </div>
-                <i className="del-icon">
+                </div> */}
+                {/* <i className="del-icon">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="18"
@@ -34,7 +36,7 @@ const OtherOrderItem = () => {
                             strokeLinejoin="round"
                         />
                     </svg>
-                </i>
+                </i> */}
             </div>
         </OtherOrderItemStyle>
     );
