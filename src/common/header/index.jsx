@@ -153,7 +153,7 @@ const Header = () => {
                         </ul>
                     </li>
                     <li className="second">
-                        <Link>
+                        <Link to="/product">
                             <div className="w600">
                                 <p className="menu-title">
                                     <strong>CASE</strong>
@@ -172,7 +172,7 @@ const Header = () => {
                                 </p>
                             </div>
                         </Link>
-                        <Link>
+                        <Link to="/product">
                             <div
                                 className="w600"
                                 style={{

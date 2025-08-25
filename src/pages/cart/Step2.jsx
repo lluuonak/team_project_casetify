@@ -1,5 +1,7 @@
+
 import { useState } from 'react';
 import Section1 from '../../components/cart/step2/section1';
+
 import Section2 from '../../components/cart/step2/section2';
 import Section3 from '../../components/cart/step2/section3';
 import Section4 from '../../components/cart/step2/section4';
@@ -23,11 +25,13 @@ const Step2 = () => {
     });
     return (
         <>
+
             <Section1 />
             <Section2 formData={formData} setFormData={setFormData} />
             <Section3 />
             <Section4 formData={formData} setFormData={setFormData} />
             <Section5 formData={formData} />
+
         </>
     );
 };
