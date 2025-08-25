@@ -29,7 +29,10 @@ const Section3 = () => {
                 const filteredTags = prevCategoryTags.filter((t) => t !== 'All');
                 if (filteredTags.includes(tag)) {
                     const updatedTags = filteredTags.filter((t) => t !== tag);
-                    return { ...prevTags, [categoryId]: updatedTags.length === 0 ? ['All'] : updatedTags };
+                    return {
+                        ...prevTags,
+                        [categoryId]: updatedTags.length === 0 ? ['All'] : updatedTags,
+                    };
                 } else {
                     return { ...prevTags, [categoryId]: [...filteredTags, tag] };
                 }
@@ -42,7 +45,8 @@ const Section3 = () => {
             <div className="container">
                 {productData.map((category) => {
                     const filteredItems =
-                        activeTags[category.id].includes('All') || activeTags[category.id].length === 0
+                        activeTags[category.id].includes('All') ||
+                        activeTags[category.id].length === 0
                             ? category.product
                             : category.product.filter((item) =>
                                   activeTags[category.id].some((tag) => item.tags.includes(tag))
@@ -71,7 +75,9 @@ const Section3 = () => {
                                         <span
                                             key={index}
                                             className={`tag ${
-                                                activeTags[category.id].includes(tag) ? 'active' : ''
+                                                activeTags[category.id].includes(tag)
+                                                    ? 'active'
+                                                    : ''
                                             }`}
                                             onClick={() => handleTagClick(category.id, tag)}
                                         >
@@ -92,7 +98,9 @@ const Section3 = () => {
                                         <span
                                             key={index}
                                             className={`tag ${
-                                                activeTags[category.id].includes(tag) ? 'active' : ''
+                                                activeTags[category.id].includes(tag)
+                                                    ? 'active'
+                                                    : ''
                                             }`}
                                             onClick={() => handleTagClick(category.id, tag)}
                                         >
@@ -109,7 +117,9 @@ const Section3 = () => {
                                             <span
                                                 key={index}
                                                 className={`tag ${
-                                                    activeTags[category.id].includes(tag) ? 'active' : ''
+                                                    activeTags[category.id].includes(tag)
+                                                        ? 'active'
+                                                        : ''
                                                 }`}
                                                 onClick={() => handleTagClick(category.id, tag)}
                                             >

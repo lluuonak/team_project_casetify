@@ -1,10 +1,9 @@
 import { useCallback, useState } from 'react';
 import { UserInfoStyle } from './style';
-<<<<<<< HEAD
+
 // import { useDaumPostcodePopup } from 'react-daum-postcode';
-=======
+
 import { useDaumPostcodePopup } from 'react-daum-postcode';
->>>>>>> 26dfdb5460a29bd1521c17ccbb592babf7b3632e
 
 const scriptUrl = '//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js';
 
