@@ -59,7 +59,7 @@ export const Section4Style = styled.section`
             .impact {
                 height: 100%;
                 flex: 1;
-                background-image: url('../../public/images/product/series-impact.png');
+                background-image: url('/images/product/series-impact.png');
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: left;
@@ -67,14 +67,14 @@ export const Section4Style = styled.section`
             .bounce {
                 height: 100%;
                 flex: 1;
-                background-image: url('../../public/images/product/series-bounce.png');
+                background-image: url('/images/product/series-bounce.png');
                 background-repeat: no-repeat;
                 background-size: cover;
             }
             .ring {
                 height: 100%;
                 flex: 1;
-                background-image: url('../../public/images/product/series-ring.png');
+                background-image: url('/images/product/series-ring.png');
                 background-repeat: no-repeat;
                 background-size: cover;
             }
@@ -83,6 +83,7 @@ export const Section4Style = styled.section`
     /* .bottom-img {
         width: 1700px;
         margin: 0 auto;
+        padding-bottom: 200px;
         img {
             object-fit: cover;
         }

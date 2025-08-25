@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Section3Style } from './style';
 import KartData from '../../../assets/KartData';
 import ListItem from './ListItem';
+import { Link } from 'react-router-dom';
 
 const Section3 = () => {
     const [expanded, setExpanded] = useState({});
@@ -44,18 +45,24 @@ const Section3 = () => {
                         </div>
 
                         <div className="category-content">
-                            <ul className="product-item">
-                                {visibleItems.map((item) => (
-                                    <ListItem key={item.id} data={item} parentId={category.id} />
-                                ))}
-                            </ul>
+                            <Link to="/detail">
+                                <ul className="product-item">
+                                    {visibleItems.map((item) => (
+                                        <ListItem
+                                            key={item.id}
+                                            data={item}
+                                            parentId={category.id}
+                                        />
+                                    ))}
+                                </ul>
+                            </Link>
                         </div>
                     </div>
                 );
             })}
 
             <div className="footer-banner">
-                <img src="../public/images/Kart/KA-back1.jpg" alt="" />
+                <img src="/images/Kart/KA-back1.jpg" alt="" />
             </div>
         </Section3Style>
     );

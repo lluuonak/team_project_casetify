@@ -6,7 +6,7 @@ const Section1 = () => {
         <Section1Style>
             <div className="kart">
                 <div className="kart-image">
-                    <img src="../public/images/Kart/KA-1.jpg" alt="" />
+                    <img src="/images/Kart/KA-1.jpg" alt="" />
                 </div>
                 <div className="kart-text">
                     <h3>K - ART</h3>

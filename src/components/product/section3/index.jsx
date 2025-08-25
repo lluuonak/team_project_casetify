@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import productData from '../../../assets/product/productData';
 import { Section3Style } from './style';
 import ListItem from './ListItem';
@@ -54,7 +55,7 @@ const Section3 = () => {
 
                     const visibleItems = expanded[category.id]
                         ? filteredItems
-                        : filteredItems.slice(0, 4);
+                        : filteredItems.slice(0, 8);
 
                     return (
                         <div key={category.id} className="category-section">
@@ -132,15 +133,17 @@ const Section3 = () => {
 
                             {/* 상품 그리드 */}
                             <div className="category-content">
-                                <div className="product-item">
-                                    {visibleItems.map((item) => (
-                                        <ListItem
-                                            key={item.id}
-                                            data={item}
-                                            categoryId={category.id}
-                                        />
-                                    ))}
-                                </div>
+                                <Link to="/detail">
+                                    <div className="product-item">
+                                        {visibleItems.map((item) => (
+                                            <ListItem
+                                                key={item.id}
+                                                data={item}
+                                                categoryId={category.id}
+                                            />
+                                        ))}
+                                    </div>
+                                </Link>
                             </div>
 
                             {/* MORE VIEW 버튼 */}
