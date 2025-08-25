@@ -5,10 +5,10 @@ const Section2 = () => {
         <Section2Style>
             <div className="images">
                 <div className="image-wrapper-left">
-                    <img src="/images/kart/국립중앙 박물관 콜라보 컨텐츠 7.jpg" alt="left" />
+                    <img src="/images/Kart/Kar_1.jpg" alt="left" />
                 </div>
                 <div className="image-wrapper-right">
-                    <img src="/images/kart/국립중앙 박물관 콜라보 컨텐츠 12.png" alt="right" />
+                    <img src="/images/Kart/Kar_2.png" alt="right" />
                 </div>
                 <div className="image-wrapper-top">
                     <img src="/images/Kart/kart-logo.png" alt="logo" />

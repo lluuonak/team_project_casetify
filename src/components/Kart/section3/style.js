@@ -47,15 +47,6 @@ export const Section3Style = styled.section`
                 fill: #fff;
             }
         }
-
-        .toggle-btn:hover {
-            /* background-color: #fff; */
-            svg {
-                width: 36px;
-                height: 36px;
-                fill: #000;
-            }
-        }
     }
 
     .category-content {
