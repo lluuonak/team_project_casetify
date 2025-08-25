@@ -4,10 +4,6 @@ import Section2 from '../../components/colab/section2';
 import Section3 from '../../components/colab/section3';
 
 const Colab = () => {
-    // const navigate = useNavigate();
-    // const onGo = (title) => {
-    //     navigate(`/colab/${title}`);
-    // };
     return (
         <>
             <Section1 />

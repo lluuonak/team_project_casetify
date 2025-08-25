@@ -57,7 +57,7 @@ export const Section3Style = styled.section`
             text-align: left;
             -webkit-text-stroke-width: 3px;
             -webkit-text-stroke-color: #888;
-            color: transparent; /* 글씨 내부 색상 투명 */
+            color: transparent;
             font-size: 155px;
             font-weight: 500;
             text-transform: uppercase;

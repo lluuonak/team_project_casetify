@@ -52,7 +52,7 @@ const OrderStatus = () => {
                 <li>
                     {' '}
                     <span>0</span>
-                    <span>배송 준비중</span>
+                    <span>배송중</span>
                 </li>
                 <li>
                     <svg
@@ -73,7 +73,7 @@ const OrderStatus = () => {
                 <li>
                     {' '}
                     <span>0</span>
-                    <span>배송 준비중</span>
+                    <span>배송완료</span>
                 </li>
             </ul>
         </OrderStatusStyle>

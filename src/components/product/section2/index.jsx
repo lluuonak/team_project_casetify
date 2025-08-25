@@ -1,7 +1,17 @@
 import React from 'react';
 import { Section2Style } from './style';
+import { useDispatch, useSelector } from 'react-redux';
+import { customActions } from '../../../store/modules/customSlice';
+import Custom from '../../custom';
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const section2 = () => {
+    const dispatch = useDispatch();
+    const { customState } = useSelector((state) => state.custom);
+    const customClick = () => {
+        dispatch(customActions.setCustomState(true));
+    };
     return (
         <Section2Style>
             {/* 상단 텍스트 영역 */}
@@ -20,16 +30,36 @@ const section2 = () => {
                         <img src="../../public/images/product/product-menu2.png" alt="" />
                         <p>Samsung</p>
                     </li>
-                    <li>
+                    <li onClick={customClick}>
                         <img src="../../public/images/product/product-menu3.png" alt="" />
                         <p>Custom</p>
                     </li>
                     <li>
-                        <img src="../../public/images/product/product-menu4.png" alt="" />
-                        <p>ACC</p>
+                        <Link to="/acc">
+                            <img src="../../public/images/product/product-menu4.png" alt="" />
+                            <p>ACC</p>
+                        </Link>
                     </li>
                 </ul>
             </div>
+            {customState && (
+                <>
+                    {/* 배경 오버레이 - 클릭시 모달 닫힘 */}
+                    <div
+                        className="overlay"
+                        style={{
+                            position: 'fixed',
+                            top: 0,
+                            left: 0,
+                            width: '100%',
+                            height: '100%',
+                            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                            zIndex: 1000,
+                        }}
+                    />
+                    <Custom />
+                </>
+            )}
             <div className="bottom-text">
                 <p>Product</p>
             </div>

@@ -9,40 +9,45 @@ const Section2 = () => {
     return (
         <Section2Style>
             <ul className="btns">
-                <li>
-                    <Link to="/colabdetail/animation">
+                <Link to="/colabdetail/animation">
+                    <li>
                         <h4>Animation</h4>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/colabdetail/art">
+                    </li>
+                </Link>
+
+                <Link to="/colabdetail/art">
+                    <li>
                         <h4>Art</h4>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/colabdetail/characters">
+                    </li>
+                </Link>
+
+                <Link to="/colabdetail/characters">
+                    <li>
                         <h4>Characters</h4>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/colabdetail/movies">
+                    </li>
+                </Link>
+
+                <Link to="/colabdetail/movies">
+                    <li>
                         <h4>
                             Movies &<br /> Entertainment
                         </h4>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/colabdetail/fashion">
+                    </li>
+                </Link>
+
+                <Link to="/colabdetail/fashion">
+                    <li>
                         <h4>
                             Fashion &<br /> Lifestyle
                         </h4>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/colabdetail/sports">
+                    </li>
+                </Link>
+
+                <Link to="/colabdetail/sports">
+                    <li>
                         <h4>Sports</h4>
-                    </Link>
-                </li>
+                    </li>
+                </Link>
             </ul>
         </Section2Style>
     );
