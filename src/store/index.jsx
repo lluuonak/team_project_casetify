@@ -7,6 +7,7 @@ import cart from './modules/cart/cartSlice';
 import colab from './modules/colab/colabSlice';
 import custom from './modules/customSlice';
 import acc from './modules/acc/accSlice';
+import detail from './modules/detail/detailSlice';
 
 const store = configureStore({
     reducer: {
@@ -18,6 +19,7 @@ const store = configureStore({
         colab,
         custom,
         acc,
+        detail,
     },
 });
 

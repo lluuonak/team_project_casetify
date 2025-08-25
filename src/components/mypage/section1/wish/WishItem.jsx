@@ -1,9 +1,18 @@
+import { useDispatch } from 'react-redux';
 import { WishItemStyle } from './style';
+import { cartActions } from '../../../../store/modules/cart/cartSlice';
 
-const WishItem = () => {
+const WishItem = ({ data }) => {
+    const { wishId, id, name, category, phone, qty, price, folder } = data;
+    console.log(data);
+    const dispatch = useDispatch();
     return (
         <WishItemStyle>
-            <i>
+            <i
+                onClick={() => {
+                    dispatch(cartActions.deleteWishItem(wishId));
+                }}
+            >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="31"
@@ -22,13 +31,18 @@ const WishItem = () => {
                 </svg>
             </i>
             <div className="img">
-                <img src="" alt="" />
+                <img src={`/images/detail/phone/${folder}/1.webp`} alt="" />
             </div>
             <div className="item-info">
-                <span>제품명</span>
-                <span>가격</span>
+                <span>{name}</span>
+                <span>{price}</span>
             </div>
-            <i className="cart-icon">
+            <i
+                className="cart-icon"
+                onClick={() => {
+                    dispatch(cartActions.moveToCart(data));
+                }}
+            >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="19"

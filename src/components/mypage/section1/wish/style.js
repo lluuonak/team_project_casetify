@@ -46,6 +46,15 @@ export const WishItemStyle = styled.li`
         width: 100px;
         height: 100px;
         border: 1px solid #fff;
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
     .item-info {
         width: 1103px;
