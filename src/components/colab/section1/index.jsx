@@ -48,7 +48,6 @@ const Section1 = () => {
                         <span>{colabVisualData[currentSlide]?.desc}</span>
                         <span>VIEW MORE</span>
                     </TextContent>
-
                     <ProductGrid active={!isTransitioning}>
                         {newProduct[currentSlide]?.product.map((product, index) => (
                             <ProductCardStyle key={index} onClick={onClickHandler}>
