@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Section3Style } from './style';
 import KcontentData from '../../../assets/KcontentData';
 import ListItem from './ListItem';
+import { Link } from 'react-router-dom';
 
 const Section3 = () => {
     const [expanded, setExpanded] = useState({});
@@ -44,11 +45,17 @@ const Section3 = () => {
                         </div>
 
                         <div className="category-content">
-                            <ul className="product-item">
-                                {visibleItems.map((item) => (
-                                    <ListItem key={item.id} data={item} parentId={category.id} />
-                                ))}
-                            </ul>
+                            <Link to="/detail">
+                                <ul className="product-item">
+                                    {visibleItems.map((item) => (
+                                        <ListItem
+                                            key={item.id}
+                                            data={item}
+                                            parentId={category.id}
+                                        />
+                                    ))}
+                                </ul>
+                            </Link>
                         </div>
                     </div>
                 );
